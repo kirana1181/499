@@ -64,11 +64,7 @@ body {
 	line-height: 0.9;
 	opacity: 0;
 	transform: translateY(20px);
-	animation: fadeUp 1.8s ease forwards;
-
-/*	text-shadow:
-		0 0 30px rgba(0,0,0,0.5),
-		0 10px 40px rgba(0,0,0,0.6);
+	animation: fadeUp 1.8s ease forwards; 
 }
 
 /* SUBTITLE */
@@ -173,15 +169,7 @@ body {
 		height: 350px;
 	}
 }
-/* =========================
-   RESET (safe to include)
-========================= */
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
 
 /* =========================
    FLOW TREE (FLOWCHART STYLE)
