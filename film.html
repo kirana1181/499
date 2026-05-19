@@ -4,63 +4,119 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Cinematic Film Showcase</title>
-<header> 	<div class="hero-content">
-			<h1 class="hero-title">
-				portfolio 
-			</h1>
-			<img class="profile-pic" src="images/profile.jpg" alt="Profile picture"> <br> <br>
 
-	<p class="subtitle">by kiran arain</p>
-			</div> </header>
-    
+<!-- CINEMATIC FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
 <style>
 body {
     margin: 0;
     background: #000;
     color: #fff;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
-/* safer container */
+/* LEFT SIDEBAR */
+.left-ui {
+    position: fixed;
+    left: 40px;
+    top: 40px;
+    bottom: 40px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* return button */
+.back-btn {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    opacity: 1;
+}
+
+/* credits block */
+.credits {
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.85;
+}
+
+.credits span {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* socials bottom */
+.socials {
+    font-size: 12px;
+    opacity: 0.6;
+    line-height: 1.8;
+}
+
+.socials a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    opacity: 1;
+}
+
+/* MAIN CONTAINER */
 .container {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 80px 20px;
 }
 
-/* film block */
+/* FILM BLOCK */
 .film {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;   /* keeps right-aligned aesthetic */
+    align-items: flex-end;
     text-align: right;
-
     margin-bottom: 120px;
-
-    /* prevents edge clipping */
     width: 100%;
 }
 
-/* title */
+/* title (cinematic serif) */
 .film h1 {
-    font-size: 42px;
+    font-family: "Playfair Display", serif;
+    font-size: 44px;
     margin: 0;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 /* runtime */
 .runtime {
-    font-size: 14px;
-    opacity: 0.6;
-    margin: 8px 0 20px 0;
-    letter-spacing: 1px;
+    font-size: 12px;
+    opacity: 0.5;
+    margin: 10px 0 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 /* image */
 .film img {
     width: 100%;
-    max-width: 420px; /* key fix */
-    border-radius: 4px;
+    max-width: 420px;
+    border-radius: 2px;
     filter: contrast(1.1) brightness(0.9);
     margin-bottom: 20px;
 }
@@ -68,8 +124,8 @@ body {
 /* description */
 .desc {
     max-width: 420px;
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.7;
     opacity: 0.85;
 }
 
@@ -93,8 +149,20 @@ body {
     }
 }
 
-/* mobile safety */
-@media (max-width: 600px) {
+/* MOBILE */
+@media (max-width: 900px) {
+    .left-ui {
+        position: relative;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    .container {
+        padding-top: 20px;
+    }
+
     .film {
         align-items: center;
         text-align: center;
@@ -105,40 +173,64 @@ body {
 
 <body>
 
+<!-- LEFT SIDE UI -->
+<div class="left-ui">
+
+    <a class="back-btn" href="https://kirana1181.github.io/499/">
+        ← Return
+    </a>
+
+    <div class="credits">
+        <span>CREW</span>
+        Director<br>
+        Cinematographer<br>
+        Gaffer<br>
+        Writer
+    </div>
+
+    <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Vimeo</a>
+        <a href="#">Email</a>
+    </div>
+
+</div>
+
+<!-- MAIN CONTENT -->
 <div class="container">
 
     <div class="film">
         <h1>Film One</h1>
         <div class="runtime">Runtime: 1h 42m</div>
-     	<img src="images/pic1.png" alt="">
+        <img src="https://via.placeholder.com/800x450">
         <div class="desc">A quiet story about memory, distance, and the spaces we leave behind.</div>
     </div>
 
     <div class="film">
         <h1>Film Two</h1>
         <div class="runtime">Runtime: 2h 10m</div>
-      	<img src="images/pic1.png" alt="">
+        <img src="https://via.placeholder.com/800x450">
         <div class="desc">A descent into fractured timelines and emotional collapse.</div>
     </div>
 
     <div class="film">
         <h1>Film Three</h1>
         <div class="runtime">Runtime: 1h 28m</div>
-     	<img src="images/pic1.png" alt="">
+        <img src="https://via.placeholder.com/800x450">
         <div class="desc">Two strangers meet in a city that never remembers their names.</div>
     </div>
 
     <div class="film">
         <h1>Film Four</h1>
         <div class="runtime">Runtime: 2h 05m</div>
-       	<img src="images/pic1.png" alt="">
+        <img src="https://via.placeholder.com/800x450">
         <div class="desc">A slow unraveling of identity in a world built on repetition.</div>
     </div>
 
     <div class="film">
         <h1>Film Five</h1>
         <div class="runtime">Runtime: 1h 55m</div>
-      	<img src="images/pic1.png" alt="">
+        <img src="https://via.placeholder.com/800x450">
         <div class="desc">A final journey through silence, light, and unresolved endings.</div>
     </div>
 
