@@ -174,11 +174,12 @@ body {
 
 
 /* =========================
-   DIMENSION STYLE NAV GRID
+   DIMENSION NAV SYSTEM
 ========================= */
 
 .nav-dimension {
-	height: 100vh;
+	position: relative;
+	min-height: 100vh;
 	background: #f5f5f5;
 
 	display: flex;
@@ -187,48 +188,67 @@ body {
 	justify-content: center;
 
 	text-align: center;
-	padding: 4rem;
+	padding: 6rem 2rem;
+	overflow: hidden;
 }
 
-/* title */
+/* CENTER SPINE LINE */
+.nav-dimension .spine {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	width: 1px;
+	background: rgba(0,0,0,0.15);
+	transform: translateX(-50%);
+}
+
+/* TITLE */
 .nav-dimension .title {
 	font-family: "Unbounded", sans-serif;
-	font-size: clamp(3rem, 8vw, 7rem);
+	font-size: clamp(3rem, 8vw, 6rem);
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	color: #111;
-
 	margin-bottom: 0.5rem;
+
+	opacity: 0;
+	animation: fadeUp 0.8s ease forwards;
 }
 
-/* subtitle */
+/* SUBTITLE */
 .nav-dimension .subtitle {
 	font-family: "Unbounded", sans-serif;
 	font-size: 0.8rem;
-	letter-spacing: 0.4em;
+	letter-spacing: 0.35em;
 	text-transform: uppercase;
 	color: rgba(0,0,0,0.6);
-
 	margin-bottom: 3rem;
+
+	opacity: 0;
+	animation: fadeUp 0.8s ease forwards;
+	animation-delay: 0.1s;
 }
 
-/* grid */
+/* GRID */
 .nav-dimension .grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 1.5rem;
-
+	gap: 1.2rem;
 	width: 100%;
 	max-width: 900px;
+
+	position: relative;
+	z-index: 2;
 }
 
-/* cards */
+/* CARDS */
 .nav-dimension .card {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	padding: 2.2rem 1rem;
+	padding: 2.5rem 1rem;
 
 	border: 1px solid #111;
 	background: white;
@@ -242,42 +262,32 @@ body {
 	text-transform: lowercase;
 
 	opacity: 0;
-	transform: translateY(15px);
+	transform: translateY(20px);
 
 	animation: fadeUp 0.8s ease forwards;
 
-	transition: 0.3s ease;
+	transition: all 0.3s ease;
 }
 
-/* stagger */
-.nav-dimension .card:nth-child(1) { animation-delay: 0.1s; }
-.nav-dimension .card:nth-child(2) { animation-delay: 0.2s; }
-.nav-dimension .card:nth-child(3) { animation-delay: 0.3s; }
-.nav-dimension .card:nth-child(4) { animation-delay: 0.4s; }
-.nav-dimension .card:nth-child(5) { animation-delay: 0.5s; }
-.nav-dimension .card:nth-child(6) { animation-delay: 0.6s; }
+/* STAGGER ANIMATION */
+.nav-dimension .card:nth-child(1) { animation-delay: 0.15s; }
+.nav-dimension .card:nth-child(2) { animation-delay: 0.25s; }
+.nav-dimension .card:nth-child(3) { animation-delay: 0.35s; }
+.nav-dimension .card:nth-child(4) { animation-delay: 0.45s; }
+.nav-dimension .card:nth-child(5) { animation-delay: 0.55s; }
+.nav-dimension .card:nth-child(6) { animation-delay: 0.65s; }
 
-/* hover */
+/* HOVER */
 .nav-dimension .card:hover {
 	background: #111;
 	color: white;
 	transform: translateY(-4px);
 }
 
-/* animation */
+/* FADE UP */
 @keyframes fadeUp {
 	to {
 		opacity: 1;
 		transform: translateY(0);
-	}
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-	.nav-dimension .grid {
-		grid-template-columns: 1fr;
 	}
 }
