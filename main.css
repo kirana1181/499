@@ -306,3 +306,23 @@ body {
 	color: white;
 	transform: translateY(-4px);
 }
+
+/* PROFILE IMAGE */
+.profile-pic {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin-top: 1.5rem;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* BYLINE */
+.byline {
+	margin-top: 0.8rem;
+	font-family: "Unbounded", sans-serif;
+	font-size: 0.75rem;
+	letter-spacing: 0.35em;
+	text-transform: uppercase;
+	color: rgba(255,255,255,0.7);
+}
