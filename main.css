@@ -21,10 +21,11 @@ body {
 	position: relative;
 	height: 100vh;
 	display: flex;
-	align-items: center;
+	align-items: flex-end; /* moves content to bottom */
 	justify-content: center;
 	text-align: center;
 	overflow: hidden;
+	padding-bottom: 5rem;
 }
 
 /* VIDEO */
@@ -61,12 +62,13 @@ body {
 
 .hero-title {
 	font-family: "Times New Roman", serif;
-	font-size: clamp(4rem, 10vw, 8rem);
+	font-size: clamp(3rem, 9vw, 7rem);
 	font-weight: 400;
 	letter-spacing: -0.06em;
 	line-height: 0.9;
 	text-transform: lowercase;
 	color: white;
+	margin: 0;
 }
 
 /* SUBTITLE */
