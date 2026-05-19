@@ -174,24 +174,33 @@ body {
 	}
 }
 /* =========================
-   SECTION
+   RESET (safe to include)
+========================= */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* =========================
+   FLOW TREE (FLOWCHART STYLE)
 ========================= */
 
 .flow-tree {
 	position: relative;
 	height: 80vh;
 	background: #f5f5f5;
+
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-start;
+
 	padding-top: 10rem;
 }
 
-/* =========================
-   MAIN HORIZONTAL LINE
-========================= */
-
-.spine {
+/* horizontal spine */
+.flow-tree .spine {
 	position: absolute;
 	top: 30%;
 	left: 5%;
@@ -200,63 +209,53 @@ body {
 	background: #111;
 }
 
-/* =========================
-   BRANCH WRAPPERS
-========================= */
-
-.branch {
+/* branch wrapper */
+.flow-tree .branch {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
 	position: relative;
 	width: 16%;
 }
 
 /* vertical connector */
-.connector {
+.flow-tree .connector {
 	width: 1px;
 	height: 120px;
 	background: #111;
-	margin-bottom: 0;
 }
 
-/* =========================
-   BUTTON NODES (BIG + CLEAN)
-========================= */
-
-.node {
+/* button node */
+.flow-tree .node {
 	display: block;
 	width: 100%;
 	text-align: center;
 
 	padding: 2rem 1rem;
 	border: 1px solid #111;
-	border-radius: 0px; /* square aesthetic */
+	border-radius: 0;
 
 	background: white;
 	color: #111;
 
 	text-decoration: none;
-	font-family: "Unbounded", sans-serif;
-	text-transform: lowercase;
-	letter-spacing: 0.15em;
-	font-size: 1rem;
 
-	transition: all 0.3s ease;
+	font-family: "Unbounded", sans-serif;
+	font-size: 1rem;
+	letter-spacing: 0.15em;
+	text-transform: lowercase;
+
+	transition: 0.3s ease;
 }
 
-/* hover */
-.node:hover {
+.flow-tree .node:hover {
 	background: #111;
 	color: white;
 }
 
-/* optional subtle alignment tweak */
-.branch {
-	margin-top: 0;
-}
-	/* =========================
-   FULL SCREEN CENTER LAYOUT
+/* =========================
+   DIMENSION STYLE NAV GRID
 ========================= */
 
 .nav-dimension {
@@ -272,11 +271,8 @@ body {
 	padding: 4rem;
 }
 
-/* =========================
-   TITLE
-========================= */
-
-.title {
+/* title */
+.nav-dimension .title {
 	font-family: "Unbounded", sans-serif;
 	font-size: clamp(3rem, 8vw, 7rem);
 	letter-spacing: 0.2em;
@@ -287,32 +283,28 @@ body {
 }
 
 /* subtitle */
-.subtitle {
+.nav-dimension .subtitle {
 	font-family: "Unbounded", sans-serif;
 	font-size: 0.8rem;
 	letter-spacing: 0.4em;
 	text-transform: uppercase;
 	color: rgba(0,0,0,0.6);
+
 	margin-bottom: 3rem;
 }
 
-/* =========================
-   GRID OF BUTTONS
-========================= */
-
-.grid {
+/* grid */
+.nav-dimension .grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 1.5rem;
+
 	width: 100%;
 	max-width: 900px;
 }
 
-/* =========================
-   BUTTON CARDS
-========================= */
-
-.card {
+/* cards */
+.nav-dimension .card {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -330,24 +322,24 @@ body {
 	letter-spacing: 0.15em;
 	text-transform: lowercase;
 
-	transition: all 0.3s ease;
-
 	opacity: 0;
 	transform: translateY(15px);
 
 	animation: fadeUp 0.8s ease forwards;
+
+	transition: 0.3s ease;
 }
 
 /* stagger */
-.card:nth-child(1) { animation-delay: 0.1s; }
-.card:nth-child(2) { animation-delay: 0.2s; }
-.card:nth-child(3) { animation-delay: 0.3s; }
-.card:nth-child(4) { animation-delay: 0.4s; }
-.card:nth-child(5) { animation-delay: 0.5s; }
-.card:nth-child(6) { animation-delay: 0.6s; }
+.nav-dimension .card:nth-child(1) { animation-delay: 0.1s; }
+.nav-dimension .card:nth-child(2) { animation-delay: 0.2s; }
+.nav-dimension .card:nth-child(3) { animation-delay: 0.3s; }
+.nav-dimension .card:nth-child(4) { animation-delay: 0.4s; }
+.nav-dimension .card:nth-child(5) { animation-delay: 0.5s; }
+.nav-dimension .card:nth-child(6) { animation-delay: 0.6s; }
 
 /* hover */
-.card:hover {
+.nav-dimension .card:hover {
 	background: #111;
 	color: white;
 	transform: translateY(-4px);
@@ -366,7 +358,7 @@ body {
 ========================= */
 
 @media (max-width: 768px) {
-	.grid {
+	.nav-dimension .grid {
 		grid-template-columns: 1fr;
 	}
 }
