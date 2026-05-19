@@ -173,81 +173,20 @@ body {
 		height: 350px;
 	}
 }
-
 /* =========================
-   TREE SELECTION
+   TREE SECTION
 ========================= */
 
-.tree-section {
-	background: #f5f5f5;
-	padding: 10rem 5vw;
-	display: flex;
-	justify-content: center;
-}
-
-/* MAIN COLUMN */
-.tree {
-	display: flex;
-	flex-direction: column;
-	gap: 3rem;
-	position: relative;
-}
-
-/* CENTRAL SPINE */
-.tree::before {
-	content: "";
-	position: absolute;
-	left: 50%;
-	top: 0;
-	bottom: 0;
-	width: 1px;
-	background: #bbb;
-	transform: translateX(-50%);
-}
-
-/* EACH BRANCH */
-.branch {
-	display: flex;
-	align-items: center;
-	position: relative;
-}
-
-/* HORIZONTAL LINE TO NODE */
-.line {
-	width: 80px;
-	height: 1px;
-	background: #bbb;
-}
-
-/* BUTTON / NODE */
-.node {
-	margin-left: 1rem;
-	padding: 0.8rem 1.2rem;
-	border: 1px solid #111;
-	border-radius: 999px;
-	text-decoration: none;
-	color: #111;
-	font-family: "Unbounded", sans-serif;
-	text-transform: lowercase;
-	letter-spacing: 0.1em;
-	transition: all 0.3s ease;
-}
-
-/* HOVER EFFECT */
-.node:hover {
-	background: #111;
-	color: white;
-	transform: translateX(5px);
-}
-
-/* SECTION */
 .tree-section {
 	background: #f5f5f5;
 	padding: 10rem 5vw;
 	overflow-x: auto;
 }
 
-/* HORIZONTAL SPINE CONTAINER */
+/* =========================
+   HORIZONTAL SPINE CONTAINER
+========================= */
+
 .tree-horizontal-nav {
 	display: flex;
 	align-items: center;
@@ -269,7 +208,10 @@ body {
 	transform: translateY(-50%);
 }
 
-/* EACH BRANCH */
+/* =========================
+   BRANCHES (VERTICAL PRONGS)
+========================= */
+
 .branch {
 	display: flex;
 	flex-direction: column;
@@ -277,14 +219,17 @@ body {
 	position: relative;
 }
 
-/* VERTICAL PRONG */
+/* vertical connector line */
 .line {
 	width: 1px;
 	height: 45px;
 	background: #bbb;
 }
 
-/* BUTTON NODES */
+/* =========================
+   BUTTON NODES
+========================= */
+
 .node {
 	margin-top: 1rem;
 	padding: 1.4rem 2.6rem;
@@ -300,41 +245,38 @@ body {
 	transition: all 0.3s ease;
 }
 
-/* HOVER EFFECT */
+/* hover effect */
 .node:hover {
 	background: #111;
 	color: white;
 	transform: translateY(-4px);
 }
 
-/* PROFILE IMAGE */
-.profile-pic {
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	object-fit: cover;
-	margin-top: 1.5rem;
-	box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
+/* =========================
+   OPTIONAL: ANIMATION (FADE IN)
+========================= */
 
-/* BYLINE */
-.byline {
-	margin-top: 0.8rem;
-	font-family: "Unbounded", sans-serif;
-	font-size: 0.75rem;
-	letter-spacing: 0.35em;
-	text-transform: uppercase;
-	color: rgba(255,255,255,0.7);
-}
-
-.profile-pic {
+.branch {
 	opacity: 0;
-	animation: fadeUp 1.5s ease forwards;
-	animation-delay: 0.3s;
+	transform: translateY(20px);
+	animation: fadeUp 1s ease forwards;
 }
 
-.byline {
-	opacity: 0;
-	animation: fadeUp 1.5s ease forwards;
-	animation-delay: 0.5s;
+/* staggered reveal */
+.branch:nth-child(1) { animation-delay: 0.1s; }
+.branch:nth-child(2) { animation-delay: 0.2s; }
+.branch:nth-child(3) { animation-delay: 0.3s; }
+.branch:nth-child(4) { animation-delay: 0.4s; }
+.branch:nth-child(5) { animation-delay: 0.5s; }
+.branch:nth-child(6) { animation-delay: 0.6s; }
+
+/* =========================
+   KEYFRAME ANIMATION
+========================= */
+
+@keyframes fadeUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
