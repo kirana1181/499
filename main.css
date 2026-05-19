@@ -61,7 +61,7 @@ body {
 
 .hero-title {
 	font-family: "Times New Roman", serif;
-	font-size: clamp(5rem, 14vw, 12rem);
+	font-size: clamp(4rem, 10vw, 8rem);
 	font-weight: 400;
 	letter-spacing: -0.06em;
 	line-height: 0.9;
