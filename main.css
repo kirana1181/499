@@ -326,3 +326,15 @@ body {
 	text-transform: uppercase;
 	color: rgba(255,255,255,0.7);
 }
+
+.profile-pic {
+	opacity: 0;
+	animation: fadeUp 1.5s ease forwards;
+	animation-delay: 0.3s;
+}
+
+.byline {
+	opacity: 0;
+	animation: fadeUp 1.5s ease forwards;
+	animation-delay: 0.5s;
+}
