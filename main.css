@@ -173,3 +173,69 @@ body {
 		height: 350px;
 	}
 }
+
+/* =========================
+   TREE SELECTION
+========================= */
+
+.tree-section {
+	background: #f5f5f5;
+	padding: 10rem 5vw;
+	display: flex;
+	justify-content: center;
+}
+
+/* MAIN COLUMN */
+.tree {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	position: relative;
+}
+
+/* CENTRAL SPINE */
+.tree::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 0;
+	bottom: 0;
+	width: 1px;
+	background: #bbb;
+	transform: translateX(-50%);
+}
+
+/* EACH BRANCH */
+.branch {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+/* HORIZONTAL LINE TO NODE */
+.line {
+	width: 80px;
+	height: 1px;
+	background: #bbb;
+}
+
+/* BUTTON / NODE */
+.node {
+	margin-left: 1rem;
+	padding: 0.8rem 1.2rem;
+	border: 1px solid #111;
+	border-radius: 999px;
+	text-decoration: none;
+	color: #111;
+	font-family: "Unbounded", sans-serif;
+	text-transform: lowercase;
+	letter-spacing: 0.1em;
+	transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.node:hover {
+	background: #111;
+	color: white;
+	transform: translateX(5px);
+}
