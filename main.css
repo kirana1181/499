@@ -1,179 +1,134 @@
----
-
-# style.css
-
-```css
-/* RESET */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ===== TYPOGRAPHY ===== */
 
 body {
-    background: #ffffff;
-    color: #111111;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+	margin: 0;
+	font-family: "Helvetica Neue", sans-serif;
+	background: #000;
+	color: white;
+	overflow-x: hidden;
 }
 
-/* HERO */
+/* Giant Portfolio Title */
 
-.hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+.hero-title {
+	font-family: "Times New Roman", serif;
+	font-size: clamp(5rem, 14vw, 12rem);
+	font-weight: 400;
+	letter-spacing: -0.06em;
+	text-transform: lowercase;
+	line-height: 0.9;
+	color: #f5f5f5;
+	margin: 0;
 }
 
-.hero-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+/* Small subtitle text */
 
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transform: translate(-50%, -50%);
+.hero-subtitle {
+	margin-top: 1.5rem;
+	font-size: 0.9rem;
+	letter-spacing: 0.35rem;
+	text-transform: uppercase;
+	color: rgba(255,255,255,0.7);
+	font-family: "Helvetica Neue", sans-serif;
 }
 
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-}
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    text-align: center;
-    z-index: 10;
-}
-
-.hero-content h1 {
-    color: white;
-    font-size: 10vw;
-    letter-spacing: 0.5rem;
-    font-family: "Times New Roman", serif;
-}
-
-.hero-content p {
-    color: white;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    letter-spacing: 0.3rem;
-}
-
-/* ABOUT */
-
-.about {
-    background: white;
-    padding: 8rem 2rem;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.about h2 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-}
-
-.about p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-}
+/* Blue elegant accent text */
 
 .blue-times {
-    color: #1d4ed8;
-    font-family: "Times New Roman", serif;
-    font-size: 5rem;
-    text-transform: lowercase;
-    line-height: 1;
+	color: #4f7cff;
+	font-family: "Times New Roman", serif;
+	font-size: clamp(2rem, 5vw, 4rem);
+	font-style: italic;
+	font-weight: 400;
+	letter-spacing: -0.03em;
+	line-height: 1;
+	text-transform: lowercase;
+	margin: 2rem 0;
 }
 
-/* SLIDESHOW */
+/* Header layout */
 
-.gallery-section {
-    background: #f5f5f5;
-    padding: 8rem 2rem;
-    text-align: center;
+.hero {
+	position: relative;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	overflow: hidden;
 }
 
-.gallery-section h2 {
-    font-size: 3rem;
-    margin-bottom: 3rem;
+/* Video Background */
+
+.hero video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform: translate(-50%, -50%);
+	z-index: -2;
 }
 
-.slideshow-container {
-    position: relative;
-    max-width: 1000px;
-    height: 650px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 20px;
+/* Dark overlay */
+
+.hero::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0,0,0,0.45);
+	z-index: -1;
 }
 
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+/* Content spacing */
 
-    object-fit: cover;
-
-    opacity: 0;
-    transition: opacity 1s ease;
+.hero-content {
+	max-width: 1000px;
+	padding: 2rem;
 }
 
-.slide.active {
-    opacity: 1;
+/* Next section */
+
+.content-section {
+	background: #f5f5f5;
+	color: #111;
+	padding: 8rem 10vw;
 }
 
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    .hero-content h1 {
-        font-size: 4rem;
-    }
-
-    .blue-times {
-        font-size: 3rem;
-    }
-
-    .slideshow-container {
-        height: 400px;
-    }
-
+.content-section h2 {
+	font-family: "Times New Roman", serif;
+	font-size: 4rem;
+	font-weight: 400;
+	letter-spacing: -0.04em;
+	margin-bottom: 2rem;
+	text-transform: lowercase;
 }
-```
 
----
+.content-section p {
+	font-size: 1.1rem;
+	line-height: 1.9;
+	max-width: 700px;
+	color: #333;
+}
 
-# Folder Structure
+/* Slideshow */
 
-```plaintext
-project-folder/
-│
-├── index.html
-├── style.css
-│
-├── images/
-│   ├── pic01.jpg
-│   ├── pic02.jpg
-│   └── pic03.jpg
-│
-└── assets/
-    └── videos/
-        └── showreel.mp4
-```
+.slideshow {
+	margin-top: 5rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+}
+
+.slideshow img {
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+	border-radius: 1rem;
+	transition: transform 0.4s ease;
+}
+
+.slideshow img:hover {
+	transform: scale(1.02);
+}
