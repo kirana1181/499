@@ -21,7 +21,7 @@ body {
 	position: relative;
 	height: 80vh;
 	display: flex;
-	align-items: flex-end; /* moves content to bottom */
+/*	align-items: flex-end; /* moves content to bottom */
 	justify-content: center;
 	text-align: center;
 	overflow: hidden;
