@@ -61,16 +61,15 @@ body {
 /* MAIN TITLE */
 
 .hero-title {
-	font-family: "Times New Roman", serif;
-font-size: clamp(2rem, 6vw, 4.5rem);
-	font-weight: 400;
-	letter-spacing: -0.06em;
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(2rem, 6vw, 4.5rem);
+	font-weight: 300;
+	letter-spacing: -0.04em;
 	line-height: 0.9;
 	text-transform: lowercase;
 	color: white;
 	margin: 0;
 }
-
 /* SUBTITLE */
 
 .hero-subtitle {
