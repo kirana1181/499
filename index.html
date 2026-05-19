@@ -1,87 +1,36 @@
-# index.html
+<section class="hero">
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+	<video autoplay muted loop playsinline>
+		<source src="video.mp4" type="video/mp4">
+	</video>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+	<div class="hero-content">
+		<h1 class="hero-title">portfolio</h1>
 
-    <!-- VIDEO HERO -->
+		<p class="hero-subtitle">
+			film • theatre • writing • direction
+		</p>
 
-    <section class="hero">
+		<div class="blue-times">
+			selected works
+		</div>
+	</div>
 
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="assets/videos/showreel.mp4" type="video/mp4">
-        </video>
+</section>
 
-        <div class="overlay"></div>
+<section class="content-section">
 
-        <div class="hero-content">
-            <h1>PORTFOLIO</h1>
-            <p>Film • Theatre • Writing • Direction</p>
-        </div>
+	<h2>projects</h2>
 
-    </section>
+	<p>
+		A curated collection of film, theatre, and experimental work.
+		Focused on atmosphere, performance, and emotional tension.
+	</p>
 
-    <!-- ABOUT SECTION -->
+	<div class="slideshow">
+		<img src="images/pic1.jpg">
+		<img src="images/pic2.jpg">
+		<img src="images/pic3.jpg">
+	</div>
 
-    <section class="about">
-
-        <div class="container">
-            <h2>About</h2>
-
-            <p>
-                This is your main introduction section. Replace this text
-                with your artist statement, bio, or project description.
-            </p>
-
-            <p class="blue-times">
-                cinematic storytelling for the end of the world.
-            </p>
-        </div>
-
-    </section>
-
-    <!-- SLIDESHOW SECTION -->
-
-    <section class="gallery-section">
-
-        <h2>Selected Work</h2>
-
-        <div class="slideshow-container">
-
-            <img class="slide active" src="images/pic01.jpg" alt="">
-            <img class="slide" src="images/pic02.jpg" alt="">
-            <img class="slide" src="images/pic03.jpg" alt="">
-
-        </div>
-
-    </section>
-
-    <script>
-
-        const slides = document.querySelectorAll('.slide');
-        let current = 0;
-
-        setInterval(() => {
-
-            slides[current].classList.remove('active');
-
-            current = (current + 1) % slides.length;
-
-            slides[current].classList.add('active');
-
-        }, 3000);
-
-    </script>
-
-</body>
-</html>
-```
-
+</section>
