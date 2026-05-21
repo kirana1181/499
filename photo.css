@@ -1,1 +1,149 @@
 
+/* =========================
+   PHOTOGRAPHY TREE SYSTEM
+========================= */
+
+.tree-section {
+	background: #f5f5f5;
+	min-height: 100vh;
+
+	display: flex;
+	align-items: center;
+
+	padding: 8rem 6vw;
+
+	position: relative;
+	overflow: hidden;
+}
+
+/* MAIN LAYOUT */
+.tree {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	gap: 3.5rem;
+
+	width: 320px;
+
+	padding-left: 4rem;
+}
+
+/* VERTICAL SPINE */
+.tree::before {
+	content: "";
+
+	position: absolute;
+
+	left: 0;
+	top: 0;
+	bottom: 0;
+
+	width: 1px;
+
+	background: rgba(0,0,0,0.2);
+}
+
+/* EACH BRANCH */
+.branch {
+	position: relative;
+
+	display: flex;
+	align-items: center;
+
+	opacity: 0;
+	transform: translateY(20px);
+
+	animation: fadeBranch 0.8s ease forwards;
+}
+
+/* STAGGERED REVEAL */
+.branch:nth-child(1) { animation-delay: 0.1s; }
+.branch:nth-child(2) { animation-delay: 0.2s; }
+.branch:nth-child(3) { animation-delay: 0.3s; }
+.branch:nth-child(4) { animation-delay: 0.4s; }
+.branch:nth-child(5) { animation-delay: 0.5s; }
+.branch:nth-child(6) { animation-delay: 0.6s; }
+.branch:nth-child(7) { animation-delay: 0.7s; }
+
+/* HORIZONTAL CONNECTOR */
+.line {
+	width: 60px;
+	height: 1px;
+
+	background: rgba(0,0,0,0.2);
+}
+
+/* NODE BUTTON */
+.node {
+	display: inline-flex;
+	align-items: center;
+
+	min-height: 70px;
+	min-width: 240px;
+
+	padding: 1.5rem 2rem;
+
+	border: 1px solid rgba(0,0,0,0.2);
+
+	background: rgba(255,255,255,0.7);
+
+	backdrop-filter: blur(10px);
+
+	text-decoration: none;
+
+	color: #111;
+
+	font-family: "Cormorant Garamond", serif;
+	font-size: 1.8rem;
+	font-weight: 400;
+	letter-spacing: 0.02em;
+	text-transform: lowercase;
+
+	transition:
+		transform 0.4s ease,
+		background 0.4s ease,
+		color 0.4s ease,
+		border 0.4s ease,
+		box-shadow 0.4s ease;
+}
+
+/* HOVER */
+.node:hover {
+	background: #111;
+	color: white;
+
+	transform: translateX(8px);
+
+	box-shadow:
+		0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* FADE IN */
+@keyframes fadeBranch {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+	.tree-section {
+		padding: 5rem 2rem;
+	}
+
+	.tree {
+		width: 100%;
+		padding-left: 2rem;
+	}
+
+	.node {
+		min-width: 100%;
+		font-size: 1.4rem;
+	}
+}
