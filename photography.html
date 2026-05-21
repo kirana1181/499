@@ -2,109 +2,394 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Photography</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<title>Photography</title>
 
-<link rel="stylesheet" href="photo.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="photo.css">
+
 </head>
 
 <body>
 
-    <div class="left-ui">
-
-    <a class="back-btn" href="https://kirana1181.github.io/499/">
-        ← Return
-    </a>
+<!-- =========================
+     PHOTO LAYOUT
+========================= -->
 
 <section class="photo-layout">
 
-    <!-- LEFT TREE -->
-    <div class="tree">
+	<!-- =========================================
+	     LEFT SIDE ARCHIVE
+	========================================= -->
 
-        <div class="tree-line"></div>
+	<div class="tree">
 
-        <button class="node active" data-gallery="horses">horses of rhosilli bay</button>
-        <button class="node" data-gallery="london">downtown london</button>
-        <button class="node" data-gallery="navigation">navigation that guides you</button>
-        <button class="node" data-gallery="florida">florida</button>
-        <button class="node" data-gallery="animals">animals</button>
-        <button class="node" data-gallery="portraits">portraits</button>
-        <button class="node" data-gallery="france">france</button>
+		<button class="node active" data-gallery="horses">
+			horses of rhosilli bay
+		</button>
 
-    </div>
+		<button class="node" data-gallery="london">
+			downtown london
+		</button>
 
-    <!-- RIGHT VIEWER -->
-    <div class="viewer">
+		<button class="node" data-gallery="navigation">
+			navigation that guides you
+		</button>
 
-        <div class="film-window">
+		<button class="node" data-gallery="florida">
+			florida
+		</button>
 
-            <div class="film-strip active" id="horses">
-          	<img src="images/pic1.png" alt="">
-             	<img src="images/pic1.png" alt="">
-             	<img src="images/pic1.png" alt="">
-            </div>
+		<button class="node" data-gallery="animals">
+			animals
+		</button>
 
-            <div class="film-strip" id="london">
-               	<img src="images/pic2.png" alt="">
-              	<img src="images/pic2.png" alt="">
-             	<img src="images/pic2.png" alt="">
-            </div>
+		<button class="node" data-gallery="portraits">
+			portraits
+		</button>
 
-            <div class="film-strip" id="navigation">
-                	<img src="images/pic3.png" alt="">
-           	<img src="images/pic3.png" alt="">
-              	<img src="images/pic3.png" alt="">
-            </div>
+		<button class="node" data-gallery="france">
+			france
+		</button>
 
-            <div class="film-strip" id="florida">
-                <img src="images/florida1.jpg">
-                <img src="images/florida2.jpg">
-            </div>
+	</div>
 
-            <div class="film-strip" id="animals">
-                <img src="images/animals1.jpg">
-                <img src="images/animals2.jpg">
-            </div>
+	<!-- =========================================
+	     RIGHT SIDE VIEWER
+	========================================= -->
 
-            <div class="film-strip" id="portraits">
-                <img src="images/portraits1.jpg">
-                <img src="images/portraits2.jpg">
-            </div>
+	<div class="viewer">
 
-            <div class="film-strip" id="france">
-                <img src="images/france1.jpg">
-                <img src="images/france2.jpg">
-            </div>
+		<!-- =========================
+		     HORSES
+		========================= -->
 
-        </div>
+		<div class="gallery active" id="horses">
 
-    </div>
+			<div class="deck">
+
+				<button class="deck-btn left">‹</button>
+
+				<div class="deck-track">
+
+					<div class="deck-card active">
+						<img src="images/horses1.jpg" alt="">
+					</div>
+
+					<div class="deck-card next">
+						<img src="images/horses2.jpg" alt="">
+					</div>
+
+					<div class="deck-card">
+						<img src="images/horses3.jpg" alt="">
+					</div>
+
+				</div>
+
+				<button class="deck-btn right">›</button>
+
+			</div>
+
+		</div>
+
+		<!-- =========================
+		     LONDON
+		========================= -->
+
+		<div class="gallery" id="london">
+
+			<div class="deck">
+
+				<button class="deck-btn left">‹</button>
+
+				<div class="deck-track">
+
+					<div class="deck-card active">
+						<img src="images/london1.jpg" alt="">
+					</div>
+
+					<div class="deck-card next">
+						<img src="images/london2.jpg" alt="">
+					</div>
+
+					<div class="deck-card">
+						<img src="images/london3.jpg" alt="">
+					</div>
+
+				</div>
+
+				<button class="deck-btn right">›</button>
+
+			</div>
+
+		</div>
+
+		<!-- =========================
+		     NAVIGATION
+		========================= -->
+
+		<div class="gallery" id="navigation">
+
+			<div class="deck">
+
+				<button class="deck-btn left">‹</button>
+
+				<div class="deck-track">
+
+					<div class="deck-card active">
+						<img src="images/nav1.jpg" alt="">
+					</div>
+
+					<div class="deck-card next">
+						<img src="images/nav2.jpg" alt="">
+					</div>
+
+					<div class="deck-card">
+						<img src="images/nav3.jpg" alt="">
+					</div>
+
+				</div>
+
+				<button class="deck-btn right">›</button>
+
+			</div>
+
+		</div>
+
+		<!-- =========================
+		     FLORIDA
+		========================= -->
+
+		<div class="gallery" id="florida">
+
+			<div class="deck">
+
+				<button class="deck-btn left">‹</button>
+
+				<div class="deck-track">
+
+					<div class="deck-card active">
+						<img src="images/florida1.jpg" alt="">
+					</div>
+
+					<div class="deck-card next">
+						<img src="images/florida2.jpg" alt="">
+					</div>
+
+				</div>
+
+				<button class="deck-btn right">›</button>
+
+			</div>
+
+		</div>
+
+		<!-- =========================
+		     ANIMALS
+		========================= -->
+
+		<div class="gallery" id="animals">
+
+			<div class="deck">
+
+				<button class="deck-btn left">‹</button>
+
+				<div class="deck-track">
+
+					<div class="deck-card active">
+						<img src="images/animals1.jpg" alt="">
+					</div>
+
+					<div class="deck-card next">
+						<img src="images/animals2.jpg" alt="">
+					</div>
+
+				</div>
+
+				<button class="deck-btn right">›</button>
+
+			</div>
+
+		</div>
+
+		<!-- =========================
+		     PORTRAITS
+		========================= -->
+
+		<div class="gallery" id="portraits">
+
+			<div class="deck">
+
+				<button class="deck-btn left">‹</button>
+
+				<div class="deck-track">
+
+					<div class="deck-card active">
+						<img src="images/portraits1.jpg" alt="">
+					</div>
+
+					<div class="deck-card next">
+						<img src="images/portraits2.jpg" alt="">
+					</div>
+
+				</div>
+
+				<button class="deck-btn right">›</button>
+
+			</div>
+
+		</div>
+
+		<!-- =========================
+		     FRANCE
+		========================= -->
+
+		<div class="gallery" id="france">
+
+			<div class="deck">
+
+				<button class="deck-btn left">‹</button>
+
+				<div class="deck-track">
+
+					<div class="deck-card active">
+						<img src="images/france1.jpg" alt="">
+					</div>
+
+					<div class="deck-card next">
+						<img src="images/france2.jpg" alt="">
+					</div>
+
+				</div>
+
+				<button class="deck-btn right">›</button>
+
+			</div>
+
+		</div>
+
+	</div>
 
 </section>
 
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
-const nodes = document.querySelectorAll(".node");
-const strips = document.querySelectorAll(".film-strip");
 
-nodes.forEach(btn => {
-    btn.addEventListener("click", () => {
+const buttons = document.querySelectorAll(".node");
+const galleries = document.querySelectorAll(".gallery");
 
-        nodes.forEach(n => n.classList.remove("active"));
-        strips.forEach(s => s.classList.remove("active"));
+/* =========================================
+   SWITCH EXHIBITIONS
+========================================= */
 
-        btn.classList.add("active");
+buttons.forEach(button => {
 
-        document.getElementById(btn.dataset.gallery)
-            .classList.add("active");
-    });
+	button.addEventListener("click", () => {
+
+		buttons.forEach(btn => btn.classList.remove("active"));
+		galleries.forEach(gallery => gallery.classList.remove("active"));
+
+		button.classList.add("active");
+
+		const target =
+			document.getElementById(button.dataset.gallery);
+
+		target.classList.add("active");
+
+	});
+
 });
+
+/* =========================================
+   DECK CAROUSELS
+========================================= */
+
+document.querySelectorAll(".deck").forEach(deck => {
+
+	const track = deck.querySelector(".deck-track");
+
+	const cards =
+		deck.querySelectorAll(".deck-card");
+
+	const leftBtn =
+		deck.querySelector(".left");
+
+	const rightBtn =
+		deck.querySelector(".right");
+
+	let index = 0;
+
+	function updateDeck() {
+
+		cards.forEach(card => {
+			card.classList.remove(
+				"active",
+				"prev",
+				"next"
+			);
+		});
+
+		cards[index].classList.add("active");
+
+		if(index > 0) {
+			cards[index - 1].classList.add("prev");
+		}
+
+		if(index < cards.length - 1) {
+			cards[index + 1].classList.add("next");
+		}
+
+		const offset =
+			(cards[0].offsetWidth + 16) * index;
+
+		const center =
+			(deck.offsetWidth / 2) -
+			(cards[0].offsetWidth / 2);
+
+		track.style.transform =
+			`translateX(${center - offset}px)`;
+	}
+
+	rightBtn.addEventListener("click", () => {
+
+		index++;
+
+		if(index >= cards.length) {
+			index = cards.length - 1;
+		}
+
+		updateDeck();
+
+	});
+
+	leftBtn.addEventListener("click", () => {
+
+		index--;
+
+		if(index < 0) {
+			index = 0;
+		}
+
+		updateDeck();
+
+	});
+
+	updateDeck();
+
+});
+
 </script>
 
 </body>
