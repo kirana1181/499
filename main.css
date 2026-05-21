@@ -160,7 +160,7 @@ body {
 }
 
 /* cards */
-.card {
+.deck .card {
 	min-width: 60%;
 	height: 50vh;
 	transition: all 0.6s ease;
