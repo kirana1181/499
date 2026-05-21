@@ -1,128 +1,257 @@
-<!DOCTYPE html>
-<html lang="en">
+/* =========================
+   RESET
+========================= */
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Photography</title>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+/* =========================
+   PAGE LAYOUT
+========================= */
 
-	<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+body {
+	background: #0b0b0b;
+	color: white;
+	font-family: "Helvetica Neue", sans-serif;
+	overflow: hidden;
+}
 
-	<link rel="stylesheet" href="main.css">
-	<link rel="stylesheet" href="photo.css">
-</head>
+/* =========================
+   MAIN LAYOUT
+========================= */
 
-<body>
+.photo-layout {
+	display: flex;
+	height: 100vh;
+	width: 100%;
+}
 
-<!-- =========================
-     PHOTOGRAPHY PAGE
-========================= -->
+/* =========================
+   LEFT: TREE NAV (ARCHIVE SYSTEM)
+========================= */
 
-<section class="photo-layout">
+.tree {
+	width: 28%;
+	min-width: 260px;
+	padding: 3rem 2rem;
 
-	<!-- LEFT: TREE HOTSPOTS -->
-	<div class="tree">
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
 
-		<button class="node active" data-gallery="horses">
-			horses of rhosilli bay
-		</button>
+	position: relative;
 
-		<button class="node" data-gallery="london">
-			downtown london
-		</button>
+	border-right: 1px solid rgba(255,255,255,0.1);
+}
 
-		<button class="node" data-gallery="navigation">
-			navigation that guides you
-		</button>
+/* TREE SPINE */
+.tree::before {
+	content: "";
+	position: absolute;
+	left: 18px;
+	top: 3rem;
+	bottom: 3rem;
+	width: 1px;
 
-		<button class="node" data-gallery="florida">
-			florida
-		</button>
+	background: linear-gradient(
+		to bottom,
+		transparent,
+		rgba(255,255,255,0.25),
+		transparent
+	);
 
-		<button class="node" data-gallery="animals">
-			animals
-		</button>
+	animation: growLine 1.2s ease forwards;
+	transform-origin: top;
+}
 
-		<button class="node" data-gallery="portraits">
-			portraits
-		</button>
+/* NODE BUTTONS */
+.node {
+	all: unset;
+	cursor: pointer;
 
-		<button class="node" data-gallery="france">
-			france
-		</button>
+	position: relative;
+	padding-left: 2.5rem;
 
-	</div>
+	font-family: "Cormorant Garamond", serif;
+	font-size: 1.1rem;
+	letter-spacing: 0.08em;
+	text-transform: lowercase;
 
-	<!-- RIGHT: VIEWER -->
-	<div class="viewer">
+	color: rgba(255,255,255,0.6);
 
-		<div class="gallery active" id="horses">
-			<img src="images/horses1.jpg">
-			<img src="images/horses2.jpg">
-			<img src="images/horses3.jpg">
-		</div>
+	opacity: 0;
+	transform: translateX(-10px);
 
-		<div class="gallery" id="london">
-			<img src="images/london1.jpg">
-			<img src="images/london2.jpg">
-			<img src="images/london3.jpg">
-		</div>
+	animation: nodeIn 0.6s ease forwards;
 
-		<div class="gallery" id="navigation">
-			<img src="images/nav1.jpg">
-			<img src="images/nav2.jpg">
-			<img src="images/nav3.jpg">
-		</div>
+	transition: all 0.4s ease;
+}
 
-		<div class="gallery" id="florida">
-			<img src="images/florida1.jpg">
-			<img src="images/florida2.jpg">
-		</div>
+/* stagger animation (tree growth) */
+.node:nth-child(1) { animation-delay: 0.1s; }
+.node:nth-child(2) { animation-delay: 0.15s; }
+.node:nth-child(3) { animation-delay: 0.2s; }
+.node:nth-child(4) { animation-delay: 0.25s; }
+.node:nth-child(5) { animation-delay: 0.3s; }
+.node:nth-child(6) { animation-delay: 0.35s; }
+.node:nth-child(7) { animation-delay: 0.4s; }
 
-		<div class="gallery" id="animals">
-			<img src="images/animals1.jpg">
-			<img src="images/animals2.jpg">
-		</div>
+/* TREE DOT */
+.node::before {
+	content: "";
+	position: absolute;
+	left: 12px;
+	top: 50%;
+	transform: translateY(-50%);
 
-		<div class="gallery" id="portraits">
-			<img src="images/portraits1.jpg">
-			<img src="images/portraits2.jpg">
-		</div>
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
 
-		<div class="gallery" id="france">
-			<img src="images/france1.jpg">
-			<img src="images/france2.jpg">
-		</div>
+	background: rgba(255,255,255,0.4);
+	transition: all 0.4s ease;
+}
 
-	</div>
+/* HOVER */
+.node:hover {
+	color: white;
+	transform: translateX(6px);
+}
 
-</section>
+.node:hover::before {
+	background: white;
+	box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
 
-<!-- =========================
-     SCRIPT (IMPORTANT: before </body>)
-========================= -->
+/* ACTIVE */
+.node.active {
+	color: white;
+	transform: translateX(10px);
+}
 
-<script>
-	const buttons = document.querySelectorAll(".node");
-	const galleries = document.querySelectorAll(".gallery");
+.node.active::before {
+	background: white;
+	box-shadow: 0 0 14px rgba(255,255,255,0.6);
+}
 
-	buttons.forEach(btn => {
-		btn.addEventListener("click", () => {
+/* =========================
+   RIGHT: VIEWER (FILM PROJECTION)
+========================= */
 
-			buttons.forEach(b => b.classList.remove("active"));
-			galleries.forEach(g => g.classList.remove("active"));
+.viewer {
+	flex: 1;
+	position: relative;
+	background: black;
+	overflow: hidden;
+}
 
-			btn.classList.add("active");
+/* GALLERY LAYER */
+.gallery {
+	position: absolute;
+	inset: 0;
 
-			const target = document.getElementById(btn.dataset.gallery);
-			target.classList.add("active");
-		});
-	});
-</script>
+	display: flex;
+	gap: 1rem;
+	padding: 3rem;
 
-</body>
-</html>
+	opacity: 0;
+	pointer-events: none;
+
+	transform: translateX(40px) scale(1.02);
+
+	transition:
+		opacity 0.6s ease,
+		transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ACTIVE GALLERY */
+.gallery.active {
+	opacity: 1;
+	pointer-events: auto;
+
+	transform: translateX(0) scale(1);
+}
+
+/* IMAGES (FILM STRIP FEEL) */
+.gallery img {
+	flex: 1;
+	height: 100%;
+	object-fit: cover;
+
+	border-radius: 6px;
+
+	filter: brightness(0.85) contrast(1.05);
+
+	transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* staggered film reveal */
+.gallery img:nth-child(1) { transition-delay: 0.05s; }
+.gallery img:nth-child(2) { transition-delay: 0.1s; }
+.gallery img:nth-child(3) { transition-delay: 0.15s; }
+
+/* hover zoom */
+.gallery img:hover {
+	transform: scale(1.04);
+	filter: brightness(1);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes nodeIn {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes growLine {
+	from {
+		transform: scaleY(0);
+	}
+	to {
+		transform: scaleY(1);
+	}
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+	body {
+		overflow: auto;
+	}
+
+	.photo-layout {
+		flex-direction: column;
+		height: auto;
+	}
+
+	.tree {
+		width: 100%;
+		flex-direction: row;
+		overflow-x: auto;
+		gap: 1rem;
+		border-right: none;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+
+	.tree::before {
+		display: none;
+	}
+
+	.node {
+		white-space: nowrap;
+	}
+
+	.viewer {
+		height: 70vh;
+	}
+}
