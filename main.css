@@ -209,33 +209,6 @@ body {
 		0 30px 60px rgba(0,0,0,0.45);
 }
 
-/* =========================
-   BASE
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:'Manrope', sans-serif;
-    background:#050505;
-    color:white;
-    overflow:hidden;
-}
-
-/* subtle cinematic atmosphere */
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:
-    radial-gradient(circle at 20% 20%, rgba(0,255,200,0.08), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(255,0,150,0.06), transparent 40%);
-    pointer-events:none;
-}
 
 
 /* =========================
