@@ -1,149 +1,79 @@
+<section class="photo-layout">
 
-/* =========================
-   PHOTOGRAPHY TREE SYSTEM
-========================= */
+	<!-- LEFT: TREE NAV -->
+	<div class="tree">
 
-.tree-section {
-	background: #f5f5f5;
-	min-height: 100vh;
+		<button class="node active" data-gallery="horses">
+			horses of rhosilli bay
+		</button>
 
-	display: flex;
-	align-items: center;
+		<button class="node" data-gallery="london">
+			downtown london
+		</button>
 
-	padding: 8rem 6vw;
+		<button class="node" data-gallery="navigation">
+			navigation that guides you
+		</button>
 
-	position: relative;
-	overflow: hidden;
-}
+		<button class="node" data-gallery="florida">
+			florida
+		</button>
 
-/* MAIN LAYOUT */
-.tree {
-	position: relative;
+		<button class="node" data-gallery="animals">
+			animals
+		</button>
 
-	display: flex;
-	flex-direction: column;
-	gap: 3.5rem;
+		<button class="node" data-gallery="portraits">
+			portraits
+		</button>
 
-	width: 320px;
+		<button class="node" data-gallery="france">
+			france
+		</button>
 
-	padding-left: 4rem;
-}
+	</div>
 
-/* VERTICAL SPINE */
-.tree::before {
-	content: "";
+	<!-- RIGHT: VIEWER -->
+	<div class="viewer">
 
-	position: absolute;
+		<div class="gallery active" id="horses">
+			<img src="images/horses1.jpg">
+			<img src="images/horses2.jpg">
+			<img src="images/horses3.jpg">
+		</div>
 
-	left: 0;
-	top: 0;
-	bottom: 0;
+		<div class="gallery" id="london">
+			<img src="images/london1.jpg">
+			<img src="images/london2.jpg">
+			<img src="images/london3.jpg">
+		</div>
 
-	width: 1px;
+		<div class="gallery" id="navigation">
+			<img src="images/nav1.jpg">
+			<img src="images/nav2.jpg">
+			<img src="images/nav3.jpg">
+		</div>
 
-	background: rgba(0,0,0,0.2);
-}
+		<div class="gallery" id="florida">
+			<img src="images/florida1.jpg">
+			<img src="images/florida2.jpg">
+		</div>
 
-/* EACH BRANCH */
-.branch {
-	position: relative;
+		<div class="gallery" id="animals">
+			<img src="images/animals1.jpg">
+			<img src="images/animals2.jpg">
+		</div>
 
-	display: flex;
-	align-items: center;
+		<div class="gallery" id="portraits">
+			<img src="images/portraits1.jpg">
+			<img src="images/portraits2.jpg">
+		</div>
 
-	opacity: 0;
-	transform: translateY(20px);
+		<div class="gallery" id="france">
+			<img src="images/france1.jpg">
+			<img src="images/france2.jpg">
+		</div>
 
-	animation: fadeBranch 0.8s ease forwards;
-}
+	</div>
 
-/* STAGGERED REVEAL */
-.branch:nth-child(1) { animation-delay: 0.1s; }
-.branch:nth-child(2) { animation-delay: 0.2s; }
-.branch:nth-child(3) { animation-delay: 0.3s; }
-.branch:nth-child(4) { animation-delay: 0.4s; }
-.branch:nth-child(5) { animation-delay: 0.5s; }
-.branch:nth-child(6) { animation-delay: 0.6s; }
-.branch:nth-child(7) { animation-delay: 0.7s; }
-
-/* HORIZONTAL CONNECTOR */
-.line {
-	width: 60px;
-	height: 1px;
-
-	background: rgba(0,0,0,0.2);
-}
-
-/* NODE BUTTON */
-.node {
-	display: inline-flex;
-	align-items: center;
-
-	min-height: 70px;
-	min-width: 240px;
-
-	padding: 1.5rem 2rem;
-
-	border: 1px solid rgba(0,0,0,0.2);
-
-	background: rgba(255,255,255,0.7);
-
-	backdrop-filter: blur(10px);
-
-	text-decoration: none;
-
-	color: #111;
-
-	font-family: "Cormorant Garamond", serif;
-	font-size: 1.8rem;
-	font-weight: 400;
-	letter-spacing: 0.02em;
-	text-transform: lowercase;
-
-	transition:
-		transform 0.4s ease,
-		background 0.4s ease,
-		color 0.4s ease,
-		border 0.4s ease,
-		box-shadow 0.4s ease;
-}
-
-/* HOVER */
-.node:hover {
-	background: #111;
-	color: white;
-
-	transform: translateX(8px);
-
-	box-shadow:
-		0 15px 40px rgba(0,0,0,0.15);
-}
-
-/* FADE IN */
-@keyframes fadeBranch {
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-
-	.tree-section {
-		padding: 5rem 2rem;
-	}
-
-	.tree {
-		width: 100%;
-		padding-left: 2rem;
-	}
-
-	.node {
-		min-width: 100%;
-		font-size: 1.4rem;
-	}
-}
+</section>
