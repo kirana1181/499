@@ -1,6 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Photography</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="photo.css">
+</head>
+
+<body>
+
+<!-- =========================
+     PHOTOGRAPHY PAGE
+========================= -->
+
 <section class="photo-layout">
 
-	<!-- LEFT: TREE NAV -->
+	<!-- LEFT: TREE HOTSPOTS -->
 	<div class="tree">
 
 		<button class="node active" data-gallery="horses">
@@ -77,3 +101,28 @@
 	</div>
 
 </section>
+
+<!-- =========================
+     SCRIPT (IMPORTANT: before </body>)
+========================= -->
+
+<script>
+	const buttons = document.querySelectorAll(".node");
+	const galleries = document.querySelectorAll(".gallery");
+
+	buttons.forEach(btn => {
+		btn.addEventListener("click", () => {
+
+			buttons.forEach(b => b.classList.remove("active"));
+			galleries.forEach(g => g.classList.remove("active"));
+
+			btn.classList.add("active");
+
+			const target = document.getElementById(btn.dataset.gallery);
+			target.classList.add("active");
+		});
+	});
+</script>
+
+</body>
+</html>
