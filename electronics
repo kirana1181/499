@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Electronic Sculpture Archive</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="electronics.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -6,12 +24,10 @@
 <div class="grid-overlay"></div>
 
 <div class="side-label">
-Electronic Sculpture Archive
+    Electronic Sculpture Archive
 </div>
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -35,9 +51,7 @@ Electronic Sculpture Archive
 
 </section>
 
-<!-- =========================
-     FILTERS
-========================= -->
+<!-- FILTERS -->
 
 <section class="filters">
 
@@ -63,9 +77,7 @@ Electronic Sculpture Archive
 
 </section>
 
-<!-- =========================
-     PROJECTS
-========================= -->
+<!-- PROJECTS -->
 
 <section class="projects">
 
@@ -248,15 +260,15 @@ Electronic Sculpture Archive
     </div>
 
 </div>
+
 </section>
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer class="footer">
 
     <div>
+
         <h3>
             Archive
         </h3>
@@ -264,9 +276,11 @@ Electronic Sculpture Archive
         <p>
             Experimental Media / Robotics / Electronic Sculpture
         </p>
+
     </div>
 
     <div>
+
         <h3>
             Contact
         </h3>
@@ -274,19 +288,20 @@ Electronic Sculpture Archive
         <a href="#">
             Instagram
         </a>
+
         <br>
+
         <a href="#">
             Vimeo
         </a>
+
     </div>
 
 </footer>
 
 <script>
 
-/* =========================
-   FILTER SYSTEM
-========================= */
+/* FILTER SYSTEM */
 
 const buttons = document.querySelectorAll(".filter-btn");
 const cards = document.querySelectorAll(".project-card");
