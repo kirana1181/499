@@ -230,183 +230,119 @@ body {
 	right: 2rem;
 }
 
-/* =========================
-   DIMENSION GRID SYSTEM
-========================= */
 
 /* =========================
-   CINEMATIC BUTTON FIELD
+   CINEMATIC NAV SECTION
 ========================= */
 
 .nav-dimension {
-	background: #f5f5f5;
-	padding: 8rem 4rem;
+	background: black;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+	padding: 1rem 2rem 5rem 2rem;
 
-/* LOOSE LAYOUT */
-.nav-dimension .grid {
-
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 2rem;
-
-	max-width: 1200px;
-}
-
-/* BUTTONS */
-.nav-dimension .card {
+	margin-top: -2rem;
 
 	position: relative;
 
 	display: flex;
+	justify-content: center;
 	align-items: center;
+
+	overflow: hidden;
+}
+
+/* GRID */
+.nav-dimension .grid {
+	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 
-	padding: 2.8rem 3.5rem;
-	min-width: 240px;
+	gap: 1.2rem;
+
+	max-width: 1100px;
+
+	position: relative;
+	z-index: 2;
+}
+
+/* BUTTONS */
+.nav-dimension .card {
+	position: relative;
+
+	min-width: 220px;
 	min-height: 170px;
+
+	padding: 2.5rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	background:
 		linear-gradient(
 			145deg,
-			rgba(255,255,255,0.95),
-			rgba(240,240,240,0.75)
+			rgba(255,255,255,0.06),
+			rgba(255,255,255,0.02)
 		);
 
-	border: 1px solid rgba(0,0,0,0.08);
-
-	border-radius: 1.4rem;
+	border: 1px solid rgba(255,255,255,0.12);
 
 	backdrop-filter: blur(12px);
 
 	text-decoration: none;
 
+	color: white;
+
 	font-family: "Cormorant Garamond", serif;
-	font-size: 2.2rem;
+	font-size: 2.1rem;
 	font-weight: 400;
-	letter-spacing: 0.06em;
+	letter-spacing: 0.05em;
 	text-transform: lowercase;
 
-	color: #111;
+	border-radius: 18px;
 
 	box-shadow:
-		0 8px 30px rgba(0,0,0,0.08),
-		0 25px 80px rgba(0,0,0,0.05);
+		0 10px 30px rgba(0,0,0,0.35);
 
+	/* START HIDDEN */
 	opacity: 0;
-	transform:
-		translateY(40px)
-		scale(0.96);
-
-	animation: cinematicFade 1.2s ease forwards;
+	transform: translateY(80px);
 
 	transition:
-		transform 0.5s ease,
-		box-shadow 0.5s ease,
-		background 0.5s ease,
-		color 0.5s ease;
+		transform 0.8s cubic-bezier(.22,.61,.36,1),
+		opacity 0.8s ease,
+		background 0.4s ease,
+		box-shadow 0.4s ease;
 }
 
-/* subtle glowing edge */
-.nav-dimension .card::after {
+/* REVEAL */
+.nav-dimension .card.show {
+	opacity: 1;
+	transform: translateY(0);
+}
 
-	content: "";
+/* STAGGER */
+.nav-dimension .card:nth-child(1) { transition-delay: 0.05s; }
+.nav-dimension .card:nth-child(2) { transition-delay: 0.12s; }
+.nav-dimension .card:nth-child(3) { transition-delay: 0.19s; }
+.nav-dimension .card:nth-child(4) { transition-delay: 0.26s; }
+.nav-dimension .card:nth-child(5) { transition-delay: 0.33s; }
+.nav-dimension .card:nth-child(6) { transition-delay: 0.40s; }
 
-	position: absolute;
-	inset: 0;
-
-	border-radius: inherit;
+/* HOVER */
+.nav-dimension .card:hover {
+	transform: translateY(-8px) scale(1.03);
 
 	background:
 		linear-gradient(
-			120deg,
-			rgba(255,255,255,0.3),
-			transparent
+			145deg,
+			rgba(255,255,255,0.14),
+			rgba(255,255,255,0.04)
 		);
 
-	opacity: 0;
-
-	transition: opacity 0.4s ease;
-}
-
-/* hover */
-.nav-dimension .card:hover {
-
-	transform:
-		translateY(-10px)
-		scale(1.03)
-		rotate(-0.5deg);
-
-	background: #111;
-	color: white;
-
 	box-shadow:
-		0 25px 80px rgba(0,0,0,0.18),
-		0 10px 30px rgba(0,0,0,0.12);
+		0 30px 60px rgba(0,0,0,0.45);
 }
-
-.nav-dimension .card:hover::after {
-	opacity: 1;
-}
-
-/* STAGGERED FADE */
-.nav-dimension .card:nth-child(1) {
-	animation-delay: 0.1s;
-}
-
-.nav-dimension .card:nth-child(2) {
-	animation-delay: 0.25s;
-	transform: translateY(60px);
-}
-
-.nav-dimension .card:nth-child(3) {
-	animation-delay: 0.4s;
-}
-
-.nav-dimension .card:nth-child(4) {
-	animation-delay: 0.55s;
-	transform: translateY(50px);
-}
-
-.nav-dimension .card:nth-child(5) {
-	animation-delay: 0.7s;
-}
-
-.nav-dimension .card:nth-child(6) {
-	animation-delay: 0.85s;
-	transform: translateY(30px);
-}
-
-/* CINEMATIC FADE */
-@keyframes cinematicFade {
-
-	to {
-		opacity: 1;
-		transform:
-			translateY(0)
-			scale(1);
-	}
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-	.nav-dimension .grid {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.nav-dimension .card {
-		width: 100%;
-		max-width: 420px;
-	}
-}
-
 /* =========================
    ANIMATION
 ========================= */
