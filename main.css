@@ -226,13 +226,13 @@ body {
     text-align:center;
     border:1px solid rgba(255,255,255,0.1);
     text-decoration:none;
-    color:white;
+    color:navy;
     transition:0.3s;
 }
 
 .split a:hover{
     flex:2;
-    background:rgba(0,255,200,0.08);
+    background: white
 }
 
 /* =========================
