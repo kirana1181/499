@@ -140,6 +140,19 @@ revealCards.forEach(card => {
 });
 
 </script>
+	<script>
+
+const menuToggle = document.getElementById("menuToggle");
+const fullscreenMenu = document.getElementById("fullscreenMenu");
+
+menuToggle.addEventListener("click", () => {
+
+	menuToggle.classList.toggle("active");
+	fullscreenMenu.classList.toggle("show");
+
+});
+
+</script>
 </body>
 
 </html>
