@@ -219,97 +219,177 @@ body {
    DIMENSION GRID SYSTEM
 ========================= */
 
+/* =========================
+   CINEMATIC BUTTON FIELD
+========================= */
+
 .nav-dimension {
 	background: #f5f5f5;
-	padding: 6rem 2rem;
-	text-align: center;
-	position: relative;
+	padding: 8rem 4rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-/* spine line */
-.nav-dimension .spine {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 50%;
-	width: 1px;
-	background: rgba(0,0,0,0.15);
-	transform: translateX(-50%);
-}
-
-/* title */
-.nav-dimension .title {
-	font-family: "Unbounded", sans-serif;
-	font-size: clamp(3rem, 8vw, 6rem);
-	color: #111;
-	margin-bottom: 0.5rem;
-	opacity: 0;
-	animation: fadeUp 0.8s ease forwards;
-}
-
-/* subtitle */
-.nav-dimension .subtitle {
-	font-family: "Unbounded", sans-serif;
-	font-size: 0.8rem;
-	letter-spacing: 0.35em;
-	color: rgba(0,0,0,0.6);
-	margin-bottom: 3rem;
-	opacity: 0;
-	animation: fadeUp 0.8s ease forwards;
-	animation-delay: 0.1s;
-}
-
-/* GRID */
+/* LOOSE LAYOUT */
 .nav-dimension .grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 0.6rem;
-	max-width: 900px;
-	margin: 0 auto;
-	position: relative;
-	z-index: 2;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+
+	max-width: 1200px;
 }
 
-/* CARDS (cinematic upgrade) */
+/* BUTTONS */
 .nav-dimension .card {
-	min-height: 180px;
+
+	position: relative;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
-	background: rgba(255,255,255,0.8);
-	border: 1px solid rgba(0,0,0,0.2);
-	backdrop-filter: blur(10px);
+	padding: 2.8rem 3.5rem;
+	min-width: 240px;
+	min-height: 170px;
 
-	font-family: "Cormorant Garamond", serif;
-	font-size: 2rem;
-	text-transform: lowercase;
-	letter-spacing: 0.08em;
-	color: #111;
+	background:
+		linear-gradient(
+			145deg,
+			rgba(255,255,255,0.95),
+			rgba(240,240,240,0.75)
+		);
+
+	border: 1px solid rgba(0,0,0,0.08);
+
+	border-radius: 1.4rem;
+
+	backdrop-filter: blur(12px);
 
 	text-decoration: none;
 
-	opacity: 0;
-	transform: translateY(20px);
-	animation: fadeUp 0.8s ease forwards;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 2.2rem;
+	font-weight: 400;
+	letter-spacing: 0.06em;
+	text-transform: lowercase;
 
-	transition: all 0.4s ease;
+	color: #111;
+
+	box-shadow:
+		0 8px 30px rgba(0,0,0,0.08),
+		0 25px 80px rgba(0,0,0,0.05);
+
+	opacity: 0;
+	transform:
+		translateY(40px)
+		scale(0.96);
+
+	animation: cinematicFade 1.2s ease forwards;
+
+	transition:
+		transform 0.5s ease,
+		box-shadow 0.5s ease,
+		background 0.5s ease,
+		color 0.5s ease;
 }
 
-/* stagger */
-.nav-dimension .card:nth-child(1) { animation-delay: 0.15s; }
-.nav-dimension .card:nth-child(2) { animation-delay: 0.25s; }
-.nav-dimension .card:nth-child(3) { animation-delay: 0.35s; }
-.nav-dimension .card:nth-child(4) { animation-delay: 0.45s; }
-.nav-dimension .card:nth-child(5) { animation-delay: 0.55s; }
-.nav-dimension .card:nth-child(6) { animation-delay: 0.65s; }
+/* subtle glowing edge */
+.nav-dimension .card::after {
+
+	content: "";
+
+	position: absolute;
+	inset: 0;
+
+	border-radius: inherit;
+
+	background:
+		linear-gradient(
+			120deg,
+			rgba(255,255,255,0.3),
+			transparent
+		);
+
+	opacity: 0;
+
+	transition: opacity 0.4s ease;
+}
 
 /* hover */
 .nav-dimension .card:hover {
+
+	transform:
+		translateY(-10px)
+		scale(1.03)
+		rotate(-0.5deg);
+
 	background: #111;
 	color: white;
-	transform: translateY(-8px) scale(1.02);
-	box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+
+	box-shadow:
+		0 25px 80px rgba(0,0,0,0.18),
+		0 10px 30px rgba(0,0,0,0.12);
+}
+
+.nav-dimension .card:hover::after {
+	opacity: 1;
+}
+
+/* STAGGERED FADE */
+.nav-dimension .card:nth-child(1) {
+	animation-delay: 0.1s;
+}
+
+.nav-dimension .card:nth-child(2) {
+	animation-delay: 0.25s;
+	transform: translateY(60px);
+}
+
+.nav-dimension .card:nth-child(3) {
+	animation-delay: 0.4s;
+}
+
+.nav-dimension .card:nth-child(4) {
+	animation-delay: 0.55s;
+	transform: translateY(50px);
+}
+
+.nav-dimension .card:nth-child(5) {
+	animation-delay: 0.7s;
+}
+
+.nav-dimension .card:nth-child(6) {
+	animation-delay: 0.85s;
+	transform: translateY(30px);
+}
+
+/* CINEMATIC FADE */
+@keyframes cinematicFade {
+
+	to {
+		opacity: 1;
+		transform:
+			translateY(0)
+			scale(1);
+	}
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+	.nav-dimension .grid {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.nav-dimension .card {
+		width: 100%;
+		max-width: 420px;
+	}
 }
 
 /* =========================
