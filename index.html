@@ -74,7 +74,49 @@
 	</div>
 
 </section>
-		
+	<script>
+
+let current = 0;
+
+const track = document.getElementById("deckTrack");
+const cards = document.querySelectorAll(".deck .card");
+
+function updateDeck() {
+
+	/* remove active */
+	cards.forEach(card => {
+		card.classList.remove("active");
+	});
+
+	/* active center card */
+	cards[current].classList.add("active");
+
+	/* move track */
+	const offset = current * 68;
+
+	track.style.transform = `translateX(-${offset}%)`;
+}
+
+function move(direction) {
+
+	current += direction;
+
+	/* loop */
+	if (current < 0) {
+		current = cards.length - 1;
+	}
+
+	if (current >= cards.length) {
+		current = 0;
+	}
+
+	updateDeck();
+}
+
+/* initial load */
+updateDeck();
+
+</script>	
 </body>
 
 </html>
