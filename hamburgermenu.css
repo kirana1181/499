@@ -152,5 +152,9 @@
 .fullscreen-menu.show a:nth-child(5) { transition-delay: 0.32s; }
 .fullscreen-menu.show a:nth-child(6) { transition-delay: 0.38s; }
 
+
 /* hover glow */
 .fullscreen-menu a:hover {
+	color: #d0d0d0;
+	transform: scale(1.05);
+}
