@@ -68,7 +68,7 @@ body {
 
 
 .hero-subtitle {
-	font-family: "Unbounded", sans-serif;
+	font-family: "Unbounded", sans-serif !important;
 	font-size: clamp(1rem, 4vw, 3rem);
 	font-weight: 200;
 	letter-spacing: 0.22em;
