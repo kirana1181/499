@@ -1,1 +1,326 @@
 
+</head>
+
+<body>
+
+<div class="grid-overlay"></div>
+
+<div class="side-label">
+Electronic Sculpture Archive
+</div>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-tag">
+        Experimental Systems / Interactive Media
+    </div>
+
+    <h1>
+        ELECTRONIC<br>
+        SCULPTURES<br>
+        & MACHINES
+    </h1>
+
+    <div class="hero-line"></div>
+
+    <p>
+        A collection of interactive installations, projection-mapped environments,
+        animatronics, kinetic sculptures, TouchDesigner systems, and experimental
+        electronic works blending cinema, robotics, and responsive media.
+    </p>
+
+</section>
+
+<!-- =========================
+     FILTERS
+========================= -->
+
+<section class="filters">
+
+    <button class="filter-btn active" data-filter="all">
+        All Projects
+    </button>
+
+    <button class="filter-btn" data-filter="touchdesigner">
+        TouchDesigner
+    </button>
+
+    <button class="filter-btn" data-filter="projection">
+        Projection Mapping
+    </button>
+
+    <button class="filter-btn" data-filter="animatronics">
+        Animatronics
+    </button>
+
+    <button class="filter-btn" data-filter="kinetic">
+        Kinetic Sculpture
+    </button>
+
+</section>
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section class="projects">
+
+<div class="project-grid">
+
+    <!-- PROJECT -->
+
+    <div class="project-card" data-category="touchdesigner">
+
+        <div class="project-image"
+        style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop');">
+        </div>
+
+        <div class="project-overlay"></div>
+
+        <div class="project-content">
+
+            <div class="category">
+                TouchDesigner
+            </div>
+
+            <h2 class="project-title">
+                Neural Pulse
+            </h2>
+
+            <p class="project-description">
+                Real-time generative visuals reacting to body movement,
+                heartbeat sensors, and spatial audio input through a
+                custom TouchDesigner pipeline.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECT -->
+
+    <div class="project-card" data-category="projection">
+
+        <div class="project-image"
+        style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop');">
+        </div>
+
+        <div class="project-overlay"></div>
+
+        <div class="project-content">
+
+            <div class="category">
+                Projection Mapping
+            </div>
+
+            <h2 class="project-title">
+                Concrete Dreams
+            </h2>
+
+            <p class="project-description">
+                Architectural projection-mapped installation transforming
+                abandoned structures into reactive cinematic environments.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECT -->
+
+    <div class="project-card" data-category="animatronics">
+
+        <div class="project-image"
+        style="background-image:url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1400&auto=format&fit=crop');">
+        </div>
+
+        <div class="project-overlay"></div>
+
+        <div class="project-content">
+
+            <div class="category">
+                Animatronics
+            </div>
+
+            <h2 class="project-title">
+                Hollow Choir
+            </h2>
+
+            <p class="project-description">
+                Servo-driven animatronic figures with synchronized movement,
+                programmable lighting, and ambient vocal playback systems.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECT -->
+
+    <div class="project-card" data-category="kinetic">
+
+        <div class="project-image"
+        style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&auto=format&fit=crop');">
+        </div>
+
+        <div class="project-overlay"></div>
+
+        <div class="project-content">
+
+            <div class="category">
+                Kinetic Sculpture
+            </div>
+
+            <h2 class="project-title">
+                Pulse Engine
+            </h2>
+
+            <p class="project-description">
+                A motorized mechanical sculpture exploring rhythm,
+                tension, and industrial motion through synchronized
+                rotational systems.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECT -->
+
+    <div class="project-card" data-category="touchdesigner">
+
+        <div class="project-image"
+        style="background-image:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1400&auto=format&fit=crop');">
+        </div>
+
+        <div class="project-overlay"></div>
+
+        <div class="project-content">
+
+            <div class="category">
+                TouchDesigner
+            </div>
+
+            <h2 class="project-title">
+                Echo Chamber
+            </h2>
+
+            <p class="project-description">
+                Multi-screen immersive environment generating evolving
+                digital landscapes through audience interaction.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECT -->
+
+    <div class="project-card" data-category="projection">
+
+        <div class="project-image"
+        style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop');">
+        </div>
+
+        <div class="project-overlay"></div>
+
+        <div class="project-content">
+
+            <div class="category">
+                Projection Mapping
+            </div>
+
+            <h2 class="project-title">
+                Signal Bloom
+            </h2>
+
+            <p class="project-description">
+                Interactive projection-mapped sculpture controlled by
+                motion sensors and custom DMX lighting sequences.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div>
+        <h3>
+            Archive
+        </h3>
+
+        <p>
+            Experimental Media / Robotics / Electronic Sculpture
+        </p>
+    </div>
+
+    <div>
+        <h3>
+            Contact
+        </h3>
+
+        <a href="#">
+            Instagram
+        </a>
+        <br>
+        <a href="#">
+            Vimeo
+        </a>
+    </div>
+
+</footer>
+
+<script>
+
+/* =========================
+   FILTER SYSTEM
+========================= */
+
+const buttons = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".project-card");
+
+buttons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        buttons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.dataset.filter;
+
+        cards.forEach(card => {
+
+            if(filter === "all"){
+                card.style.display = "block";
+            }
+
+            else if(card.dataset.category === filter){
+                card.style.display = "block";
+            }
+
+            else{
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
