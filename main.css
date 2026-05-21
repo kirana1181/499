@@ -237,85 +237,31 @@ body::before{
     pointer-events:none;
 }
 
+
 /* =========================
-   SPLIT NAV (CINEMATIC PANELS)
+   5. SPLIT SCREEN
 ========================= */
 
-.split-nav{
+.split{
     display:flex;
-    height:80vh;
-    width:100%;
-    margin-top:5rem;
+    gap:10px;
 }
 
-/* PANELS */
-.split-nav .panel{
+.split a{
     flex:1;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    padding:40px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,0.1);
     text-decoration:none;
     color:white;
-    position:relative;
-    overflow:hidden;
-    transition: flex 0.6s ease, filter 0.4s ease;
+    transition:0.3s;
 }
 
-/* EXPAND ON HOVER */
-.split-nav .panel:hover{
-    flex:3;
+.split a:hover{
+    flex:2;
+    background:rgba(0,255,200,0.08);
 }
 
-/* DIM OTHERS WHEN ONE IS ACTIVE */
-.split-nav:hover .panel:not(:hover){
-    filter: brightness(0.4);
-}
-
-/* TEXT */
-.split-nav h1{
-    font-family: "Unbounded", sans-serif;
-    font-size:3rem;
-    font-weight:300;
-    letter-spacing:2px;
-}
-
-.split-nav p{
-    font-family: "Cormorant Garamond", serif;
-    margin-top:10px;
-    opacity:0.7;
-    font-size:1.1rem;
-    text-align:center;
-    max-width:220px;
-}
-
-/* BACKGROUNDS */
-.split-nav .film{
-    background:linear-gradient(to bottom, #0a0a0a, #111);
-}
-
-.split-nav .electronic{
-    background:linear-gradient(to bottom, #061013, #0c1a1a);
-}
-
-.split-nav .photo{
-    background:linear-gradient(to bottom, #0a0a0a, #151515);
-}
-
-/* MOBILE */
-@media(max-width:900px){
-    .split-nav{
-        flex-direction:column;
-        height:auto;
-    }
-
-    .split-nav .panel{
-        height:30vh;
-    }
-
-    .split-nav .panel:hover{
-        flex:1.2;
-    }
-}
 /* =========================
    ANIMATION
 ========================= */
