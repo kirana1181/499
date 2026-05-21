@@ -255,3 +255,17 @@ body {
 		height: 70vh;
 	}
 }
+/* return button */
+.back-btn {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    opacity: 1;
+}
