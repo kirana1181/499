@@ -102,11 +102,11 @@ body {
 ========================= */
 
 .nav-dimension {
-	background: black;
+	background: white;
 
-	padding: 1rem 2rem 5rem 2rem;
+	padding: .5rem 1rem 2rem 1rem;
 
-	margin-top: -2rem;
+	margin-top: -.5rem;
 
 	position: relative;
 
@@ -157,12 +157,11 @@ body {
 
 	text-decoration: none;
 
-	color: white;
+	color: black;
 
-	font-family: "Cormorant Garamond", serif;
-	font-size: 2.1rem;
-	font-weight: 400;
-	letter-spacing: 0.05em;
+	font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.5px;
 	text-transform: lowercase;
 
 	border-radius: 18px;
