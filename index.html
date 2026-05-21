@@ -33,49 +33,46 @@
 	</section>
 
 	<!-- SECOND SECTION -->
-	<section class="content-section">
-		<h2>
-			a conglomeration of various projects. <br> film, photo, art, and electronic exibitions 
-		</h2>
+<section class="content-section">
 
-		<!-- SLIDESHOW / IMAGE GRID -->
+	<h2>
+		a conglomeration of various projects. <br>
+		film, photo, art, and electronic exhibitions
+	</h2>
+
+	<!-- AUTO CAROUSEL -->
 	<div class="slideshow">
+		<div class="slides">
+			<img src="images/pic1.png" alt="">
+			<img src="images/pic2.png" alt="">
+			<img src="images/pic3.png" alt="">
+		</div>
+	</div>
 
-	<div class="slides">
+	<!-- DECK CAROUSEL -->
+	<div class="deck">
 
-		<img src="images/pic1.png" alt="">
-		<img src="images/pic2.png" alt="">
-		<img src="images/pic3.png" alt="">
+		<button class="deck-btn left" onclick="move(-1)">‹</button>
+
+		<div class="deck-track" id="deckTrack">
+
+			<div class="card"><img src="images/pic1.png"></div>
+			<div class="card"><img src="images/pic2.png"></div>
+			<div class="card"><img src="images/pic3.png"></div>
+			<div class="card"><img src="images/pic4.png"></div>
+			<div class="card"><img src="images/pic5.png"></div>
+
+		</div>
+
+		<button class="deck-btn right" onclick="move(1)">›</button>
 
 	</div>
 
+</section>
 
-<div class="deck">
+<!-- NAV GRID -->
+<section class="nav-dimension">
 
-    <button class="deck-btn left" onclick="move(-1)">‹</button>
-
-    <div class="deck-track" id="deckTrack">
-
-        <div class="card"><img src="images/pic1.png"></div>
-        <div class="card"><img src="images/pic2.png"></div>
-        <div class="card"><img src="images/pic3.png"></div>
-        <div class="card"><img src="images/pic4.png"></div>
-        <div class="card"><img src="images/pic5.png"></div>
-
-    </div>
-
-    <button class="deck-btn right" onclick="move(1)">›</button>
-
-</div>
-
-
-
-
-
-		
-
-</div>
-<section class="nav-dimension"> 
 	<div class="grid">
 		<a href="film.html" class="card">film</a>
 		<a href="art.html" class="card">art</a>
@@ -83,11 +80,9 @@
 		<a href="photography.html" class="card">photo</a>
 		<a href="digital.html" class="card">digital</a>
 		<a href="electronic.html" class="card">electronic</a>
-
 	</div>
 
 </section>
-
 		
 </body>
 
