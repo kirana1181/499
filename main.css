@@ -126,26 +126,77 @@ body {
 }
 
 /* =========================
-   SLIDESHOW GRID
+   CINEMATIC CAROUSEL
 ========================= */
 
 .slideshow {
-	margin-top: 5rem;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 1.5rem;
-}
-
-.slideshow img {
+	position: relative;
 	width: 100%;
-	height: 500px;
-	object-fit: cover;
-	border-radius: 1rem;
-	transition: transform 0.4s ease;
+	height: 70vh;
+
+	margin-top: 5rem;
+
+	overflow: hidden;
+	border-radius: 1.5rem;
 }
 
-.slideshow img:hover {
-	transform: scale(1.02);
+/* TRACK */
+.slides {
+	display: flex;
+	width: 300%;
+	height: 100%;
+
+	animation: carousel 18s infinite;
+}
+
+/* IMAGES */
+.slides img {
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+	flex-shrink: 0;
+
+	filter: brightness(0.9);
+
+	transition: transform 0.6s ease;
+}
+
+/* subtle cinematic zoom */
+.slides img:hover {
+	transform: scale(1.03);
+}
+
+/* AUTO SLIDE */
+@keyframes carousel {
+
+	0% {
+		transform: translateX(0%);
+	}
+
+	30% {
+		transform: translateX(0%);
+	}
+
+	35% {
+		transform: translateX(-100%);
+	}
+
+	65% {
+		transform: translateX(-100%);
+	}
+
+	70% {
+		transform: translateX(-200%);
+	}
+
+	95% {
+		transform: translateX(-200%);
+	}
+
+	100% {
+		transform: translateX(0%);
+	}
 }
 
 /* =========================
