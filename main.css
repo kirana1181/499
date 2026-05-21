@@ -180,7 +180,7 @@ body {
 
 .nav-dimension {
 	position: relative;
-	min-height: 100vh;
+	/*min-height: 100vh;*/
 	background: #f5f5f5;
 
 	display: flex;
@@ -189,7 +189,7 @@ body {
 	justify-content: center;
 
 	text-align: center;
-	padding: 6rem 2rem;
+	/* padding: 6rem 2rem; */
 	overflow: hidden;
 }
 
