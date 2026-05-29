@@ -152,7 +152,7 @@ let current = 0;
 
 const deck = document.querySelector(".deck");
 const track = document.getElementById("deckTrack");
-const cards = document.querySelectorAll(".deck .card");
+const cards = track.querySelectorAll(".card");
 
 function updateDeck() {
 
@@ -222,35 +222,44 @@ revealCards.forEach(card => {
 </script>
 
 	<!-- Menu script -->
-	<script>
+<script>
 
 const menuToggle = document.getElementById("menuToggle");
 const sideMenu = document.getElementById("sideMenu");
-/* OPEN MENU */
+
+let menuTimeout;
+
+/* OPEN */
+
 function openMenu() {
+
+	clearTimeout(menuTimeout);
+
 	menuToggle.classList.add("active");
+
 	sideMenu.classList.add("show");
 }
-/* CLOSE MENU */
+
+/* CLOSE */
+
 function closeMenu() {
-	menuToggle.classList.remove("active");
-	sideMenu.classList.remove("show");
+
+	menuTimeout = setTimeout(() => {
+
+		menuToggle.classList.remove("active");
+
+		sideMenu.classList.remove("show");
+
+	}, 120);
 }
-/* OPEN WHEN HOVERING BUTTON */
+
+/* HOVER EVENTS */
+
 menuToggle.addEventListener("mouseenter", openMenu);
-/* KEEP OPEN WHEN HOVERING MENU */
+
 sideMenu.addEventListener("mouseenter", openMenu);
-/* CLOSE WHEN LEAVING BUTTON */
-menuToggle.addEventListener("mouseleave", () => {
-	setTimeout(() => {
-		if (!sideMenu.matches(":hover")) {
-			closeMenu();
-		}
-	}, 50);
 
-});
-
-/* CLOSE WHEN LEAVING MENU */
+menuToggle.addEventListener("mouseleave", closeMenu);
 
 sideMenu.addEventListener("mouseleave", closeMenu);
 
