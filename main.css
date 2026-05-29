@@ -186,6 +186,10 @@ body {
    1. FILM CARDS
 ========================= */
 
+.section{
+    padding:60px 5vw;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
 .card{
     display:block;
     padding:60px;
