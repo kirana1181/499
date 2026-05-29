@@ -103,14 +103,18 @@
 </section>  -->
 
 <!-- HAMBURGER BUTTON -->
+
 <div class="menu-toggle" id="menuToggle">
+
 	<span></span>
 	<span></span>
 	<span></span>
+
 </div>
 
-<!-- FULLSCREEN MENU -->
-<div class="fullscreen-menu" id="fullscreenMenu">
+<!-- SIDE MENU -->
+
+<div class="side-menu" id="sideMenu">
 
 	<a href="film.html">film</a>
 	<a href="art.html">art</a>
@@ -118,7 +122,6 @@
 	<a href="photography.html">photo</a>
 	<a href="digital.html">digital</a>
 	<a href="electronics.html">electronic</a>
-
 </div>
 
 	
@@ -188,15 +191,17 @@ revealCards.forEach(card => {
 });
 
 </script>
+
 	<script>
 
 const menuToggle = document.getElementById("menuToggle");
-const fullscreenMenu = document.getElementById("fullscreenMenu");
+const sideMenu = document.getElementById("sideMenu");
 
 menuToggle.addEventListener("click", () => {
 
 	menuToggle.classList.toggle("active");
-	fullscreenMenu.classList.toggle("show");
+
+	sideMenu.classList.toggle("show");
 
 });
 
