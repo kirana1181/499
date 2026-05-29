@@ -95,11 +95,11 @@
 
 	padding: 8rem 4rem;
 
-	background: black
-	/*	linear-gradient(
+	background: 
+ linear-gradient(
 			to left,
 			rgba(10,10,10,0.97),
-			rgba(10,10,10,0.82) */
+			rgba(10,10,10,0.82) 
 		);
 
 	backdrop-filter: blur(18px);
