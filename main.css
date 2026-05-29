@@ -209,6 +209,16 @@ body {
     color:#aaa;
     margin-top:10px;
 }
+
+/* background atmosphere */
+.bg{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top, rgba(0,255,200,0.12), transparent 40%),
+    radial-gradient(circle at bottom, rgba(255,0,150,0.08), transparent 40%);
+    z-index:-1;
+}
 /* =========================
    5. SPLIT SCREEN
 =========================
