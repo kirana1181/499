@@ -144,7 +144,7 @@
 	<a href="electronics.html">electronic</a>
 </div>
 
-	
+	<!-- Carousel Track Script -->
 	<script>
 
 let current = 0;
@@ -220,18 +220,38 @@ revealCards.forEach(card => {
 
 </script>
 
+	<!-- Menu script -->
 	<script>
 
-/* const menuToggle = document.getElementById("menuToggle"); */
+const menuToggle = document.getElementById("menuToggle");
 const sideMenu = document.getElementById("sideMenu");
-
-menuToggle.addEventListener("click", () => {
-
-	menuToggle.classList.toggle("active");
-
-	sideMenu.classList.toggle("show");
+/* OPEN MENU */
+function openMenu() {
+	menuToggle.classList.add("active");
+	sideMenu.classList.add("show");
+}
+/* CLOSE MENU */
+function closeMenu() {
+	menuToggle.classList.remove("active");
+	sideMenu.classList.remove("show");
+}
+/* OPEN WHEN HOVERING BUTTON */
+menuToggle.addEventListener("mouseenter", openMenu);
+/* KEEP OPEN WHEN HOVERING MENU */
+sideMenu.addEventListener("mouseenter", openMenu);
+/* CLOSE WHEN LEAVING BUTTON */
+menuToggle.addEventListener("mouseleave", () => {
+	setTimeout(() => {
+		if (!sideMenu.matches(":hover")) {
+			closeMenu();
+		}
+	}, 50);
 
 });
+
+/* CLOSE WHEN LEAVING MENU */
+
+sideMenu.addEventListener("mouseleave", closeMenu);
 
 </script>
 </body>
