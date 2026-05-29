@@ -101,11 +101,11 @@ body {
    CINEMATIC SPLIT NAV UPGRADE
 ========================= */
 
-.nav-dimension {
+/*.nav-dimension {
     background: white;
     padding: 2rem 1rem;
     margin-top: -0.5rem;
-}
+} */
 
 /* MAIN CONTAINER */
 .nav-dimension .grid {
@@ -191,7 +191,9 @@ body {
     border-top:1px solid rgba(255,255,255,0.08);
 }
 .card{
-    display:block;
+    display: inline-block;
+  width: 150px;
+  height: 100px;
     padding:60px;
     border:1px solid rgba(255,255,255,0.12);
     text-decoration:none;
