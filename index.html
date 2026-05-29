@@ -129,6 +129,7 @@
 
 let current = 0;
 
+const deck = document.querySelector(".deck");
 const track = document.getElementById("deckTrack");
 const cards = document.querySelectorAll(".deck .card");
 
@@ -142,10 +143,17 @@ function updateDeck() {
 	/* active center card */
 	cards[current].classList.add("active");
 
-	/* move track */
-	const offset = current * 68;
+const cardWidth = cards[0].offsetWidth;
+const gap = 24;
 
-	track.style.transform = `translateX(-${offset}%)`;
+const offset =
+	current * (cardWidth + gap)
+	- (deck.offsetWidth / 2)
+	+ (cardWidth / 2);
+
+track.style.transform = `translateX(-${offset}px)`;
+
+
 }
 
 function move(direction) {
