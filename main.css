@@ -101,11 +101,9 @@ body {
    CINEMATIC SPLIT NAV UPGRADE
 ========================= */
 
-/*.nav-dimension {
-    background: white;
-    padding: 2rem 1rem;
-    margin-top: -0.5rem;
-} */
+.nav-dimension {
+   background: linear-gradient(white, black);
+} 
 
 /* MAIN CONTAINER */
 .nav-dimension .grid {
@@ -225,7 +223,7 @@ body {
     radial-gradient(circle at bottom, rgba(255,0,150,0.08), transparent 40%);
     z-index:-1;
 }
-/* =========================
+ =========================
    5. SPLIT SCREEN
 =========================
 
@@ -247,7 +245,7 @@ body {
 .split a:hover{
     flex:2;
     background: white
-} */
+} 
 
 /* =========================
    ANIMATION
