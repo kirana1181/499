@@ -96,122 +96,7 @@ body {
 	margin-bottom: 2rem;
 }
 
-/* =========================
-   CINEMATIC SPLIT NAV UPGRADE
-========================= */
 
-.nav-dimension {
-   background: linear-gradient(white, black);
-} 
-
-/* MAIN CONTAINER */
-.nav-dimension .grid {
-    display: flex;
-    width: 100%;
-    height: 140px;
-
-    gap: 6px;
-
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* PANELS (THIS IS THE MAGIC) */
-.nav-dimension .card {
-    flex: 1;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
-
-    background: black;
-    color: white;
-
-    font-family: "Orbitron", sans-serif;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    border: 1px solid rgba(255,255,255,0.08);
-
-    position: relative;
-    overflow: hidden;
-
-    transition:
-        flex 0.7s cubic-bezier(.22,.61,.36,1),
-        transform 0.4s ease,
-        background 0.4s ease;
-}
-
-/* EXPAND ON HOVER */
-.nav-dimension .card:hover {
-    flex: 3;
-    transform: scale(1.02);
-    background: rgba(0,0,0,0.92);
-}
-
-/* DIM OTHER ITEMS WHEN ONE IS ACTIVE */
-.nav-dimension .grid:hover .card:not(:hover) {
-    filter: brightness(0.3);
-    transform: scale(0.98);
-}
-
-/* OPTIONAL TEXT CLEANUP */
-.nav-dimension .card {
-    font-size: 1rem;
-}
-
-/* MOBILE STACK */
-@media (max-width: 900px) {
-    .nav-dimension .grid {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .nav-dimension .card {
-        height: 80px;
-    }
-
-    .nav-dimension .card:hover {
-        flex: 1;
-    }
-}
-
-/* =========================
-   1. FILM CARDS
-========================= */
-
-.section{
-    padding:60px 5vw;
-    border-top:1px solid rgba(255,255,255,0.08);
-}
-.card{
-    display: block;
-  width: 150px;
-  height: 100px;
-    padding:60px;
-    border:1px solid rgba(255,255,255,0.12);
-    text-decoration:none;
-    color:white;
-    transition:0.4s;
-}
-
-.card:hover{
-    background:rgba(0,255,200,0.08);
-    transform:translateX(10px);
-}
-
-.card .title{
-    font-family:'Orbitron', sans-serif;
-    font-size:2.5rem;
-}
-
-.card .sub{
-    color:#aaa;
-    margin-top:10px;
-}
 
 /* background atmosphere */
 .bg{
@@ -233,7 +118,7 @@ body {
 		transform: translateY(0);
 	}
 }
-/* =========================
+ =========================
 	writing-mode: vertical-rl;
 
 	text-orientation: mixed;
