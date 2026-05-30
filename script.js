@@ -1,40 +1,42 @@
-
-/* Carousel Track Script */
+/* =========================
+CAROUSEL
+========================= */
 
 let current = 0;
 
 const deck = document.querySelector(".deck");
 const track = document.getElementById("deckTrack");
+
+if (deck && track) {
+
+```
 const cards = track.querySelectorAll(".card");
 
 function updateDeck() {
 
-	/* remove active */
 	cards.forEach(card => {
 		card.classList.remove("active");
 	});
 
-	/* active center card */
+	if (!cards[current]) return;
+
 	cards[current].classList.add("active");
 
-const cardWidth = cards[0].offsetWidth;
-const gap = 24;
+	const cardWidth = cards[0].offsetWidth;
+	const gap = 24;
 
-const offset =
-	current * (cardWidth + gap)
-	- (deck.offsetWidth / 2)
-	+ (cardWidth / 2);
+	const offset =
+		current * (cardWidth + gap)
+		- (deck.offsetWidth / 2)
+		+ (cardWidth / 2);
 
-track.style.transform = `translateX(-${offset}px)`;
-
-
+	track.style.transform = `translateX(-${offset}px)`;
 }
 
-function move(direction) {
+window.move = function(direction) {
 
 	current += direction;
 
-	/* loop */
 	if (current < 0) {
 		current = cards.length - 1;
 	}
@@ -44,19 +46,27 @@ function move(direction) {
 	}
 
 	updateDeck();
+};
+
+updateDeck();
+```
+
 }
 
-/* initial load */
-updateDeck();
-
+/* =========================
+CARD REVEAL
+========================= */
 
 const revealCards = document.querySelectorAll(".nav-dimension .card");
 
+if (revealCards.length) {
+
+```
 const observer = new IntersectionObserver(entries => {
 
 	entries.forEach(entry => {
 
-		if(entry.isIntersecting) {
+		if (entry.isIntersecting) {
 			entry.target.classList.add("show");
 		}
 
@@ -69,110 +79,103 @@ const observer = new IntersectionObserver(entries => {
 revealCards.forEach(card => {
 	observer.observe(card);
 });
+```
 
+}
 
-
-/* Menu script */
-
+/* =========================
+HAMBURGER MENU
+========================= */
 
 const menuToggle = document.getElementById("menuToggle");
 const sideMenu = document.getElementById("sideMenu");
 
-let menuTimeout;
+if (menuToggle && sideMenu) {
 
-/* OPEN */
+```
+let menuTimeout;
 
 function openMenu() {
 
 	clearTimeout(menuTimeout);
 
 	menuToggle.classList.add("active");
-
 	sideMenu.classList.add("show");
 }
-
-/* CLOSE */
 
 function closeMenu() {
 
 	menuTimeout = setTimeout(() => {
 
 		menuToggle.classList.remove("active");
-
 		sideMenu.classList.remove("show");
 
 	}, 120);
 }
 
-/* HOVER EVENTS */
-
 menuToggle.addEventListener("mouseenter", openMenu);
-
 sideMenu.addEventListener("mouseenter", openMenu);
 
 menuToggle.addEventListener("mouseleave", closeMenu);
-
 sideMenu.addEventListener("mouseleave", closeMenu);
+```
 
+}
+
+/* =========================
+CINEMA PANELS REVEAL
+========================= */
 
 const revealSection = document.querySelector(".cinema-panels");
 
+if (revealSection) {
+
+```
 const sectionObserver = new IntersectionObserver(entries => {
 
 	entries.forEach(entry => {
 
 		if (entry.isIntersecting) {
-
-			revealSection.classList.add("visible");
-		}
-	});
-
-}, {
-	threshold: 0.2
-});
-
-sectionObserver.observe(revealSection);
-
-/* panel script */
-
-
-
-const revealSection = document.querySelector(".cinema-panels");
-
-const sectionObserver = new IntersectionObserver(entries => {
-
-	entries.forEach(entry => {
-
-		if (entry.isIntersecting) {
-
-			revealSection.classList.add("visible");
-		}
-	});
-
-}, {
-	threshold: 0.2
-});
-
-sectionObserver.observe(revealSection);
-
-
-const reveals=document.querySelectorAll(".reveal");
-
-const revealObserver=new IntersectionObserver(entries=>{
-
-	entries.forEach(entry=>{
-
-		if(entry.isIntersecting){
 			entry.target.classList.add("visible");
 		}
 
 	});
 
-},{
-	threshold:0.15
+}, {
+	threshold: 0.15
 });
 
-reveals.forEach(item=>{
+sectionObserver.observe(revealSection);
+```
+
+}
+
+/* =========================
+FEATURED WORK REVEAL
+========================= */
+
+const reveals = document.querySelectorAll(".reveal");
+
+if (reveals.length) {
+
+```
+const revealObserver = new IntersectionObserver(entries => {
+
+	entries.forEach(entry => {
+
+		if (entry.isIntersecting) {
+			entry.target.classList.add("visible");
+		}
+
+	});
+
+}, {
+	threshold: 0.15
+});
+
+reveals.forEach(item => {
 	revealObserver.observe(item);
 });
+```
 
+}
