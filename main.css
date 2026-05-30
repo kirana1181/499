@@ -118,7 +118,11 @@ body {
 		transform: translateY(0);
 	}
 }
- =========================
+/* =========================
+   CINEMATIC PANELS
+========================= */
+
+.panel {
 	writing-mode: vertical-rl;
 
 	text-orientation: mixed;
