@@ -14,7 +14,7 @@
 
 body {
 	background: white;
-	color: white;
+	color: black;
 	font-family: "Helvetica Neue", sans-serif;
 	overflow-x: hidden;
 }
@@ -76,7 +76,7 @@ body {
 	opacity: 0;
 	transform: translateY(20px);
 	animation: fadeUp 1.8s ease forwards;
-	color: grey
+	color: white
 }
 
 /* =========================
@@ -84,7 +84,7 @@ body {
 ========================= */
 
 .content-section {
-	color: white;
+	color: black;
 	padding: 6rem 8vw;
 }
 
