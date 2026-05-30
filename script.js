@@ -136,7 +136,27 @@ sectionObserver.observe(revealSection);
 /* panel script */
 
 
+<script>
 
+const revealSection = document.querySelector(".cinema-panels");
+
+const sectionObserver = new IntersectionObserver(entries => {
+
+	entries.forEach(entry => {
+
+		if (entry.isIntersecting) {
+
+			revealSection.classList.add("visible");
+		}
+	});
+
+}, {
+	threshold: 0.2
+});
+
+sectionObserver.observe(revealSection);
+
+</script>
 const reveals=document.querySelectorAll(".reveal");
 
 const revealObserver=new IntersectionObserver(entries=>{
