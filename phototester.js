@@ -1,49 +1,110 @@
-/* =========================
-   EXHIBITION SWITCHER
-========================= */
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
-const links = document.querySelectorAll(".expo-link");
-const expositions = document.querySelectorAll(".expo");
+<script>
 
-links.forEach(link => {
-	link.addEventListener("click", () => {
+const buttons = document.querySelectorAll(".node");
+const galleries = document.querySelectorAll(".gallery");
 
-		// remove active states
-		links.forEach(l => l.classList.remove("active"));
-		expositions.forEach(e => e.classList.remove("active"));
+/* =========================================
+   SWITCH EXHIBITIONS
+========================================= */
 
-		// activate clicked button
-		link.classList.add("active");
+buttons.forEach(button => {
 
-		// show matching exhibition
-		const target = document.getElementById(link.dataset.expo);
-		if (target) target.classList.add("active");
+	button.addEventListener("click", () => {
+
+		buttons.forEach(btn => btn.classList.remove("active"));
+		galleries.forEach(gallery => gallery.classList.remove("active"));
+
+		button.classList.add("active");
+
+		const target =
+			document.getElementById(button.dataset.gallery);
+
+		target.classList.add("active");
+
 	});
+
 });
 
+/* =========================================
+   DECK CAROUSELS
+========================================= */
 
-/* =========================
-   CAROUSELS
-========================= */
+document.querySelectorAll(".deck").forEach(deck => {
 
-document.querySelectorAll(".carousel").forEach(carousel => {
-	const track = carousel.querySelector(".track");
-	const images = carousel.querySelectorAll("img");
-	const nextBtn = carousel.querySelector(".next");
-	const prevBtn = carousel.querySelector(".prev");
+	const track = deck.querySelector(".deck-track");
+
+	const cards =
+		deck.querySelectorAll(".deck-card");
+
+	const leftBtn =
+		deck.querySelector(".left");
+
+	const rightBtn =
+		deck.querySelector(".right");
 
 	let index = 0;
 
-	// safety check
-	if (!track || !images.length || !nextBtn || !prevBtn) return;
+	function updateDeck() {
 
-	nextBtn.addEventListener("click", () => {
-		index = (index + 1) % images.length;
-		track.style.transform = `translateX(-${index * 100}%)`;
+		cards.forEach(card => {
+			card.classList.remove(
+				"active",
+				"prev",
+				"next"
+			);
+		});
+
+		cards[index].classList.add("active");
+
+		if(index > 0) {
+			cards[index - 1].classList.add("prev");
+		}
+
+		if(index < cards.length - 1) {
+			cards[index + 1].classList.add("next");
+		}
+
+		const offset =
+			(cards[0].offsetWidth + 16) * index;
+
+		const center =
+			(deck.offsetWidth / 2) -
+			(cards[0].offsetWidth / 2);
+
+		track.style.transform =
+			`translateX(${center - offset}px)`;
+	}
+
+	rightBtn.addEventListener("click", () => {
+
+		index++;
+
+		if(index >= cards.length) {
+			index = cards.length - 1;
+		}
+
+		updateDeck();
+
 	});
 
-	prevBtn.addEventListener("click", () => {
-		index = (index - 1 + images.length) % images.length;
-		track.style.transform = `translateX(-${index * 100}%)`;
+	leftBtn.addEventListener("click", () => {
+
+		index--;
+
+		if(index < 0) {
+			index = 0;
+		}
+
+		updateDeck();
+
 	});
+
+	updateDeck();
+
 });
+
+</script>
