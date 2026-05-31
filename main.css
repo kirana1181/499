@@ -116,60 +116,117 @@ body {
    CINEMATIC PANELS
 ========================= */
 
-.cinema-panels{
-	display:flex;
-	height:75vh;
-	width:100%;
-	margin:8rem 0;
-	background:black;
-}
+.cinema-panels {
+	background: white;
+	width: 100%;
+	padding: 8rem 4vw;
+	height: 78vh;
 
-.panel{
-	flex:1;
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	gap: 1rem;
 
-	display:flex;
-	align-items:center;
-	justify-content:center;
+	position: relative;
+	z-index: 2;
 
-	position:relative;
-	overflow:hidden;
-
-	text-decoration:none;
-	color:white;
-
-	border-right:1px solid rgba(255,255,255,.15);
+	opacity: 0;
+	transform: translateY(80px);
+	filter: blur(10px);
 
 	transition:
-		flex .8s ease,
-		opacity .5s ease,
-		transform .7s ease,
-		background .7s ease;
+		opacity 1.2s ease,
+		transform 1.2s ease,
+		filter 1.2s ease;
 }
 
-.panel:last-child{
-	border-right:none;
-}
-
-.panel span{
-	font-family:"Unbounded", sans-serif;
-	font-size:1.3rem;
-	font-weight:300;
-	letter-spacing:.18em;
-
-	writing-mode:vertical-rl;
-	text-orientation:mixed;
-
-	transition:
-		transform .7s ease,
-		letter-spacing .7s ease;
+.cinema-panels.visible {
+	opacity: 1;
+	transform: translateY(0);
+	filter: blur(0);
 }
 
 /* =========================
-   HOVER STATES
+   PANEL
 ========================= */
 
-/* .cinema-panels:hover .panel {
-	opacity: 0.35; */
+.panel {
+	flex: 1;
+
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background: linear-gradient(
+		135deg,
+		#0b132b 0%,
+		#000000 55%,
+		#0a0f1f 100%
+	);
+
+	border: 1px solid rgba(255,255,255,0.08);
+
+	text-decoration: none;
+
+	overflow: hidden;
+
+	transition:
+		flex 0.8s cubic-bezier(.22,.61,.36,1),
+		opacity 0.6s ease,
+		transform 0.6s ease,
+		border-color 0.6s ease,
+		background 0.6s ease;
+}
+
+/* soft cinematic glow overlay */
+.panel::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+
+	background: radial-gradient(
+		circle at center,
+		rgba(255,255,255,0.06),
+		transparent 60%
+	);
+
+	opacity: 0;
+
+	transition: opacity 0.6s ease;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.panel span {
+	position: relative;
+	z-index: 2;
+
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(2rem, 3vw, 4.5rem);
+	font-weight: 300;
+
+	letter-spacing: 0.12em;
+
+	color: white;
+
+	text-align: center;
+
+	transition:
+		transform 0.7s ease,
+		letter-spacing 0.7s ease,
+		opacity 0.5s ease;
+}
+
+/* =========================
+   PANEL HOVER
+========================= */
+
+.cinema-panels:hover .panel {
+	opacity: 0.35;
 }
 
 .cinema-panels .panel:hover {
