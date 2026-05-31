@@ -99,23 +99,18 @@ body {
 	position: relative;
 	z-index: 2;
 
-	opacity: 0;
 	transform: translateY(80px);
 	filter: blur(10px);
 
 	transition:
-		opacity 1.2s ease,
 		transform 1.2s ease,
 		filter 1.2s ease;
 }
 
 .cinema-panels.visible {
-	opacity: 1;
 	transform: translateY(0);
 	filter: blur(0);
 }
-
-/* Optional: tighten spacing between the two rows */
 
 .second-row {
 	padding-top: 0;
