@@ -117,19 +117,14 @@ body {
 ========================= */
 
 .cinema-panels {
-
 	background: white;
-
 	width: 100%;
-
 	padding: 8rem 4vw;
-
 	height: 78vh;
 
 	display: flex;
 	justify-content: center;
 	align-items: stretch;
-
 	gap: 1rem;
 
 	position: relative;
@@ -146,7 +141,6 @@ body {
 }
 
 .cinema-panels.visible {
-
 	opacity: 1;
 	transform: translateY(0);
 	filter: blur(0);
@@ -157,7 +151,6 @@ body {
 ========================= */
 
 .panel {
-
 	flex: 1;
 
 	position: relative;
@@ -166,9 +159,14 @@ body {
 	justify-content: center;
 	align-items: center;
 
-	background: navy;
+	background: linear-gradient(
+		135deg,
+		#0b132b 0%,
+		#000000 55%,
+		#0a0f1f 100%
+	);
 
-	border: 1px solid rgba(0,0,0,0.15);
+	border: 1px solid rgba(255,255,255,0.08);
 
 	text-decoration: none;
 
@@ -182,79 +180,70 @@ body {
 		background 0.6s ease;
 }
 
+/* soft cinematic glow overlay */
 .panel::before {
-
 	content: "";
-
 	position: absolute;
 	inset: 0;
 
-	background:
-		linear-gradient(
-			to bottom,
-			rgba(0,0,0,0.02),
-			rgba(0,0,0,0.01)
-		);
+	background: radial-gradient(
+		circle at center,
+		rgba(255,255,255,0.06),
+		transparent 60%
+	);
 
 	opacity: 0;
 
 	transition: opacity 0.6s ease;
 }
 
-.panel span {
+/* =========================
+   TEXT
+========================= */
 
+.panel span {
 	position: relative;
 	z-index: 2;
 
 	font-family: "Cormorant Garamond", serif;
-
 	font-size: clamp(2rem, 3vw, 4.5rem);
-
 	font-weight: 300;
 
-	letter-spacing: 0.18em;
+	letter-spacing: 0.12em;
 
-	color: black;
+	color: white;
 
-	writing-mode: vertical-rl;
-	text-orientation: mixed;
+	text-align: center;
 
 	transition:
 		transform 0.7s ease,
 		letter-spacing 0.7s ease,
 		opacity 0.5s ease;
 }
+
 /* =========================
    PANEL HOVER
 ========================= */
 
 .cinema-panels:hover .panel {
-
 	opacity: 0.35;
 }
 
 .cinema-panels .panel:hover {
-
 	flex: 2.4;
 
 	opacity: 1;
-
 	transform: scale(1.01);
 
-	border-color: rgba(0,0,0,0.75);
-
-	background: rgba(0,0,0,0.03);
+	border-color: rgba(255,255,255,0.25);
 }
 
 .cinema-panels .panel:hover::before {
-
 	opacity: 1;
 }
 
 .cinema-panels .panel:hover span {
-
 	transform: scale(1.08);
-
 	letter-spacing: 0.25em;
 }
 
