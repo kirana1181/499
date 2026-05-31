@@ -9,7 +9,6 @@ const track = document.getElementById("deckTrack");
 
 if (deck && track) {
 
-```
 const cards = track.querySelectorAll(".card");
 
 function updateDeck() {
@@ -30,7 +29,7 @@ function updateDeck() {
 		- (deck.offsetWidth / 2)
 		+ (cardWidth / 2);
 
-	track.style.transform = `translateX(-${offset}px)`;
+	track.style.transform = `'''X(-${offset}px)`;
 }
 
 window.move = function(direction) {
@@ -49,7 +48,6 @@ window.move = function(direction) {
 };
 
 updateDeck();
-```
 
 }
 
@@ -61,7 +59,6 @@ const revealCards = document.querySelectorAll(".nav-dimension .card");
 
 if (revealCards.length) {
 
-```
 const observer = new IntersectionObserver(entries => {
 
 	entries.forEach(entry => {
@@ -79,7 +76,6 @@ const observer = new IntersectionObserver(entries => {
 revealCards.forEach(card => {
 	observer.observe(card);
 });
-```
 
 }
 
@@ -92,7 +88,7 @@ const sideMenu = document.getElementById("sideMenu");
 
 if (menuToggle && sideMenu) {
 
-```
+
 let menuTimeout;
 
 function openMenu() {
@@ -118,7 +114,6 @@ sideMenu.addEventListener("mouseenter", openMenu);
 
 menuToggle.addEventListener("mouseleave", closeMenu);
 sideMenu.addEventListener("mouseleave", closeMenu);
-```
 
 }
 
@@ -130,7 +125,6 @@ const revealSection = document.querySelector(".cinema-panels");
 
 if (revealSection) {
 
-```
 const sectionObserver = new IntersectionObserver(entries => {
 
 	entries.forEach(entry => {
@@ -146,8 +140,6 @@ const sectionObserver = new IntersectionObserver(entries => {
 });
 
 sectionObserver.observe(revealSection);
-```
-
 }
 
 /* =========================
@@ -158,7 +150,6 @@ const reveals = document.querySelectorAll(".reveal");
 
 if (reveals.length) {
 
-```
 const revealObserver = new IntersectionObserver(entries => {
 
 	entries.forEach(entry => {
