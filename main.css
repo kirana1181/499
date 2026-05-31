@@ -112,6 +112,7 @@ body {
 		transform: translateY(0);
 	}
 }
+/* =========================
    CINEMATIC PANELS
 ========================= */
 
@@ -237,8 +238,8 @@ body {
    HOVER STATES
 ========================= */
 
-.cinema-panels:hover .panel {
-	opacity: 0.35;
+/* .cinema-panels:hover .panel {
+	opacity: 0.35; */
 }
 
 .cinema-panels .panel:hover {
