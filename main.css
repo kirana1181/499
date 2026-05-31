@@ -285,7 +285,7 @@ h2 {
 	overflow: hidden; /* keeps gradient clean */
 }
 
-/* TOP FADE (white → black) */
+/* TOP FADE (white → black)
 .featured-works::before {
 	content: "";
 	position: absolute;
@@ -297,7 +297,7 @@ h2 {
 	background: linear-gradient(to bottom, white, black);
 
 	pointer-events: none;
-	z-index: 0;
+	z-index: 0; */
 }
 
 /* ensure content sits above gradient */
