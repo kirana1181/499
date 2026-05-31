@@ -121,9 +121,7 @@ sideMenu.addEventListener("mouseleave", closeMenu);
 CINEMA PANELS REVEAL
 ========================= */
 
-const revealSection = document.querySelector(".cinema-panels");
-
-if (revealSection) {
+const revealSections = document.querySelectorAll(".cinema-panels");
 
 const sectionObserver = new IntersectionObserver(entries => {
 
@@ -139,8 +137,9 @@ const sectionObserver = new IntersectionObserver(entries => {
 	threshold: 0.15
 });
 
-sectionObserver.observe(revealSection);
-}
+revealSections.forEach(section => {
+	sectionObserver.observe(section);
+});
 
 /* =========================
 FEATURED WORK REVEAL
