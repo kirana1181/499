@@ -93,7 +93,7 @@ body {
 	z-index: 2;
 }
 
-h2 {
+.content-section h2 {
 	font-family: "Cormorant Garamond", serif;
 	font-size: 2.5rem;
 	font-weight: 400;
@@ -304,7 +304,7 @@ h2 {
 }
 
 /* TITLE */
-h3 {
+.featured-works h3 {
 	font-family: "Cormorant Garamond", serif;
 	font-size: 5.5rem;
 	font-weight: 400;
