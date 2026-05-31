@@ -81,50 +81,17 @@ body {
 }
 
 /* =========================
-   CONTENT SECTION
-========================= */
-
-.content-section {
-	background: white;
-	color: black;
-
-	padding: 6rem 8vw;
-
-	position: relative;
-	z-index: 2;
-}
-
-.content-section h2 {
-	font-family: "Cormorant Garamond", serif;
-	font-size: 2.5rem;
-	font-weight: 400;
-	text-align: center;
-	margin-bottom: 3rem;
-	color: black;
-}
-/* =========================
-   ANIMATION
-========================= */
-
-@keyframes fadeUp {
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-/* =========================
    CINEMATIC PANELS
 ========================= */
 
 .cinema-panels {
 	background: white;
 	width: 100%;
-	padding: 8rem 4vw;
-	height: 78vh;
+	padding: 4rem 4vw;
+
+	height: 35vh;
 
 	display: flex;
-	flex-direction: column;
-	gap: 1rem;
 	justify-content: center;
 	align-items: stretch;
 	gap: 1rem;
@@ -148,6 +115,13 @@ body {
 	filter: blur(0);
 }
 
+/* Optional: tighten spacing between the two rows */
+
+.second-row {
+	padding-top: 0;
+	margin-top: -2rem;
+}
+
 /* =========================
    PANEL
 ========================= */
@@ -157,8 +131,7 @@ body {
 
 	position: relative;
 
-display: flex;
-	flex-direction: column;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 
@@ -177,18 +150,15 @@ display: flex;
 
 	transition:
 		flex 0.8s cubic-bezier(.22,.61,.36,1),
-		opacity 0.6s ease,
 		transform 0.6s ease,
 		border-color 0.6s ease,
 		background 0.6s ease;
 }
-.cinema-row {
-	display: flex;
-	flex: 1;
-	gap: 1rem;
-}
 
-/* soft cinematic glow overlay */
+/* =========================
+   GLOW OVERLAY
+========================= */
+
 .panel::before {
 	content: "";
 	position: absolute;
@@ -220,40 +190,34 @@ display: flex;
 	letter-spacing: 0.12em;
 
 	color: white;
-
 	text-align: center;
 
 	transition:
 		transform 0.7s ease,
-		letter-spacing 0.7s ease,
-		opacity 0.5s ease;
+		letter-spacing 0.7s ease;
 }
 
 /* =========================
    PANEL HOVER
 ========================= */
 
-.cinema-panels:hover .panel {
-	opacity: 0.35;
-}
-
-.cinema-panels .panel:hover {
+.panel:hover {
 	flex: 2.4;
 
-	opacity: 1;
 	transform: scale(1.01);
 
 	border-color: rgba(255,255,255,0.25);
 }
 
-.cinema-panels .panel:hover::before {
+.panel:hover::before {
 	opacity: 1;
 }
 
-.cinema-panels .panel:hover span {
+.panel:hover span {
 	transform: scale(1.08);
 	letter-spacing: 0.25em;
 }
+
 /* =========================
    MOBILE
 ========================= */
@@ -261,29 +225,25 @@ display: flex;
 @media (max-width: 900px) {
 
 	.cinema-panels {
-
-		flex-direction: column;
-
 		height: auto;
-
+		flex-direction: column;
 		gap: 1rem;
 	}
 
 	.panel {
-
 		height: 120px;
 	}
 
 	.panel span {
-
-		writing-mode: horizontal-tb;
-
 		font-size: 2rem;
 	}
 
-	.cinema-panels .panel:hover {
-
+	.panel:hover {
 		flex: 1;
+	}
+
+	.second-row {
+		margin-top: 0;
 	}
 }
 /* =========================
