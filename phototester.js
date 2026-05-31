@@ -2,14 +2,13 @@
      JAVASCRIPT
 =========================  */
 
-<script>
 
 const buttons = document.querySelectorAll(".node");
 const galleries = document.querySelectorAll(".gallery");
 
-/* =========================================
-   SWITCH EXHIBITIONS
-========================================= */
+/* =========================
+     SWITCH EXIB
+=========================  */
 
 buttons.forEach(button => {
 
@@ -29,9 +28,9 @@ buttons.forEach(button => {
 
 });
 
-/* =========================================
-   DECK CAROUSELS
-========================================= */
+/* =========================
+     DECK
+=========================  */
 
 document.querySelectorAll(".deck").forEach(deck => {
 
@@ -107,4 +106,3 @@ document.querySelectorAll(".deck").forEach(deck => {
 
 });
 
-</script>
