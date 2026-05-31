@@ -247,6 +247,16 @@ body {
 	letter-spacing: 0.25em;
 }
 
+.panel-row {
+	display: flex;
+	gap: 1rem;
+	width: 100%;
+	height: 50%;
+}
+
+.panel-row .panel {
+	flex: 1;
+}
 /* =========================
    MOBILE
 ========================= */
