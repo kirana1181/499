@@ -8,14 +8,16 @@ const deck = document.querySelector(".deck");
 const track = document.getElementById("deckTrack");
 
 if (deck && track) {
-
-const cards = track.querySelectorAll(".card");
+	function getCards() {
+	return track.querySelectorAll(".card"); 
+	}
 
 function updateDeck() {
+	const cards = getCards();
 
-	cards.forEach(card => {
-		card.classList.remove("active");
-	});
+	if (!cards.length) return;
+
+	cards.forEach(card => card.classList.remove("active"));
 
 	if (!cards[current]) return;
 
@@ -29,20 +31,18 @@ function updateDeck() {
 		- (deck.offsetWidth / 2)
 		+ (cardWidth / 2);
 
-	track.style.transform = `'''X(-${offset}px)`;
+	track.style.transform = `translateX(-${offset}px)`;
 }
 
 window.move = function(direction) {
+	const cards = getCards();
+
+	if (!cards.length) return;
 
 	current += direction;
 
-	if (current < 0) {
-		current = cards.length - 1;
-	}
-
-	if (current >= cards.length) {
-		current = 0;
-	}
+	if (current < 0) current = cards.length - 1;
+	if (current >= cards.length) current = 0;
 
 	updateDeck();
 };
@@ -167,6 +167,5 @@ const revealObserver = new IntersectionObserver(entries => {
 reveals.forEach(item => {
 	revealObserver.observe(item);
 });
-```
 
 }
