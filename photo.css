@@ -2,12 +2,13 @@
 body {
 	margin: 0;
 	font-family: "Unbounded", sans-serif;
-background: radial-gradient(
-		ellipse at center,
-		transparent 50%,
-		rgba(0,0,0,0.75) 100%
-	);
+body {
+	background:
+		radial-gradient(circle at 50% 0%, rgba(33, 66, 92, 0.6) 0%, transparent 60%),
+		radial-gradient(circle at 50% 100%, rgba(26, 49, 64, 0.6) 0%, transparent 60%),
+		#000000;
 	color: white;
+}
 
 
 
