@@ -79,6 +79,44 @@ body {
 	animation: fadeUp 1.8s ease forwards;
 	color: white
 }
+/* =========================
+   CONTENT SECTION
+========================= */
+
+.content-section {
+	background: white;
+	color: black;
+
+	padding: 6rem 8vw;
+
+	position: relative;
+	z-index: 2;
+}
+
+.content-section h2 {
+	font-family: "Cormorant Garamond", serif;
+	font-size: 2.5rem;
+	font-weight: 400;
+
+	text-align: center;
+
+	margin-bottom: 3rem;
+
+	color: black;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp {
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+}
 
 /* =========================
    CINEMATIC PANELS
