@@ -277,7 +277,7 @@ h3 {
 }
 
 .featured-works {
-	background: black;
+		background: linear-gradient(to bottom, white, black);
 	width: 100%;
 	max-width: none;
 
