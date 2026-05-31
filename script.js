@@ -124,23 +124,24 @@ CINEMA PANELS REVEAL
 const revealSections = document.querySelectorAll(".cinema-panels");
 
 const sectionObserver = new IntersectionObserver(entries => {
-
 	entries.forEach(entry => {
-
 		if (entry.isIntersecting) {
 			entry.target.classList.add("visible");
 		}
-
 	});
-
 }, {
-	threshold: 0.15
+	threshold: 0.1
 });
 
+// force initial check (IMPORTANT FIX)
 revealSections.forEach(section => {
 	sectionObserver.observe(section);
-});
 
+	// if already visible on load
+	if (section.getBoundingClientRect().top < window.innerHeight) {
+		section.classList.add("visible");
+	}
+});
 /* =========================
 FEATURED WORK REVEAL
 ========================= */
