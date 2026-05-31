@@ -23,17 +23,17 @@ body::before {
 	z-index: 0;
 
 	background:
-		radial-gradient(circle at 15% 20%, rgba(255,255,255,0.06), transparent 45%),
-		radial-gradient(circle at 85% 70%, rgba(255,255,255,0.035), transparent 50%),
-		radial-gradient(circle at 50% 110%, rgba(255,255,255,0.02), transparent 60%),
+		radial-gradient(circle at 15% 20%, rgba(255,255,255,0.08), transparent 45%),
+		radial-gradient(circle at 85% 70%, rgba(255,255,255,0.04), transparent 55%),
+		radial-gradient(circle at 50% 110%, rgba(255,255,255,0.03), transparent 60%),
 		linear-gradient(to bottom,
-			rgba(255,255,255,0.04),
-			transparent 35%,
-			rgba(0,0,0,0.55)
+			rgba(255,255,255,0.05),
+			transparent 40%,
+			rgba(0,0,0,0.6)
 		);
 
-	opacity: 0.75;
-	mix-blend-mode: soft-light;
+	opacity: 0.9;
+	mix-blend-mode: screen;
 }
 
 body::after {
@@ -45,135 +45,193 @@ body::after {
 
 	background: radial-gradient(
 		ellipse at center,
-		transparent 55%,
-		rgba(0,0,0,0.45) 100%
+		transparent 50%,
+		rgba(0,0,0,0.75) 100%
 	);
 }
 
 /* =========================
-   CONTENT LAYER WRAPPER (IMPORTANT FIX)
+   MAIN LAYOUT ROOT (CRITICAL)
 ========================= */
 
-.topbar,
-.expo-page,
-.expo-content,
-section,
-header,
-main,
-aside {
+.photo-layout {
+	display: flex;
+	min-height: 100vh;
+	position: relative;
+	z-index: 2;
+}
+
+/* ensure main columns are above background */
+.tree,
+.viewer {
 	position: relative;
 	z-index: 2;
 }
 
 /* =========================
-   TOP BAR
+   LEFT SIDEBAR (TREE)
 ========================= */
 
-.topbar {
-	position: sticky;
-	top: 0;
-	z-index: 100;
-
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
-	padding: 1.2rem 2rem;
-
-	background: rgba(0,0,0,0.85);
+.tree {
+	width: 280px;
+	padding: 3rem 2rem;
+	border-right: 1px solid rgba(255,255,255,0.1);
+	background: rgba(0,0,0,0.35);
 	backdrop-filter: blur(10px);
-	border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.logo {
-	font-family: "Cormorant Garamond", serif;
-	letter-spacing: 0.2em;
-	font-size: 1rem;
-}
-
-.topnav a {
-	font-family: "Unbounded", sans-serif;
+.tree button {
+	display: block;
+	width: 100%;
+	background: none;
+	border: none;
 	color: rgba(255,255,255,0.6);
-	margin-left: 1.5rem;
-	text-decoration: none;
-	letter-spacing: 0.18em;
-	font-size: 0.75rem;
-	text-transform: uppercase;
+	text-align: left;
+	padding: 0.75rem 0;
+	font-size: 1rem;
+	cursor: pointer;
 	transition: 0.3s ease;
+	font-family: "Unbounded", sans-serif;
+	letter-spacing: 0.05em;
 }
 
-.topnav a:hover,
-.topnav a.active {
+.tree button:hover {
+	color: white;
+	transform: translateX(6px);
+}
+
+.tree button.active {
 	color: white;
 }
 
 /* =========================
-   EXHIBITION TITLE
+   RIGHT VIEWER
 ========================= */
 
-.expo h2 {
-	font-family: "Cormorant Garamond", serif;
-	font-size: 3.5rem;
-	letter-spacing: 0.05em;
-	margin-bottom: 0.5rem;
+.viewer {
+	flex: 1;
+	padding: 4rem;
 }
 
-/* STATEMENT */
-.statement {
+/* =========================
+   GALLERIES
+========================= */
+
+.gallery {
+	display: none;
+	opacity: 0;
+	transform: translateY(15px);
+	transition: 0.5s ease;
+}
+
+.gallery.active {
+	display: block;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+.gallery h2 {
+	font-family: "Cormorant Garamond", serif;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	letter-spacing: 0.03em;
+}
+
+.gallery p {
 	max-width: 650px;
 	color: rgba(255,255,255,0.7);
-	font-style: italic;
-	margin-bottom: 2rem;
 	line-height: 1.6;
+	margin-bottom: 2rem;
 }
 
 /* =========================
-   THUMB STRIP
+   DECK / CAROUSEL
 ========================= */
 
-.thumb-strip {
+.deck {
+	position: relative;
+	overflow: hidden;
+	border-radius: 14px;
+}
+
+.deck-track {
 	display: flex;
-	gap: 0.5rem;
-	margin-top: 1rem;
-	overflow-x: auto;
-	padding-bottom: 0.5rem;
+	transition: transform 0.7s ease;
+	will-change: transform;
 }
 
-.thumb-strip img {
-	width: 90px;
-	height: 60px;
+.deck-card {
+	min-width: 100%;
+	height: 65vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.deck-card img {
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
-	opacity: 0.6;
-	transition: 0.3s ease;
-	cursor: pointer;
-}
-
-.thumb-strip img:hover {
-	opacity: 1;
-	transform: scale(1.05);
-}
-
-.thumb-strip img.active {
-	opacity: 1;
-	outline: 1px solid rgba(255,255,255,0.4);
 }
 
 /* =========================
-   EXHIBITION TEXT BLOCK
+   NAV BUTTONS
 ========================= */
 
-.expo-text {
-	margin-top: 2rem;
-	max-width: 700px;
+.deck-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0,0,0,0.4);
+	border: none;
+	color: white;
+	font-size: 2rem;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	z-index: 5;
+	transition: 0.3s ease;
 }
 
-.expo-text h3 {
-	font-family: "Cormorant Garamond", serif;
-	font-size: 1.5rem;
-	margin-bottom: 0.5rem;
+.deck-btn:hover {
+	background: rgba(0,0,0,0.7);
 }
 
-.expo-text p {
-	color: rgba(255,255,255,0.75);
-	line-height: 1.7;
+.deck-btn.left {
+	left: 10px;
+}
+
+.deck-btn.right {
+	right: 10px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+	.photo-layout {
+		flex-direction: column;
+	}
+
+	.tree {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		border-right: none;
+		border-bottom: 1px solid rgba(255,255,255,0.1);
+	}
+
+	.viewer {
+		padding: 2rem;
+	}
+
+	.deck-card {
+		height: 45vh;
+	}
 }
