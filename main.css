@@ -162,7 +162,6 @@ h2 {
 ========================= */
 
 .panel {
-	.panel {
 	flex: 1;
 	min-width: 160px;
 	max-width: 260px;
