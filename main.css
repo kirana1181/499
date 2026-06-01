@@ -162,9 +162,12 @@ h2 {
 ========================= */
 
 .panel {
-	flex: 1;
-	min-width: 160px;
-	max-width: 260px;
+	position: relative;
+
+	flex: 1 1 0;
+	min-width: 180px;
+	max-width: none;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -180,7 +183,6 @@ h2 {
 	border-radius: 10px;
 
 	text-decoration: none;
-
 	overflow: hidden;
 
 	transition:
@@ -236,7 +238,8 @@ h2 {
    PANEL HOVER
 ========================= */
 .panel:hover {
-	transform: scale(1.05);
+	flex: 2.2;
+	transform: scale(1.02);
 	border-color: rgba(255,255,255,0.25);
 }
 
