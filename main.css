@@ -124,6 +124,7 @@ h2 {
 ========================= */
 
 .cinema-panels {
+	  overflow: hidden;
 	background: white;
 	width: 100%;
 	padding: 4rem 4vw;
@@ -162,7 +163,7 @@ h2 {
 
 .panel {
 	flex: 1;
-
+    min-width: 0;
 	position: relative;
 
 	display: flex;
