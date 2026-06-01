@@ -357,28 +357,22 @@ h3 {
 
 /* IMAGE */
 
-.featured-image{
-	position:relative;
-	overflow:hidden;
-	width:100%;
-	height:55vh;
+.featured-image {
+	height: 55vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
-	object-fit:cover;
-	display:block;
-
-	filter:grayscale(8%);
-
-	transition:
-		transform 1s ease,
-		filter 1s ease;
+.featured-image img {
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: contain;
 }
 
 .featured-item:hover img{
 	transform:scale(1.03);
 	filter:grayscale(0%);
-
-
-
 	
 }
 
