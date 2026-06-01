@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cinematic Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;600&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Unbounded", sans-serif;
+	background: radial-gradient(circle at 30% 20%, #0a0f1a 0%, #05070c 45%, #000 100%);
+	color: white;
+	overflow-x: hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+}
+
+.hero::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: url("https://images.unsplash.com/photo-1526481280695-3c687fd5432c") center/cover;
+	opacity: 0.25;
+	filter: blur(2px);
+}
+
+.hero h1 {
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(3rem, 8vw, 7rem);
+	letter-spacing: 0.2em;
+	z-index: 2;
+}
+
+.hero p {
+	margin-top: 1rem;
+	opacity: 0.7;
+	z-index: 2;
+}
+
+/* =========================
+   SECTION BASE
+========================= */
+section {
+	padding: 6rem 8vw;
+	position: relative;
+}
+
+/* =========================
+   FEATURED WORKS
+========================= */
+.featured {
+	display: grid;
+	grid-template-columns: 1.2fr 1fr;
+	gap: 3rem;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.featured img {
+	width: 100%;
+	height: 60vh;
+	object-fit: cover;
+	border-radius: 14px;
+}
+
+.featured h2 {
+	font-family: "Cormorant Garamond", serif;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.featured p {
+	opacity: 0.7;
+	line-height: 1.6;
+}
+
+/* =========================
+   GALLERY
+========================= */
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	margin-top: 2rem;
+}
+
+.gallery img {
+	width: 100%;
+	height: 260px;
+	object-fit: cover;
+	border-radius: 12px;
+	transition: transform 0.5s ease;
+}
+
+.gallery img:hover {
+	transform: scale(1.03);
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+	align-items: center;
+}
+
+.about img {
+	width: 100%;
+	border-radius: 16px;
+	height: 60vh;
+	object-fit: cover;
+}
+
+.about p {
+	opacity: 0.75;
+	line-height: 1.7;
+}
+
+/* =========================
+   BOTTOM NAV
+========================= */
+.nav {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-top: 6rem;
+	flex-wrap: wrap;
+}
+
+.nav a {
+	padding: 1rem 2rem;
+	border: 1px solid rgba(255,255,255,0.2);
+	text-decoration: none;
+	color: white;
+	font-size: 0.8rem;
+	letter-spacing: 0.2em;
+	transition: 0.4s ease;
+}
+
+.nav a:hover {
+	background: white;
+	color: black;
+}
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+.reveal {
+	opacity: 0;
+	transform: translateY(40px);
+	filter: blur(6px);
+	transition: 1s ease;
+}
+
+.reveal.active {
+	opacity: 1;
+	transform: translateY(0);
+	filter: blur(0);
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 900px) {
+
+	.featured,
+	.about {
+		grid-template-columns: 1fr;
+	}
+
+	.gallery {
+		grid-template-columns: 1fr;
+	}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+   HERO
+========================= -->
+<section class="hero reveal">
+	<h1>CINEMATIC PORTFOLIO</h1>
+	<p>film • photography • digital work • installations</p>
+</section>
+
+<!-- =========================
+   FEATURED WORK
+========================= -->
+<section class="reveal">
+	<h2>Featured Work</h2>
+
+	<div class="featured">
+		<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+		<div>
+			<h2>Selected Project Title</h2>
+			<p>
+				A cinematic exploration of memory, environment, and fragmented narrative.
+				Blending photography, film stills, and conceptual visual design.
+			</p>
+		</div>
+	</div>
+</section>
+
+<!-- =========================
+   GALLERY
+========================= -->
+<section class="reveal">
+	<h2>Gallery</h2>
+
+	<div class="gallery">
+		<img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb">
+		<img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+		<img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4">
+		<img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e">
+		<img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+		<img src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66">
+	</div>
+</section>
+
+<!-- =========================
+   ABOUT
+========================= -->
+<section class="reveal">
+	<h2>About the Artist</h2>
+
+	<div class="about">
+		<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1">
+		<p>
+			This portfolio explores cinematic storytelling through film, photography,
+			and digital installations. The work focuses on atmosphere, memory, and
+			the emotional weight of visual composition.
+			<br><br>
+			Each project acts as a fragment of a larger narrative system, blending
+			documentation and fiction.
+		</p>
+	</div>
+</section>
+
+<!-- =========================
+   NAV BUTTONS
+========================= -->
+<section class="reveal">
+	<div class="nav">
+		<a href="expo1.html">EXPO 01</a>
+		<a href="expo2.html">EXPO 02</a>
+		<a href="expo3.html">EXPO 03</a>
+	</div>
+</section>
+
+<script>
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const items = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(entries => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add("active");
+		}
+	});
+}, {
+	threshold: 0.15
+});
+
+items.forEach(el => observer.observe(el));
+
+</script>
+
+</body>
+</html>
