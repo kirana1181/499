@@ -11,7 +11,7 @@
 
 	height: 62vh;
 
-	margin: 0 auto 1rem auto;
+	margin: 0 auto .5rem auto;
 
 	display: flex;
 	align-items: center;
@@ -27,7 +27,7 @@
 	display: flex;
 	align-items: center;
 
-	gap: 1rem;
+	gap: .5rem;
 
 	transition: transform 0.8s cubic-bezier(.22,.61,.36,1);
 
