@@ -126,10 +126,10 @@ h2 {
 .cinema-panels {
 	  overflow: hidden;
 	background: white;
-	width: 50%;
+	width: 100%;
 	padding: 4rem 4vw;
 
-	height: 40vh;
+	height: 55vh;
 
 	display: flex;
 	justify-content: center;
@@ -162,7 +162,7 @@ h2 {
 ========================= */
 
 .panel {
-	flex: 1;
+	flex: 0 1 260px;
     min-width: 0;
 	position: relative;
 
@@ -177,7 +177,8 @@ h2 {
 		#0a0f1f 100%
 	);
 
-	border: 1px solid rgba(255,255,255,0.08);
+	border: 1px solid rgba(255,255,255,0.12);
+	border-radius: 10px;
 
 	text-decoration: none;
 
@@ -235,12 +236,8 @@ h2 {
 /* =========================
    PANEL HOVER
 ========================= */
-
 .panel:hover {
-	flex: 2.4;
-
-	transform: scale(1.01);
-
+	transform: scale(1.05);
 	border-color: rgba(255,255,255,0.25);
 }
 
