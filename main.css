@@ -548,3 +548,50 @@ h3 {
 
 
 }
+.topbar {
+	position: sticky;
+	top: 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 1.25rem 3rem;
+
+	background: rgba(0,0,0,0.75);
+
+	backdrop-filter: blur(12px);
+
+	border-bottom: 1px solid rgba(255,255,255,0.08);
+
+	z-index: 100;
+}
+
+.logo {
+	font-family: "Cormorant Garamond", serif;
+	font-size: 1.1rem;
+	letter-spacing: 0.35em;
+	color: white;
+}
+
+.topnav {
+	display: flex;
+	gap: 2rem;
+}
+
+.topnav a {
+	text-decoration: none;
+
+	font-size: 0.75rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+
+	color: rgba(255,255,255,0.55);
+
+	transition: 0.3s ease;
+}
+
+.topnav a:hover,
+.topnav a.active {
+	color: white;
+}
