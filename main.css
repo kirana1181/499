@@ -15,8 +15,11 @@
 
 body {
 
-background: #020024;
-background: linear-gradient(0deg,rgba(2, 0, 36, 1) 0%, rgba(25, 25, 89, 1) 35%, rgba(30, 107, 143, 1) 60%, rgba(23, 29, 82, 1) 100%);
+background: linear-gradient(
+		135deg,
+		#0b132b 0%,
+		#000000 55%,
+		#0a0f1f 100%
 	color: black;
 	font-family: "Helvetica Neue", sans-serif;
 	overflow-x: hidden;
