@@ -306,10 +306,10 @@ h2 {
 
 h3 {
 	font-family: "Cormorant Garamond", serif;
-	font-size: 5.5rem;
+	font-size: 3rem;
 	font-weight: 400;
 	text-align: center;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.2rem;
 	color: white;
 }
 
@@ -318,14 +318,14 @@ h3 {
 	width: 100%;
 	max-width: none;
 
-	padding: 6rem 6vw;
+	padding: 5rem 5vw;
 
 	margin: 0;
 
 	display: flex;
 	flex-direction: column;
 
-	gap: 5rem;
+	gap: 3rem;
 
 	position: relative;
 	z-index: 2;
