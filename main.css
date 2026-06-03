@@ -349,6 +349,20 @@ h3 {
 	filter: blur(0);
 }
 
+/* SOCIAL FOOTER */
+
+.social-footer {
+	background: black;
+	width: 100%;
+	padding: 4rem 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	position: relative;
+	z-index: 2;
+}
+
 /* SOCIAL ICONS */
 
 .social-icon {
@@ -484,5 +498,10 @@ h3 {
 
 	.topnav a {
 		font-size: 0.65rem;
+	}
+
+	.social-icon {
+		width: 48px;
+		height: 48px;
 	}
 }
