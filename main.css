@@ -98,7 +98,7 @@ h2 {
 	font-weight: 400;
 	text-align: center;
 	margin-bottom: 3rem;
-	color: black;
+	color: white;
 }
 
 /* =========================
@@ -290,7 +290,7 @@ h3 {
 	font-size: 0.7rem;
 	letter-spacing: 0.18em;
 	text-transform: uppercase;
-	color: #777;
+	color: #999;
 	margin-bottom: 1rem;
 }
 
@@ -307,7 +307,7 @@ h3 {
 	font-size: 1rem;
 	line-height: 1.7;
 	max-width: 520px;
-	color: rgba(255, 255, 255, 0.75);
+	color: rgba(255, 255, 255, 0.85);
 	margin-bottom: 1.5rem;
 }
 
@@ -387,9 +387,9 @@ h3 {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.25rem 3rem;
-	background: rgba(0, 0, 0, 0.75);
+	background: rgba(0, 0, 0, 0.85);
 	backdrop-filter: blur(12px);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 	z-index: 100;
 }
 
@@ -398,6 +398,7 @@ h3 {
 	font-size: 1.1rem;
 	letter-spacing: 0.35em;
 	color: white;
+	font-weight: 600;
 }
 
 .topnav {
@@ -410,7 +411,7 @@ h3 {
 	font-size: 0.75rem;
 	letter-spacing: 0.18em;
 	text-transform: uppercase;
-	color: rgba(255, 255, 255, 0.55);
+	color: rgba(255, 255, 255, 0.75);
 	transition: 0.3s ease;
 }
 
@@ -473,5 +474,21 @@ h3 {
 @media (max-width: 768px) {
 	.hero-title {
 		font-size: 5rem;
+	}
+
+	.topbar {
+		padding: 1rem 1.5rem;
+	}
+
+	.logo {
+		font-size: 0.9rem;
+	}
+
+	.topnav {
+		gap: 1rem;
+	}
+
+	.topnav a {
+		font-size: 0.65rem;
 	}
 }
