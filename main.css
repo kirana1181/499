@@ -279,49 +279,57 @@ background: linear-gradient(135deg, #0b132b 0%, #000000 55%, #0a0f1f 100%);
 	display: flex;
 	flex-direction: column;
 	gap: 0;
-background: linear-gradient(135deg, #0b132b 0%, #000000 55%, #0a0f1f 100%);
+	background: linear-gradient(135deg, #0b132b 0%, #000000 55%, #0a0f1f 100%);
 }
 
 .featured-works h3 {
 	font-family: "Cormorant Garamond", serif;
-	font-size: 4.5rem;
+	font-size: 3rem;
 	font-weight: 400;
 	text-align: center;
-	padding: 5rem 8vw;
+	padding: 3rem 5vw 2rem;
 	margin: 0;
-	color: #F3F5F2;
+	color: white;
 	letter-spacing: -0.02em;
 }
 
 /* =========================
-   PROJECT BANDS
+   PROJECTS
 ========================= */
 
 .featured-item {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	align-items: stretch;
-	gap: 0;
+	align-items: center;
 
-	min-height: 85vh;
 	width: 100%;
+	min-height: auto;
 
-	padding: 0;
-	border-radius: 0;
+	gap: 2rem;
+
+	padding: 2rem 5vw;
 
 	position: relative;
 }
-
-/* subtle divider */
 
 .featured-item:not(:last-child)::after {
 	content: "";
 	position: absolute;
 	bottom: 0;
-	left: 6vw;
-	right: 6vw;
+	left: 5vw;
+	right: 5vw;
 	height: 1px;
-	background: rgba(220, 235, 220, 0.15);
+	background: rgba(255,255,255,0.1);
+}
+
+/* alternate image position */
+
+.featured-item:nth-child(even) .featured-image {
+	order: 2;
+}
+
+.featured-item:nth-child(even) .featured-text {
+	order: 1;
 }
 
 /* =========================
@@ -329,22 +337,26 @@ background: linear-gradient(135deg, #0b132b 0%, #000000 55%, #0a0f1f 100%);
 ========================= */
 
 .featured-image {
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .featured-image img {
 	width: 100%;
-	height: 100%;
-	object-fit: cover;
+	height: auto;
+
+	max-height: 350px;
+
+	object-fit: contain;
+
 	display: block;
 
-	transition: transform 1s ease;
+	transition: transform 0.4s ease;
 }
 
 .featured-item:hover img {
-	transform: scale(1.03);
+	transform: scale(1.02);
 }
 
 /* =========================
@@ -352,39 +364,39 @@ background: linear-gradient(135deg, #0b132b 0%, #000000 55%, #0a0f1f 100%);
 ========================= */
 
 .featured-text {
-	padding: 6rem 8vw;
+	padding: 0;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 
-	color: #E9EEE8;
+	color: white;
 }
 
 .featured-label {
 	font-family: "Unbounded", sans-serif;
-	font-size: 0.7rem;
-	letter-spacing: 0.18em;
+	font-size: 0.65rem;
+	letter-spacing: 0.15em;
 	text-transform: uppercase;
-	color: #9EB19C;
-	margin-bottom: 1rem;
+	color: rgba(255,255,255,0.55);
+	margin-bottom: 0.75rem;
 }
 
 .featured-text h2 {
 	font-family: "Cormorant Garamond", serif;
-	font-size: clamp(2.5rem, 4vw, 5rem);
+	font-size: clamp(2rem, 3vw, 3.5rem);
 	font-weight: 300;
-	line-height: 0.95;
-	margin-bottom: 1.5rem;
-	color: #F5F8F4;
+	line-height: 1;
+	margin-bottom: 1rem;
+	color: white;
 }
 
 .featured-description {
-	font-size: 1rem;
-	line-height: 1.8;
-	max-width: 600px;
-	color: rgba(235, 242, 234, 0.9);
-	margin-bottom: 2rem;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	max-width: 550px;
+	color: rgba(255,255,255,0.8);
+	margin-bottom: 1rem;
 }
 
 .featured-link {
@@ -392,32 +404,60 @@ background: linear-gradient(135deg, #0b132b 0%, #000000 55%, #0a0f1f 100%);
 	text-decoration: none;
 
 	font-family: "Unbounded", sans-serif;
-	font-size: 0.75rem;
-	letter-spacing: 0.16em;
+	font-size: 0.7rem;
+	letter-spacing: 0.15em;
 	text-transform: uppercase;
 
-	color: #DDE8DB;
+	color: white;
 }
 
 .featured-link::after {
 	content: "";
 	position: absolute;
 	left: 0;
-	bottom: -6px;
+	bottom: -4px;
 
 	width: 100%;
 	height: 1px;
 
-	background: #DDE8DB;
+	background: white;
 
 	transform: scaleX(0.3);
 	transform-origin: left;
 
-	transition: transform 0.5s ease;
+	transition: transform 0.4s ease;
 }
 
 .featured-link:hover::after {
 	transform: scaleX(1);
+}
+
+@media (max-width: 900px) {
+
+	.featured-item {
+		grid-template-columns: 1fr;
+		padding: 2rem 5vw;
+		gap: 1.5rem;
+	}
+
+	.featured-item:nth-child(even) .featured-image,
+	.featured-item:nth-child(even) .featured-text {
+		order: initial;
+	}
+
+	.featured-image img {
+		max-height: 250px;
+		width: 100%;
+	}
+
+	.featured-works h3 {
+		font-size: 2.5rem;
+		padding: 2rem 5vw;
+	}
+
+	.featured-text h2 {
+		font-size: 2.25rem;
+	}
 }
 /* SOCIAL FOOTER */
 
