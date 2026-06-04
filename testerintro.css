@@ -755,12 +755,19 @@ body {
 	will-change: transform;
 }
 /* =========================
-   PINNED SCENE SYSTEM
+   FILM SEQUENCE WRAPPER
+========================= */
+
+.film {
+	background: #0b0d0f;
+}
+
+/* =========================
+   SCENE (PINNED CUT SYSTEM)
 ========================= */
 
 .scene {
-	height: 200vh; /* scroll distance */
-	background: #0b0d0f;
+	height: 220vh; /* longer = more cinematic pacing */
 	position: relative;
 }
 
@@ -774,38 +781,47 @@ body {
 	align-items: center;
 
 	padding: 0 6vw;
+
 	overflow: hidden;
 }
 
-/* IMAGE */
+/* =========================
+   IMAGE LAYER (CINEMATIC MOVE)
+========================= */
 
 .scene-image {
-	height: 80vh;
+	height: 85vh;
 	overflow: hidden;
-	border-radius: 2px;
 }
 
 .scene-image img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	transform: scale(1.1);
-	transition: transform 1s ease;
+
+	transform: scale(1.15);
+	transition: transform 1.2s ease;
 }
 
-/* TEXT */
+/* =========================
+   TEXT LAYER
+========================= */
 
 .scene-content {
 	padding-left: 4vw;
 	color: white;
 	max-width: 600px;
+
+	transform: translateY(80px);
+	opacity: 0;
+	transition: all 1s ease;
 }
 
 .scene-label {
 	font-size: .7rem;
-	letter-spacing: .25em;
+	letter-spacing: .3em;
 	text-transform: uppercase;
-	opacity: .6;
+	opacity: .5;
 	margin-bottom: 1rem;
 }
 
@@ -814,7 +830,7 @@ body {
 	font-size: clamp(3rem, 6vw, 6rem);
 	font-weight: 300;
 	line-height: .9;
-	margin-bottom: 2rem;
+	margin-bottom: 1.5rem;
 }
 
 .scene-content p {
@@ -824,24 +840,31 @@ body {
 }
 
 /* =========================
-   SCENE ANIMATION STATES
+   ACTIVE STATE (THE CUT)
 ========================= */
 
-.scene-image,
-.scene-content {
-	will-change: transform;
-	transform: translateY(60px);
-	opacity: 0;
-	transition: all .8s ease;
-}
-
-.scene.active .scene-image,
 .scene.active .scene-content {
 	transform: translateY(0);
 	opacity: 1;
 }
 
-/* MOBILE */
+.scene.active .scene-image img {
+	transform: scale(1.02);
+}
+
+/* subtle cinematic fade */
+.scene {
+	opacity: 0.4;
+	transition: opacity 1s ease;
+}
+
+.scene.active {
+	opacity: 1;
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:900px){
 
