@@ -279,7 +279,7 @@ background: linear-gradient(135deg, #0b132b 0%, #000000 55%, #0a0f1f 100%);
 	display: flex;
 	flex-direction: column;
 	gap: 0;
-	background: #08170A;
+background: linear-gradient(135deg, #0b132b 0%, #000000 55%, #0a0f1f 100%);
 }
 
 .featured-works h3 {
@@ -312,16 +312,6 @@ background: linear-gradient(135deg, #0b132b 0%, #000000 55%, #0a0f1f 100%);
 	position: relative;
 }
 
-/* alternating greens */
-
-.featured-item:nth-child(odd) {
-	background: #08170A;
-}
-
-.featured-item:nth-child(even) {
-	background: #102415;
-}
-
 /* subtle divider */
 
 .featured-item:not(:last-child)::after {
@@ -335,24 +325,12 @@ background: linear-gradient(135deg, #0b132b 0%, #000000 55%, #0a0f1f 100%);
 }
 
 /* =========================
-   ALTERNATING LAYOUT
-========================= */
-
-.featured-item:nth-child(even) .featured-image {
-	order: 2;
-}
-
-.featured-item:nth-child(even) .featured-text {
-	order: 1;
-}
-
-/* =========================
    IMAGE
 ========================= */
 
 .featured-image {
 	height: 100%;
-	min-height: 85vh;
+	width: 100%;
 	overflow: hidden;
 }
 
