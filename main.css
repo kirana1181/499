@@ -259,7 +259,7 @@ h2 {
 ========================= */
 
 .featured-works {
-	background: #F8F9FA;
+	background: #black;
 	width: 100%;
 	max-width: none;
 	padding: 8rem 8vw;
@@ -462,7 +462,7 @@ h2 {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.25rem 3rem;
-	background: rgba(255, 255, 255, 0.95);
+	background: black;
 	backdrop-filter: blur(12px);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 	z-index: 100;
