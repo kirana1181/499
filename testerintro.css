@@ -323,6 +323,28 @@ body {
 	grid-template-columns: 1fr;
 
 }
+
+.footer {
+
+	padding: 5rem 2rem 2rem;
+
+}
+
+.footer-grid {
+
+	grid-template-columns: 1fr;
+
+	gap: 2rem;
+
+}
+
+.footer-bottom {
+
+	flex-direction: column;
+
+	gap: .75rem;
+
+}
 /* ========================================
 HORIZONTAL GALLERY
 ======================================== */
@@ -559,5 +581,168 @@ CHAPTER ARCHIVE
 	letter-spacing: .15em;
 
 	text-transform: uppercase;
+
+}
+
+/* ========================================
+FOOTER
+======================================== */
+
+.footer {
+
+	background: #0b0d0f;
+
+	color: white;
+
+	padding: 10rem 6vw 4rem;
+
+}
+
+.footer-top {
+
+	max-width: 1400px;
+
+	margin-bottom: 6rem;
+
+}
+
+.footer-label {
+
+	font-size: .7rem;
+
+	letter-spacing: .25em;
+
+	text-transform: uppercase;
+
+	opacity: .6;
+
+	margin-bottom: 1.5rem;
+
+}
+
+.footer h2 {
+
+	font-family: "Cormorant Garamond", serif;
+
+	font-size: clamp(5rem,10vw,10rem);
+
+	font-weight: 300;
+
+	line-height: .85;
+
+	max-width: 900px;
+
+	margin-bottom: 2rem;
+
+}
+
+.footer-email {
+
+	font-size: 1.25rem;
+
+	color: white;
+
+	text-decoration: none;
+
+	position: relative;
+
+}
+
+.footer-email::after {
+
+	content: "";
+
+	position: absolute;
+
+	left: 0;
+	bottom: -6px;
+
+	width: 100%;
+	height: 1px;
+
+	background: white;
+
+}
+
+.footer-divider {
+
+	height: 1px;
+
+	background: rgba(255,255,255,.1);
+
+	margin-bottom: 4rem;
+
+}
+
+.footer-grid {
+
+	display: grid;
+
+	grid-template-columns:
+		repeat(4,1fr);
+
+	gap: 3rem;
+
+	margin-bottom: 6rem;
+
+}
+
+.footer-column h4 {
+
+	font-size: .75rem;
+
+	letter-spacing: .18em;
+
+	text-transform: uppercase;
+
+	margin-bottom: 1rem;
+
+	opacity: .6;
+
+}
+
+.footer-column ul {
+
+	list-style: none;
+
+	display: flex;
+
+	flex-direction: column;
+
+	gap: .75rem;
+
+}
+
+.footer-column a {
+
+	color: white;
+
+	text-decoration: none;
+
+	opacity: .85;
+
+}
+
+.footer-column p {
+
+	line-height: 1.8;
+
+	opacity: .85;
+
+}
+
+.footer-bottom {
+
+	display: flex;
+
+	justify-content: space-between;
+
+	border-top: 1px solid rgba(255,255,255,.08);
+
+	padding-top: 2rem;
+
+	font-size: .8rem;
+
+	opacity: .6;
 
 }
