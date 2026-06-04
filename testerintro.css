@@ -304,6 +304,25 @@ body {
 	}
 
 }
+.chapters-section {
+
+	grid-template-columns: 1fr;
+
+	padding: 5rem 2rem;
+
+}
+
+.chapters-copy {
+
+	position: static;
+
+}
+
+.chapters-grid {
+
+	grid-template-columns: 1fr;
+
+}
 /* ========================================
 HORIZONTAL GALLERY
 ======================================== */
