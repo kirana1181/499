@@ -14,9 +14,8 @@
 ========================= */
 
 body {
-	background: #020024;
-	background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(25, 25, 89, 1) 35%, rgba(30, 107, 143, 1) 60%, rgba(23, 29, 82, 1) 100%);
-	color: black;
+	background: #F8F9FA;
+	color: #333;
 	font-family: "Helvetica Neue", sans-serif;
 	overflow-x: hidden;
 }
@@ -80,7 +79,7 @@ body {
 ========================= */
 
 .content-section {
-	color: white;
+	color: #333;
 	padding: 6rem 8vw;
 	position: relative;
 	z-index: 2;
@@ -92,7 +91,57 @@ h2 {
 	font-weight: 400;
 	text-align: center;
 	margin-bottom: 3rem;
-	color: white;
+	color: #333;
+}
+
+/* =========================
+   ARTIST BIO SECTION
+========================= */
+
+.artist-bio {
+	background: white;
+	padding: 6rem 8vw;
+	margin: 4rem 0;
+	position: relative;
+	z-index: 2;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.bio-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 4rem;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.bio-text h3 {
+	font-family: "Cormorant Garamond", serif;
+	font-size: 3rem;
+	font-weight: 400;
+	margin-bottom: 2rem;
+	color: #333;
+}
+
+.bio-text p {
+	font-size: 1.1rem;
+	line-height: 1.8;
+	color: #666;
+	margin-bottom: 1.5rem;
+}
+
+.bio-image {
+	height: 500px;
+	border-radius: 12px;
+	overflow: hidden;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.bio-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 /* =========================
@@ -209,26 +258,31 @@ h2 {
    FEATURED WORKS
 ========================= */
 
-h3 {
-	font-family: "Cormorant Garamond", serif;
-	font-size: 3rem;
-	font-weight: 400;
-	text-align: center;
-	margin-bottom: 0.2rem;
-	color: white;
-}
-
 .featured-works {
-	background: black;
+	background: #F8F9FA;
 	width: 100%;
 	max-width: none;
-	padding: 5rem 5vw;
+	padding: 8rem 8vw;
 	margin: 0;
 	display: flex;
 	flex-direction: column;
 	gap: 3rem;
 	position: relative;
 	z-index: 2;
+}
+
+.featured-works h3 {
+	font-family: "Cormorant Garamond", serif;
+	font-size: 4.5rem;
+	font-weight: 400;
+	text-align: center;
+	margin-bottom: 3rem;
+	color: #333;
+	letter-spacing: -0.02em;
+}
+
+.featured-works hr {
+	display: none;
 }
 
 /* ITEM */
@@ -238,7 +292,15 @@ h3 {
 	grid-template-columns: 1.2fr 1fr;
 	align-items: center;
 	gap: 3rem;
-	background: transparent;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 3rem;
+	border-radius: 12px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-item:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .featured-item.reverse {
@@ -260,12 +322,16 @@ h3 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border-radius: 8px;
+	overflow: hidden;
 }
 
 .featured-image img {
 	max-height: 100%;
 	max-width: 100%;
-	object-fit: contain;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
 }
 
 .featured-item:hover img {
@@ -284,7 +350,7 @@ h3 {
 	font-size: 0.7rem;
 	letter-spacing: 0.18em;
 	text-transform: uppercase;
-	color: #999;
+	color: #BBB;
 	margin-bottom: 1rem;
 }
 
@@ -301,7 +367,7 @@ h3 {
 	font-size: 1rem;
 	line-height: 1.7;
 	max-width: 520px;
-	color: rgba(255, 255, 255, 0.85);
+	color: rgba(255, 255, 255, 0.9);
 	margin-bottom: 1.5rem;
 }
 
@@ -352,7 +418,7 @@ h3 {
 /* SOCIAL FOOTER */
 
 .social-footer {
-	background: black;
+	background: white;
 	width: 100%;
 	padding: 4rem 2rem;
 	display: flex;
@@ -361,6 +427,7 @@ h3 {
 	gap: 2rem;
 	position: relative;
 	z-index: 2;
+	box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* SOCIAL ICONS */
@@ -378,7 +445,7 @@ h3 {
 .social-icon svg {
 	width: 100%;
 	height: 100%;
-	fill: white;
+	fill: #333;
 }
 
 .social-icon:hover {
@@ -395,9 +462,9 @@ h3 {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.25rem 3rem;
-	background: rgba(0, 0, 0, 0.85);
+	background: rgba(255, 255, 255, 0.95);
 	backdrop-filter: blur(12px);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 	z-index: 100;
 }
 
@@ -405,7 +472,7 @@ h3 {
 	font-family: "Cormorant Garamond", serif;
 	font-size: 1.1rem;
 	letter-spacing: 0.35em;
-	color: white;
+	color: #333;
 	font-weight: 600;
 }
 
@@ -419,13 +486,13 @@ h3 {
 	font-size: 0.75rem;
 	letter-spacing: 0.18em;
 	text-transform: uppercase;
-	color: rgba(255, 255, 255, 0.75);
+	color: rgba(0, 0, 0, 0.6);
 	transition: 0.3s ease;
 }
 
 .topnav a:hover,
 .topnav a.active {
-	color: white;
+	color: #333;
 }
 
 /* =========================
@@ -470,12 +537,25 @@ h3 {
 		height: 40vh;
 	}
 
-	h3 {
+	.featured-works h3 {
 		font-size: 3.5rem;
 	}
 
 	.featured-text h2 {
 		font-size: 3rem;
+	}
+
+	.bio-container {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.bio-text h3 {
+		font-size: 2.2rem;
+	}
+
+	.bio-image {
+		height: 300px;
 	}
 }
 
@@ -503,5 +583,17 @@ h3 {
 	.social-icon {
 		width: 48px;
 		height: 48px;
+	}
+
+	.artist-bio {
+		padding: 3rem 4vw;
+	}
+
+	.content-section {
+		padding: 3rem 4vw;
+	}
+
+	.featured-works {
+		padding: 4rem 4vw;
 	}
 }
