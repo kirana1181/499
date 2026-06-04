@@ -746,3 +746,11 @@ FOOTER
 	opacity: .6;
 
 }
+
+html {
+	background: #0b0d0f;
+}
+
+body {
+	will-change: transform;
+}
