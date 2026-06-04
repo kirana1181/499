@@ -74,3 +74,27 @@ function updateGallery() {
 }
 
 updateGallery();
+
+/* =========================
+   PINNED SCENE ACTIVATION
+========================= */
+
+const scenes = document.querySelectorAll(".scene");
+
+const sceneObserver = new IntersectionObserver((entries) => {
+
+	entries.forEach(entry => {
+
+		if(entry.isIntersecting){
+			entry.target.classList.add("active");
+		}
+
+	});
+
+}, {
+	threshold: 0.4
+});
+
+scenes.forEach(scene => {
+	sceneObserver.observe(scene);
+});
