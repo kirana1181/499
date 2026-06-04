@@ -270,9 +270,6 @@ h2 {
 /* =========================
    FEATURED WORKS
 ========================= */
-/* =========================
-   FEATURED WORKS
-========================= */
 
 .featured-works {
 	width: 100%;
@@ -446,7 +443,7 @@ h2 {
 /* SOCIAL FOOTER */
 
 .social-footer {
-	background: black;
+background: linear-gradient(135deg, #0b132b 0%, #000000 55%, #0a0f1f 100%);
 	width: 100%;
 	padding: 4rem 2rem;
 	display: flex;
@@ -490,7 +487,7 @@ h2 {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.25rem 3rem;
-	background: black;
+background: linear-gradient(135deg, #0b132b 0%, #000000 55%, #0a0f1f 100%);
 	backdrop-filter: blur(12px);
 	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 	z-index: 100;
