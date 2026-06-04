@@ -304,3 +304,118 @@ body {
 	}
 
 }
+/* ========================================
+HORIZONTAL GALLERY
+======================================== */
+
+.horizontal-gallery {
+
+	height: 450vh;
+
+	position: relative;
+
+	background: #0b0d0f;
+
+}
+
+.gallery-sticky {
+
+	position: sticky;
+
+	top: 0;
+
+	height: 100vh;
+
+	overflow: hidden;
+
+	display: flex;
+
+	align-items: center;
+
+}
+
+.gallery-intro {
+
+	position: absolute;
+
+	top: 8vh;
+	left: 5vw;
+
+	z-index: 50;
+
+	max-width: 500px;
+
+}
+
+.gallery-intro p {
+
+	font-family: "Cormorant Garamond", serif;
+
+	font-size: 2rem;
+
+	line-height: 1.1;
+
+	color: rgba(255,255,255,.8);
+
+}
+
+.gallery-track {
+
+	display: flex;
+
+	align-items: center;
+
+	gap: 3rem;
+
+	padding-left: 45vw;
+	padding-right: 20vw;
+
+	will-change: transform;
+
+}
+
+.gallery-item {
+
+	width: 50vw;
+
+	height: 70vh;
+
+	flex-shrink: 0;
+
+	overflow: hidden;
+
+	background: #111;
+
+}
+
+.gallery-item.wide {
+
+	width: 70vw;
+
+}
+
+.gallery-item.tall {
+
+	width: 40vw;
+	height: 85vh;
+
+}
+
+.gallery-item img {
+
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+
+	display: block;
+
+	transition: transform 1.5s ease;
+
+}
+
+.gallery-item:hover img {
+
+	transform: scale(1.05);
+
+}
