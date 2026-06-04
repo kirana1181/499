@@ -754,3 +754,103 @@ html {
 body {
 	will-change: transform;
 }
+/* =========================
+   PINNED SCENE SYSTEM
+========================= */
+
+.scene {
+	height: 200vh; /* scroll distance */
+	background: #0b0d0f;
+	position: relative;
+}
+
+.scene-sticky {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+
+	display: grid;
+	grid-template-columns: 1.2fr 1fr;
+	align-items: center;
+
+	padding: 0 6vw;
+	overflow: hidden;
+}
+
+/* IMAGE */
+
+.scene-image {
+	height: 80vh;
+	overflow: hidden;
+	border-radius: 2px;
+}
+
+.scene-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform: scale(1.1);
+	transition: transform 1s ease;
+}
+
+/* TEXT */
+
+.scene-content {
+	padding-left: 4vw;
+	color: white;
+	max-width: 600px;
+}
+
+.scene-label {
+	font-size: .7rem;
+	letter-spacing: .25em;
+	text-transform: uppercase;
+	opacity: .6;
+	margin-bottom: 1rem;
+}
+
+.scene-content h2 {
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(3rem, 6vw, 6rem);
+	font-weight: 300;
+	line-height: .9;
+	margin-bottom: 2rem;
+}
+
+.scene-content p {
+	line-height: 1.8;
+	opacity: .8;
+	max-width: 500px;
+}
+
+/* =========================
+   SCENE ANIMATION STATES
+========================= */
+
+.scene-image,
+.scene-content {
+	will-change: transform;
+	transform: translateY(60px);
+	opacity: 0;
+	transition: all .8s ease;
+}
+
+.scene.active .scene-image,
+.scene.active .scene-content {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+	.scene-sticky {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.scene-image {
+		height: 50vh;
+	}
+}
