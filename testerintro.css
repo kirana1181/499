@@ -117,25 +117,6 @@ body {
 
 }
 
-.hero-image {
-
-	position: absolute;
-
-	inset: 0;
-
-	background:
-	linear-gradient(
-		rgba(0,0,0,.45),
-		rgba(0,0,0,.45)
-	),
-
-		
-	url("https://picsum.photos/2200/1400");
-
-	background-size: cover;
-	background-position: center;
-
-}
 
 .hero-video {
 	position: absolute;
@@ -144,8 +125,9 @@ body {
 	width: 100%;
 	height: 100%;
 
-	object-fit: cover;
-	object-position: center top;
+
+	background-size: cover;
+	background-position: center top;
 
 	z-index: 1;
 
