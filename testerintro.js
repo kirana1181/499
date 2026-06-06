@@ -1,4 +1,34 @@
 /* =========================
+HAMBURGER MENU
+========================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const sideMenu = document.getElementById("sideMenu");
+
+if (menuToggle && sideMenu) {
+	let menuTimeout;
+
+	function openMenu() {
+		clearTimeout(menuTimeout);
+		menuToggle.classList.add("active");
+		sideMenu.classList.add("show");
+	}
+
+	function closeMenu() {
+		menuTimeout = setTimeout(() => {
+			menuToggle.classList.remove("active");
+			sideMenu.classList.remove("show");
+		}, 120);
+	}
+
+	menuToggle.addEventListener("mouseenter", openMenu);
+	sideMenu.addEventListener("mouseenter", openMenu);
+
+	menuToggle.addEventListener("mouseleave", closeMenu);
+	sideMenu.addEventListener("mouseleave", closeMenu);
+}
+
+/* =========================
    SMOOTH SCROLL ENGINE
 ========================= 
 
