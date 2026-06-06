@@ -196,7 +196,7 @@ body {
 
 	font-family: "Cormorant Garamond", serif;
 
-	font-size: clamp(3rem, 7vw, 7rem);
+	font-size: clamp(1rem, 4vw, 4rem);
 
 	line-height: .95;
 
