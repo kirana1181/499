@@ -190,7 +190,7 @@ body {
 /* ABOUT */
 
 .about {
-
+display: grid;
 		grid-template-columns: 1fr 1fr;
 	grid-template-areas: "image text";
 	align-items: center;
