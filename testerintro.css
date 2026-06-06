@@ -199,6 +199,14 @@ body {
 
 }
 
+.about-image {
+	position: relative;
+	overflow: hidden;
+
+	height: 80vh;
+	width: 100%;
+}
+
 .about-image img {
 
 	width: 100%;
