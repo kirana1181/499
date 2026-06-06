@@ -782,7 +782,7 @@ body {
 ========================= */
 
 .scene {
-	height: 220vh; /* longer = more cinematic pacing */
+	height: 140vh; /* longer = more cinematic pacing */
 	position: relative;
 }
 
