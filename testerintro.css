@@ -126,7 +126,7 @@ body {
 	height: 80%;
     object-fit: cover;
 
-	transform: scale(2) translateY(-6%);
+	transform: scale(2);
 	transform-origin: center;
 
 	z-index: 1;
