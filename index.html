@@ -2,115 +2,72 @@
 <html lang="en">
 
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
-	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+	<title>Kiran Arain</title>
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;600&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="main.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="testerintro.css">
 	<link rel="stylesheet" href="hamburgermenu.css">
-	<link rel="stylesheet" href="carousel.css">
+
 </head>
 
 <body>
 
-<header class="topbar">
+	<nav class="nav">
 
-	<div class="logo">
-		KIRAN ARAIN
-	</div>
+		<div class="logo">
+			Kiran Arain
+		</div>
 
-	<nav class="topnav">
-		<a href="index.html">Home</a>
-		<a href="about.html">About</a>
+		<div class="nav-links">
+
+			<a href="#about">Film</a>
+			<a href="#about">Photography</a>
+			<a href="#about">Music</a>
+			<a href="#about">Electronics</a>
+			<a href="#work">Digital</a>
+			<a href="#contact">Art</a>
+
+		</div>
+
 	</nav>
 
-</header>
+	
 
-<!-- =========================
-   HERO
-========================= -->
-<section class="hero">
-	<!-- VIDEO BACKGROUND -->
-	<video autoplay muted loop playsinline>
-		<source src="videos/hdbackground.mp4" type="video/mp4">
-	</video>
-	<!-- TEXT OVER VIDEO -->
-	<div class="hero-content">
-		<h1 class="hero-title">
-			portfolio 
-		</h1>
-		<p class="hero-subtitle">by kiran arain</p>
-	</div> 
-</section>
+	<section class="hero">
 
-<hr style="border: none; border-top: 5px black; width: 100%;">
+		<video
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline>
+    <source src="videos/hdbackgroundcrop.mp4" type="video/mp4">
+</video>
 
-<!-- =========================
-   CONTENT
-========================= -->
+		<div class="hero-content">
 
-	<section class="artist-bio">
-
-	<div class="bio-container">
-
-		<div class="bio-text">
-			<h3>Artist Bio</h3>
-
-			<p>
-				Kiran Arain is a multimedia artist and recent graduate of New York University.
-				Their work spans filmmaking, performance, interactive media, and emerging
-				technologies, exploring the intersections of storytelling, identity, memory,
-				and collective imagination.
+			<p class="eyebrow">
+				MULTIMEDIA ARTIST
 			</p>
 
-			<p>
-				Drawing from screenwriting, installation, electronics, and digital tools such
-				as Blender and TouchDesigner, they create projects that move fluidly between
-				cinematic, theatrical, and experiential forms.
-			</p>
+			<h1>
+				Kiran<br>
+				Arain
+			</h1>
 
-			<p>
-				Their practice is driven by collaboration and experimentation, using art as a
-				space to investigate new ways of connecting audiences with urgent social,
-				political, and environmental questions.
-			</p>
 		</div>
 
-		<div class="bio-image">
-			<img src="images/kiran-portrait.jpg" alt="Portrait of Kiran Arain">
-		</div>
+	</section>
 
-	</div>
-
-</section>
-<section class="content-section">
-
-	<h2>
-		a conglomeration of various projects. <br>
-		film, photo, art, and electronic exhibitions
-	</h2>
-
-
-	<!-- DECK CAROUSEL -->
-	<div class="deck">
-		<button class="deck-btn left" onclick="move(-1)">‹</button>
-		<div class="deck-track" id="deckTrack">
-			<div class="card"><img src="images/pic5.png"></div>
-			<div class="card"><img src="images/pic5.png"></div>
-			<div class="card"><img src="images/pic5.png"></div>
-			<div class="card"><img src="images/pic4.png"></div>
-			<div class="card"><img src="images/pic5.png"></div>
-		</div>
-		<button class="deck-btn right" onclick="move(1)">›</button>
-	</div>
-</section>
-
-
-<!-- =========================
+	<!-- =========================
 HAMBURGER MENU
 ========================= -->
 
@@ -130,142 +87,319 @@ HAMBURGER MENU
 	<a href="digital.html">digital</a>
 	<a href="electronics.html">electronic</a>
 </div> 
-	
-<!-- =========================
-   FEATURED WORKS
-========================= -->
-<hr style="border: none; border-top: 5px navy; width: 100%;">
-<section class="featured-works">
-	<h3>Featured Works</h3>
-	<hr style="border: none; border-top: 2px solid white; width: 100%;">
-	
-	<div class="featured-item reveal">
-		<div class="featured-image">
-			<img src="images/poster.png" alt="A Message to the United States">
-		</div>
-		<div class="featured-text">
-			<p class="featured-label">short film / 2026</p>
-			<h2>A Message to the United States</h2>
-			<p class="featured-description">
-				A fragmented climate elegy exploring collapse through mixed media and observational narrative.
-			</p>
-			<a href="#" class="featured-link">view project</a>
-		</div>
-	</div>
-	<hr style="border: none; border-top: 2px solid white; width: 100%;">
 
-	<!-- SECOND -->
-
-	<div class="featured-item reverse reveal">
-		<div class="featured-image">
-			<img src="images/work2.jpg" alt="The Horses of Rhossili Bay">
-		</div>
-		<div class="featured-text">
-			<p class="featured-label">photography / exhibition</p>
-			<h2>The Horses of Rhossili Bay</h2>
-			<p class="featured-description">
-				A photographic series documenting synthetic landscapes and environmental simulacra.
-			</p>
-			<a href="#" class="featured-link">view project</a>
-		</div>
-	</div>
-	<hr style="border: none; border-top: 2px solid white; width: 100%;">
-
-	<!-- THIRD -->
-	<div class="featured-item reveal">
-		<div class="featured-image">
-			<img src="images/work3.jpg" alt="INFECTION">
-		</div>
-		<div class="featured-text">
-			<p class="featured-label">digital installation</p>
-			<h2>INFECTION</h2>
-			<p class="featured-description">
-				A performance using interactive projection via TouchDesigner and KantanMapper. 
-			</p>
-			<a href="#" class="featured-link">view project</a>
-		</div>
-	</div>
-	<hr style="border: none; border-top: 2px solid white; width: 100%;">	
-
-	<!-- FOURTH -->
-
-	<div class="featured-item reveal">
-		<div class="featured-image">
-			<img src="images/work3.jpg" alt="Signal - Blue Bird, Broken Bird?">
-		</div>
-		<div class="featured-text">
-			<p class="featured-label">Electronics</p>
-			<h2>Signal - Blue Bird, Broken Bird?</h2>
-			<p class="featured-description">
-				Motor powered animatronic of bird. 
-			</p>
-			<a href="#" class="featured-link">view project</a>
-		</div>
-	</div>
-	<hr style="border: none; border-top: 2px solid white; width: 100%;">
-
-	<!-- FIFTH -->
-
-	<div class="featured-item reveal">
-		<div class="featured-image">
-			<img src="images/work3.jpg" alt="Good Boy!">
-		</div>
-		<div class="featured-text">
-			<p class="featured-label">Fine Art</p>
-			<h2>Good Boy!</h2>
-			<p class="featured-description">
-				An unaccurate portrait of man's best friend. 
-			</p>
-			<a href="#" class="featured-link">view project</a>
-		</div>
-	</div>
+	<section class="manifesto reveal">
+    <p>
+        a conglomeration of film, art, electronics, and various other projects.
+    </p>
 </section>
 
-<!-- =========================
-   CINEMATIC PANELS
-========================= --> 
+	<section class="about">
 
-<h3">Explore:</32>
+    <div class="about-image reveal" id="aboutFrame">
+        <img class="stack-image active" src="images1.jpg">
+        <img class="stack-image" src="image2.jpg">
+        <img class="stack-image" src="image3.jpg">
+        <img class="stack-image" src="image4.jpg">
+
+        <button class="image-next-btn">→</button>
+    </div>
+
+    <div class="about-copy reveal">
+
+    
+
+			<h2>
+			about
+			</h2>
+
+			<p>
+
+				Kiran Arain is a multimedia artist and recent graduate of New York University.
+				Their work spans filmmaking, performance, interactive media, and emerging
+				technologies, exploring the intersections of storytelling, identity, memory,
+				and collective imagination.
+			</p>
+
+			<p>
+				Drawing from screenwriting, installation, electronics, and digital tools such
+				as Blender and TouchDesigner, they create projects that move fluidly between
+				cinematic, theatrical, and experiential forms. 
+
+			</p>
+
+		</div>
+
+	</section>
+
+
+
 	
-<section class="cinema-panels reveal-section">
-	<a href="film.html" class="panel"><span>FILM</span></a>
-	<a href="art.html" class="panel"><span>ART</span></a>
-	<a href="music.html" class="panel"><span>MUSIC</span></a>
-</section>
 
-<section class="cinema-panels reveal-section second-row">
-	<a href="photography.html" class="panel"><span>PHOTO</span></a>
-	<a href="digital.html" class="panel"><span>DIGITAL</span></a>
-	<a href="electronics.html" class="panel"><span>ELECTRONIC</span></a>
+	<section class="horizontal-gallery">
+
+	<div class="gallery-sticky">
+
+		<div class="gallery-intro">
+
+			<p>
+				Select works spanning film, installation, and performance,
+	
+			</p>
+
+		</div>
+
+		<div class="gallery-track">
+
+			<div class="gallery-item">
+				<img src=images/rhosbay/index1>
+			</div>
+
+			<div class="gallery-item wide">
+				<img src="images/rhosbay/rhosbay29.png">
+			</div>
+
+			<div class="gallery-item">
+				<img src="images/rhosbay/rhosbay2.jpg">
+			</div>
+
+			<div class="gallery-item tall">
+				<img src="images/rhosbay/rhosbay19-2.jpg">
+	
+			</div>
+
+		</div>
+
+	</div>
+
 </section>
 
 
-<!-- =========================
-FOOTER SOCIAL BAR
-========================= -->
-<footer class="social-footer">
+<section class="film">
 
-	<a href="https://instagram.com" target="_blank" class="social-icon" aria-label="Instagram">
-		<svg viewBox="0 0 24 24">
-			<path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3h10zm-5 3.5[...]"/>
-		</svg>
-	</a>
+		<h2>Featured works</h2>
 
-	<a href="https://youtube.com" target="_blank" class="social-icon" aria-label="YouTube">
-		<svg viewBox="0 0 24 24">
-			<path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.5 12 4.5 12 4.5s-5.7 0-7.5.6A3 3 0 0 0 2.4 7.2A31 31 0 0 0 2 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.8.6 7.5.6 7.5.6s5.7 0 7.5-.6a3 3 0 0 0 2.1-2.[...]"/>
-		</svg>
-	</a>
+	<!-- SCENE 01 -->
+	<section class="scene">
+		<div class="scene-sticky">
+			<div class="scene-image">
+				<img src=images/poster.png>
+			</div>
+			<div class="scene-content">
+				<p class="scene-label">Featured Work</p>
+				<h2>a message to the united states, god, or my dead cat</h2>
+				<p>a climate eulogy</p>
+			</div>
+		</div>
+	</section>
 
-	<a href="mailto:kiran@example.com" class="social-icon" aria-label="Email">
-		<svg viewBox="0 0 24 24">
-			<path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/>
-		</svg>
-	</a>
+	<!-- SCENE 02 -->
+	<section class="scene">
+		<div class="scene-sticky">
+			<div class="scene-image">
+				<img src="images/rhosbay/rhosbay28.png">
+			</div>
+			<div class="scene-content">
+				<p class="scene-label">Featured Work2</p>
+				<h2>Wild Horses of Rhossili Bay</h2>
+				<p>Photodoc series capturing the home and characters of rhossili bay's only wild pony herd.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- SCENE 03 -->
+	<section class="scene">
+		<div class="scene-sticky">
+			<div class="scene-image">
+				<img src="https://picsum.photos/id/1039/2000/1400">
+			</div>
+			<div class="scene-content">
+				<p class="scene-label">SCENE 03</p>
+				<h2>The Navigation which uides you</h2>
+				<p>Interactive light installatino coded with Touchdesigner and a motorized automata.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- SCENE 04 -->
+	<section class="scene">
+		<div class="scene-sticky">
+			<div class="scene-image">
+				<img src="https://picsum.photos/id/1047/2000/1400">
+			</div>
+			<div class="scene-content">
+				<p class="scene-label">SCENE 04</p>
+				<h2>Blue Bird</h2>
+				<p>Automata</p>
+			</div>
+		</div>
+	</section>
+
+</section>
+	
+
+	<section class="chapters-section">
+
+	<div class="chapters-copy">
+
+		<p class="chapter-label">
+			ARCHIVE
+		</p>
+
+		<h2>
+			Explore more!
+		</h2>
+
+		<p class="chapter-description">
+
+			A collection of films,
+			installations,
+			performances,
+			and ongoing experiments.
+
+		</p>
+
+	</div>
+
+	<div class="chapters-grid">
+
+		<a href="#" class="chapter-card">
+			<img src="images/filmchapter">
+			<span>Film</span>
+		</a>
+
+		<a href="#" class="chapter-card">
+			<img src="images/sculptchapter">
+			<span>Sculptures</span>
+		</a>
+
+		<a href="#" class="chapter-card">
+			<img src="images/rhosbay/rhosbay13.jpg">
+			<span>Photography</span>
+		</a>
+
+		<a href="#" class="chapter-card">
+			<img src="images/3dchap">
+			<span>3d Models</span>
+		</a>
+
+		<a href="#" class="chapter-card">
+			<img src="images/touchchapter">
+			<span>Digital</span>
+		</a>
+
+		<a href="#" class="chapter-card">
+			<img src="images/artchapter">
+			<span>Fine Arts</span>
+		</a>
+			<a href="#" class="chapter-card">
+			<img src="images/muscchapter">
+			<span>Music</span>
+		</a>
+
+	</div>
+
+</section>
+
+	<footer id="contact" class="footer">
+
+	<div class="footer-top">
+
+		<p class="footer-label">
+			reach out!
+		</p>
+
+		<h2>
+			let's make
+			something
+			together.
+		</h2>
+
+		<a
+			href="mailto:ka2872@nyu.edu"
+			class="footer-email"
+		>
+			ka2872@nyu.edu
+		</a>
+
+	</div>
+
+	<div class="footer-divider"></div>
+
+	<div class="footer-grid">
+
+		<div class="footer-column">
+
+			<h4>Practice</h4>
+
+			<ul>
+
+				<li>Film</li>
+				<li>Installation</li>
+				<li>Performance</li>
+				<li>Creative Technology</li>
+				<li>Interactive Media</li>
+
+			</ul>
+
+		</div>
+
+		<div class="footer-column">
+
+			<h4>Explore</h4>
+
+			<ul>
+
+				<li><a href="#about">About</a></li>
+				<li><a href="#work">Projects</a></li>
+				<li><a href="#">Archive</a></li>
+
+			</ul>
+
+		</div>
+
+		<div class="footer-column">
+
+			<h4>Connect</h4>
+
+			<ul>
+
+				<li><a href="#">Instagram</a></li>
+				<li><a href="#">Vimeo</a></li>
+				<li><a href="#">LinkedIn</a></li>
+
+			</ul>
+
+		</div>
+
+		<div class="footer-column">
+
+			<h4>Location</h4>
+
+			<p>
+				New York City<br>
+				Available Worldwide
+			</p>
+
+		</div>
+
+	</div>
+
+	<div class="footer-bottom">
+
+		<p>
+			© 2026 Kiran Arain
+		</p>
+
+		<p>
+			Multimedia Artist
+		</p>
+
+	</div>
 
 </footer>
+	<script src="testerintro.js"></script>
 
-<script src="script.js"></script>
 </body>
 
 </html>
