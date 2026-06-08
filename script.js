@@ -1,56 +1,4 @@
 /* =========================
-CAROUSEL
-========================= */
-
-let current = 0;
-
-const deck = document.querySelector(".deck");
-const track = document.getElementById("deckTrack");
-
-if (deck && track) {
-	function getCards() {
-		return track.querySelectorAll(".card");
-	}
-
-	function updateDeck() {
-		const cards = getCards();
-
-		if (!cards.length) return;
-
-		cards.forEach(card => card.classList.remove("active"));
-
-		if (!cards[current]) return;
-
-		cards[current].classList.add("active");
-
-		const cardWidth = cards[0].offsetWidth;
-		const gap = 24;
-
-		const offset =
-			current * (cardWidth + gap)
-			- (deck.offsetWidth / 2)
-			+ (cardWidth / 2);
-
-		track.style.transform = `translateX(-${offset}px)`;
-	}
-
-	window.move = function(direction) {
-		const cards = getCards();
-
-		if (!cards.length) return;
-
-		current += direction;
-
-		if (current < 0) current = cards.length - 1;
-		if (current >= cards.length) current = 0;
-
-		updateDeck();
-	};
-
-	updateDeck();
-}
-
-/* =========================
 HAMBURGER MENU
 ========================= */
 
@@ -81,49 +29,120 @@ if (menuToggle && sideMenu) {
 }
 
 /* =========================
-CINEMA PANELS REVEAL
+   SMOOTH SCROLL ENGINE
+========================= 
+
+const lenis = new Lenis({
+	smooth: true,
+	lerp: 0.08, // lower = more floaty
+});
+
+function raf(time) {
+	lenis.raf(time);
+	requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf); */
+
+
+/* =========================
+   REVEAL OBSERVER
 ========================= */
 
-const revealSections = document.querySelectorAll(".cinema-panels");
-
-const sectionObserver = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver((entries) => {
 	entries.forEach(entry => {
 		if (entry.isIntersecting) {
 			entry.target.classList.add("visible");
 		}
 	});
 }, {
-	threshold: 0.1
+	threshold: 0.15
 });
 
-// force initial check (IMPORTANT FIX)
-revealSections.forEach(section => {
-	sectionObserver.observe(section);
-
-	// if already visible on load
-	if (section.getBoundingClientRect().top < window.innerHeight) {
-		section.classList.add("visible");
-	}
+document.querySelectorAll(".reveal").forEach(el => {
+	observer.observe(el);
 });
+
 
 /* =========================
-FEATURED WORK REVEAL
+   HORIZONTAL GALLERY (EASED)
 ========================= */
 
-const reveals = document.querySelectorAll(".reveal");
+const gallery = document.querySelector(".horizontal-gallery");
+const track = document.querySelector(".gallery-track");
 
-if (reveals.length) {
-	const revealObserver = new IntersectionObserver(entries => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				entry.target.classList.add("visible");
-			}
-		});
-	}, {
-		threshold: 0.15
-	});
+let currentX = 0;
+let targetX = 0;
 
-	reveals.forEach(item => {
-		revealObserver.observe(item);
-	});
+function updateGallery() {
+
+	if (!gallery || !track) return;
+
+	const rect = gallery.getBoundingClientRect();
+
+	const maxScroll =
+		gallery.offsetHeight - window.innerHeight;
+
+	const progress =
+		Math.min(
+			Math.max((-rect.top) / maxScroll, 0),
+			1
+		);
+
+	const maxMove =
+		track.scrollWidth - window.innerWidth;
+
+	targetX = progress * maxMove;
+
+	// INERTIA (THIS IS THE MAGIC)
+	currentX += (targetX - currentX) * 0.08;
+
+	track.style.transform =
+		`translateX(${-currentX}px)`;
+
+	requestAnimationFrame(updateGallery);
 }
+
+updateGallery();
+
+/* =========================
+   PINNED SCENE ACTIVATION
+========================= */
+
+const scenes = document.querySelectorAll(".scene");
+
+const sceneObserver = new IntersectionObserver((entries) => {
+
+	entries.forEach(entry => {
+
+		if(entry.isIntersecting){
+			entry.target.classList.add("active");
+		}
+
+	});
+
+}, {
+	threshold: 0.4
+});
+
+scenes.forEach(scene => {
+	sceneObserver.observe(scene);
+});
+
+/* about section */
+
+const frame = document.getElementById("aboutFrame");
+const images = frame.querySelectorAll(".stack-image");
+const button = frame.querySelector(".image-next-btn");
+
+let index = 0;
+
+function showImage(i) {
+	images.forEach(img => img.classList.remove("active"));
+	images[i].classList.add("active");
+}
+
+button.addEventListener("click", () => {
+	index = (index + 1) % images.length;
+	showImage(index);
+});
