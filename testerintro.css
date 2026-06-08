@@ -165,28 +165,21 @@ body {
 /* MANIFESTO */
 
 .manifesto {
+    background: var(--stone);
+    color: var(--ink);
+    padding: 12rem 8vw;
 
-	background: var(--stone);
-
-	color: var(--ink);
-
-	padding: 12rem 8vw;
-
+    display: flex;
+    justify-content: center;
 }
 
 .manifesto p {
-
-	font-family: "Cormorant Garamond", serif;
-
-	font-size: clamp(1rem, 4vw, 4rem);
-
-	line-height: .95;
-
-	max-width: 1200px;
-  justify-content: center;
-  align-items: center;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(1rem, 4vw, 4rem);
+    line-height: .95;
+    max-width: 1200px;
+    text-align: center; /* optional */
 }
-
 /* ABOUT */
 
 .about {
