@@ -122,12 +122,10 @@ body {
 	position: absolute;
 	inset: 0;
 
-	width: 80%;
-	height: 80%;
+	width: 100%;
+	height: 100%;
     object-fit: cover;
-	object-position: center 70%; /* this is your crop control */
-
-	transform: scale(2);
+	object-position: center 
 	transform-origin: center;
 
 	z-index: 1;
