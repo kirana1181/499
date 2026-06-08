@@ -168,7 +168,10 @@ body {
     background: var(--stone);
     color: var(--ink);
     padding: 12rem 8vw;
-
+ background-image: url("images/rhossbay/about.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
 }
@@ -187,10 +190,6 @@ display: grid;
 		grid-template-columns: 1fr 1fr;
 	grid-template-areas: "image text";
 	align-items: center;
- background-image: url("images/rhossbay/about.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .about-image {
