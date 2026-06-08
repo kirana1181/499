@@ -187,7 +187,10 @@ display: grid;
 		grid-template-columns: 1fr 1fr;
 	grid-template-areas: "image text";
 	align-items: center;
-
+ background-image: url("images/about-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .about-image {
