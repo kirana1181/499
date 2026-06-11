@@ -515,7 +515,7 @@ gap:2rem;
 
 .bench-card{
 
-```
+
 padding:2rem;
 
 border-radius:18px;
@@ -579,6 +579,264 @@ line-height:2;
 
     grid-template-columns:1fr;
 }
+
+
+}
+
+/* =========================
+ARCHIVE WALL
+========================= */
+
+.archive-wall{
+
+
+padding:8rem 8vw;
+
+
+}
+
+.archive-grid{
+
+
+margin-top:4rem;
+
+display:grid;
+
+grid-template-columns:
+    repeat(3,1fr);
+
+gap:2.5rem;
+
+}
+
+.archive-item{
+
+
+background:white;
+
+padding:1rem 1rem 2rem;
+
+box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+position:relative;
+transition:
+    transform .3s ease;
+
+
+}
+
+.archive-item:nth-child(odd){
+
+transform:rotate(-2deg);
+
+}
+
+.archive-item:nth-child(even){
+
+transform:rotate(2deg);
+
+
+}
+
+.archive-item:hover{
+
+transform:
+    translateY(-10px)
+    rotate(0deg);
+
+
+}
+
+.archive-item img{
+
+
+width:100%;
+
+display:block;
+
+
+}
+
+.archive-item figcaption{
+
+
+margin-top:1rem;
+
+text-align:center;
+
+font-family:"Caveat",cursive;
+
+font-size:1.4rem;
+
+
+}
+
+/* tape */
+
+.archive-item::before{
+
+content:"";
+
+position:absolute;
+
+top:-10px;
+left:50%;
+
+width:90px;
+height:24px;
+
+transform:
+    translateX(-50%)
+    rotate(-3deg);
+
+background:
+    rgba(255,255,255,.65);
+
+backdrop-filter:
+    blur(3px);
+
+
+}
+@media (max-width:900px){
+
+    .archive-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:600px){
+
+    .archive-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* =========================
+FINAL NOTE
+========================= */
+
+.final-note{
+
+padding:
+    8rem 8vw
+    12rem;
+
+
+}
+
+.note-paper{
+
+max-width:900px;
+
+margin:auto;
+
+background:white;
+
+padding:4rem;
+
+border-radius:20px;
+
+box-shadow:
+    0 20px 60px rgba(0,0,0,.08);
+
+position:relative;
+
+
+}
+
+.note-paper::before{
+
+content:"";
+
+position:absolute;
+
+top:-12px;
+right:80px;
+
+width:120px;
+height:28px;
+
+background:
+    rgba(255,255,255,.65);
+
+transform:
+    rotate(6deg);
+
+
+}
+
+.note-paper h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:clamp(2.5rem,5vw,4rem);
+
+font-weight:400;
+
+margin:
+    1rem 0
+    2rem;
+
+}
+
+.note-paper p{
+
+line-height:1.9;
+
+max-width:700px;
+
+}
+
+.footer-links{
+
+margin-top:3rem;
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:1.5rem;
+
+
+}
+
+.footer-links a{
+
+text-decoration:none;
+
+color:var(--ink);
+
+padding:.7rem 1.2rem;
+
+background:var(--cream);
+
+border-radius:999px;
+
+transition:
+    transform .2s ease;
+
+
+}
+
+.footer-links a:hover{
+
+transform:
+    translateY(-3px);
+
+}
+
+.signature{
+
+margin-top:3rem;
+
+font-family:"Caveat",cursive;
+
+font-size:2rem;
 
 
 }
