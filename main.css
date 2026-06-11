@@ -165,23 +165,38 @@ body {
 /* MANIFESTO */
 
 .manifesto {
-    background: var(--stone);
-    color: var(--ink);
-    padding: 12rem 8vw;
- background-image: url("images/rhosbay/about.png");
+    min-height: 100vh;
+
+    background-image: url("images/rhosbay/about.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    padding: 4rem;
 }
 
 .manifesto p {
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(1rem, 4vw, 4rem);
-    line-height: .95;
-    max-width: 1200px;
-    text-align: center; /* optional */
+    font-size: clamp(1.5rem, 4vw, 4rem);
+    line-height: 1;
+
+    max-width: 1000px;
+    text-align: center;
+
+    background: rgba(233, 228, 221, 0.92);
+
+    color: var(--ink);
+
+    padding: 3rem 4rem;
+
+    border-radius: 2px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
 }
 /* ABOUT */
 
