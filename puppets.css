@@ -35,3 +35,67 @@ body{
     font-family:"Cormorant Garamond",serif;
     font-size:clamp(2rem,4vw,4rem);
 }
+
+.build{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    min-height:100vh;
+}
+
+.build.reverse{
+    direction:rtl;
+}
+
+.build.reverse *{
+    direction:ltr;
+}
+
+.build-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.build-copy{
+    padding:8vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.archive-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:2rem;
+}
+
+.archive-card{
+    position:relative;
+    overflow:hidden;
+}
+
+.archive-card img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.5);
+
+    opacity:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    transition:.5s;
+}
+
+.archive-card:hover .overlay{
+    opacity:1;
+}
