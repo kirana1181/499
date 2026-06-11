@@ -486,3 +486,101 @@ background:var(--green);
 
 }
 
+/* =========================
+WORKBENCH
+========================= */
+
+.workbench{
+
+
+padding:8rem 8vw;
+
+
+}
+
+.workbench-grid{
+
+
+margin-top:4rem;
+
+display:grid;
+
+grid-template-columns:
+    repeat(4,1fr);
+
+gap:2rem;
+
+
+}
+
+.bench-card{
+
+```
+padding:2rem;
+
+border-radius:18px;
+
+box-shadow:
+    0 15px 35px rgba(0,0,0,.08);
+
+transition:
+    transform .3s ease;
+
+
+}
+
+.bench-card:hover{
+
+
+transform:
+    translateY(-8px)
+    rotate(-1deg);
+
+
+}
+
+.bench-card h3{
+
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:2rem;
+
+margin-bottom:1rem;
+
+
+}
+
+.bench-card ul{
+
+
+list-style:none;
+
+line-height:2;
+
+
+}
+
+@media (max-width:1000px){
+
+.workbench-grid{
+
+    grid-template-columns:
+        repeat(2,1fr);
+}
+
+
+}
+
+@media (max-width:700px){
+
+
+.workbench-grid{
+
+    grid-template-columns:1fr;
+}
+
+
+}
+
+
