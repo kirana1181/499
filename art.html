@@ -1,1 +1,333 @@
+<!DOCTYPE html>
 
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kiran Arain — Studio Archive</title>
+
+<link rel="stylesheet" href="art.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<div class="paper-texture"></div>
+
+<div class="side-label">
+    Studio Archive
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <p class="archive-tag">
+        Paintings · Objects · Experiments
+    </p>
+
+    <h1>
+        Studio<br>
+        Archive
+    </h1>
+
+    <div class="hero-line"></div>
+
+    <p class="hero-description">
+        A collection of paintings, painted vinyl records,
+        decorative objects, digital works, commissions,
+        and visual experiments spanning multiple mediums.
+    </p>
+
+    <a href="#collection" class="enter-btn">
+        Enter Collection
+    </a>
+
+</section>
+
+<!-- COLLECTOR PANEL -->
+
+<section class="collector-panel">
+
+    <div>
+        <h2>
+            Collect a Piece
+        </h2>
+
+        <p>
+            Selected works are available through the studio shop.
+            Original paintings, painted vinyls, décor pieces,
+            and limited editions.
+        </p>
+    </div>
+
+    <a href="#">
+        Visit Etsy →
+    </a>
+
+</section>
+
+<!-- FILTERS -->
+
+<section class="filters" id="collection">
+
+    <button class="filter-btn active" data-filter="all">
+        All Works
+    </button>
+
+    <button class="filter-btn" data-filter="oil">
+        Oil
+    </button>
+
+    <button class="filter-btn" data-filter="acrylic">
+        Acrylic
+    </button>
+
+    <button class="filter-btn" data-filter="digital">
+        Digital
+    </button>
+
+    <button class="filter-btn" data-filter="vinyl">
+        Painted Vinyls
+    </button>
+
+    <button class="filter-btn" data-filter="decor">
+        Décor
+    </button>
+
+</section>
+
+ <section class="view-toggle">
+
+    <button class="view-btn active" data-view="gallery">
+        Gallery View
+    </button>
+
+    <button class="view-btn" data-view="archive">
+        Archive View
+    </button>
+
+</section>
+<!-- GALLERY GRID -->
+
+<section class="gallery">
+
+    <div class="art-grid">
+
+     <div class="art-card large" data-category="oil">
+
+<img src="images/art/oil1.jpg" alt="">
+
+<div class="art-info">
+
+    <div class="medium">
+        Oil Painting
+    </div>
+
+    <h3>
+        Memory of Fire
+    </h3>
+
+    <p>
+        2025
+    </p>
+
+</div>
+
+</div>
+
+<div class="art-card" data-category="acrylic">
+
+<img src="images/art/acrylic1.jpg" alt="">
+
+<div class="art-info">
+
+    <div class="medium">
+        Acrylic
+    </div>
+
+    <h3>
+        Urban Bloom
+    </h3>
+
+    <p>
+        2024
+    </p>
+
+</div>
+
+
+</div>
+
+<div class="art-card tall" data-category="vinyl">
+
+
+<img src="images/art/vinyl1.jpg" alt="">
+
+<div class="art-info">
+
+    <div class="medium">
+        Painted Vinyl
+    </div>
+
+    <h3>
+        Echoes
+    </h3>
+
+    <p>
+        Available
+    </p>
+
+</div>
+
+
+</div>
+
+<div class="art-card" data-category="digital">
+
+
+<img src="images/art/digital1.jpg" alt="">
+
+<div class="art-info">
+
+    <div class="medium">
+        Digital Painting
+    </div>
+
+    <h3>
+        Synthetic Garden
+    </h3>
+
+    <p>
+        2025
+    </p>
+
+</div>
+
+</div>
+
+<div class="art-card wide" data-category="decor">
+
+<img src="images/art/decor1.jpg" alt="">
+
+<div class="art-info">
+
+    <div class="medium">
+        Décor Object
+    </div>
+
+    <h3>
+        House Spirit
+    </h3>
+
+    <p>
+        Available
+    </p>
+
+</div>
+
+
+</div>
+
+
+    </div>
+
+</section>
+
+<section class="archive-view">
+
+<div class="archive-header">
+
+    <div>Title</div>
+    <div>Medium</div>
+    <div>Year</div>
+    <div>Status</div>
+
+</div>
+
+<div class="archive-row">
+
+    <div>Memory of Fire</div>
+    <div>Oil</div>
+    <div>2025</div>
+    <div>Available</div>
+
+</div>
+
+<div class="archive-row">
+
+    <div>Urban Bloom</div>
+    <div>Acrylic</div>
+    <div>2024</div>
+    <div>Sold</div>
+
+</div>
+
+<div class="archive-row">
+
+    <div>Echoes</div>
+    <div>Painted Vinyl</div>
+    <div>2025</div>
+    <div>Available</div>
+
+</div>
+
+
+</section>
+<script>
+
+const viewButtons =
+document.querySelectorAll(".view-btn");
+
+const gallery =
+document.querySelector(".gallery");
+
+const archive =
+document.querySelector(".archive-view");
+
+viewButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        viewButtons.forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        const view = button.dataset.view;
+
+        if(view === "gallery") {
+
+            gallery.style.display = "block";
+
+            archive.classList.remove("active");
+
+        }
+
+        else {
+
+            gallery.style.display = "none";
+
+            archive.classList.add("active");
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
