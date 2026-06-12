@@ -160,53 +160,50 @@ body {
 
     letter-spacing: 0.08em;
 }
+
 .reel-section {
     background: #050505;
-
     padding: 10rem 6vw;
+    position: relative;
+}
 
+/* NEW FLEX CONTAINER */
+.reel-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: center;   /* vertical alignment */
+    justify-content: space-between;
+    gap: 6rem;
+
+    max-width: 1400px;
+    margin: 0 auto;
 }
+
+/* TEXT SIDE */
 .reel-header {
-    text-align: center;
-
-    margin-bottom: 4rem;
+    flex: 1;
 }
-
 
 .reel-header h2 {
     font-family: "Cormorant Garamond", serif;
 
-    color: white;
-
     font-weight: 300;
+    font-size: clamp(3rem, 6vw, 6rem);
 
-    font-size: clamp(4rem, 8vw, 8rem);
-
-    line-height: 1;
-
-    letter-spacing: 0.05em;
-
-    text-transform: uppercase;
+    color: white;
+    line-height: 1.1;
 }
+
+/* VIDEO SIDE */
 .reel-video {
-    width: 100%;
-    max-width: 1400px;
+    flex: 1.5;
 }
+
+/* keep your existing styling but ensure full width */
 .reel-video video {
     width: 100%;
-
     display: block;
-
     border-radius: 10px;
-
-    box-shadow:
-        0 40px 80px rgba(0,0,0,0.5);
-}
-.reel-section {
-    position: relative;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5);
 }
 .reel-section::before,
 .reel-section::after {
@@ -544,5 +541,15 @@ body {
 
     .nav-links {
         gap: 1rem;
+    }
+}
+@media (max-width: 900px) {
+    .reel-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .reel-header {
+        padding-right: 0;
     }
 }
