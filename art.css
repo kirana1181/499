@@ -20,19 +20,26 @@
 html {
 scroll-behavior: smooth;
 }
-
 body {
+    background:
+        radial-gradient(circle at top left,
+            rgba(184,146,87,.18),
+            transparent 40%),
 
- 
-background: var(--paper);
+        radial-gradient(circle at bottom right,
+            rgba(96,71,58,.12),
+            transparent 45%),
 
-color: var(--ink);
+        linear-gradient(
+            180deg,
+            #f4efe7 0%,
+            #ede5d7 40%,
+            #e7ddd0 100%
+        );
 
-font-family: "Inter", sans-serif;
-
-overflow-x: hidden;
- 
-
+    color: var(--ink);
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
 }
 
 .paper-texture {
