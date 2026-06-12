@@ -8,7 +8,7 @@
 
     <title>Kiran Arain — Cinematography</title>
 
-    <link rel="stylesheet" href="cinematography.css">
+    <link rel="stylesheet" href="newfilm.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,4 +27,218 @@ NAVIGATION
     <a href="index.html" class="logo">KIRAN ARAIN</a>
 
     <div class="nav-links">
-        <a href="index.html">Home</a
+        <a href="index.html">Home</a>
+        <a href="film.html">Film</a>
+        <a href="art.html">Art</a>
+        <a href="photo.html">Photo</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<!-- =========================
+HERO
+========================= -->
+<section class="hero">
+
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="cinematography-hero.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1>CINEMATOGRAPHY</h1>
+
+        <p>
+            Visual storytelling through light,
+            movement, atmosphere, and memory.
+        </p>
+
+        <a href="#reel" class="scroll-btn">
+            Explore Work
+        </a>
+    </div>
+
+</section>
+
+<!-- =========================
+DEMO REEL
+========================= -->
+<section id="reel" class="reel-section">
+
+    <h2>Demo Reel</h2>
+
+    <div class="reel-video">
+
+        <video controls poster="reel-thumbnail.jpg">
+            <source src="demo-reel.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+</section>
+
+<!-- =========================
+SELECTED WORK
+========================= -->
+<section class="selected-work">
+
+    <div class="section-title">
+        <h2>Selected Work</h2>
+    </div>
+
+    <!-- Project 1 -->
+    <article class="project">
+
+        <div class="project-media">
+            <video autoplay muted loop playsinline>
+                <source src="project1.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="project-info">
+            <h3>A Message to the United States, God, or My Dead Cat</h3>
+
+            <p>
+                Experimental Short • 2025
+            </p>
+
+            <p>
+                First Place Winner, NYU Global Climate Change Film Festival.
+            </p>
+        </div>
+
+    </article>
+
+    <!-- Project 2 -->
+    <article class="project reverse">
+
+        <div class="project-media">
+            <video autoplay muted loop playsinline>
+                <source src="project2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="project-info">
+            <h3>Return to Sender</h3>
+
+            <p>
+                Narrative Short • 2025
+            </p>
+
+            <p>
+                A letter cast into a future sea.
+            </p>
+        </div>
+
+    </article>
+
+</section>
+
+<!-- =========================
+FILM ARCHIVE (CAROUSEL)
+========================= -->
+<section class="film-archive">
+
+    <div class="archive-header">
+        <h2>Film Archive</h2>
+    </div>
+
+    <div class="carousel-wrapper">
+
+        <button class="carousel-btn prev">&#10094;</button>
+
+        <div class="poster-carousel">
+
+            <!-- POSTER 1 -->
+            <div class="poster"
+                 data-title="A Message to the United States, God, or My Dead Cat"
+                 data-meta="Experimental Short • 2025"
+                 data-logline="A fragmented letter sent into a collapsing world becomes an act of survival, as grief and climate collapse blur into the same language.">
+
+                <img src="images/poster1.jpg" alt="">
+            </div>
+
+            <!-- POSTER 2 -->
+            <div class="poster"
+                 data-title="Return to Sender"
+                 data-meta="Narrative Short • 2025"
+                 data-logline="In a world without postal systems, a young woman writes letters that will never be delivered, discovering that communication itself has become a form of belief.">
+
+                <img src="images/poster2.jpg" alt="">
+            </div>
+
+            <!-- POSTER 3 -->
+            <div class="poster"
+                 data-title="Project Three"
+                 data-meta="Experimental Film • 2024"
+                 data-logline="A study of memory, water, and fragmented identity told through drifting visual states.">
+
+                <img src="images/poster3.jpg" alt="">
+            </div>
+
+            <!-- POSTER 4 (ACTIVE START) -->
+            <div class="poster active"
+                 data-title="Project Four"
+                 data-meta="Cinematography Study • 2024"
+                 data-logline="Light becomes the central character in a film about absence, presence, and observation.">
+
+                <img src="images/poster4.jpg" alt="">
+            </div>
+
+            <!-- POSTER 5 -->
+            <div class="poster"
+                 data-title="Project Five"
+                 data-meta="Narrative Short • 2023"
+                 data-logline="A collapsing domestic space becomes a psychological landscape of tension and silence.">
+
+                <img src="images/poster5.jpg" alt="">
+            </div>
+
+            <!-- POSTER 6 -->
+            <div class="poster"
+                 data-title="Project Six"
+                 data-meta="Experimental Short • 2023"
+                 data-logline="An exploration of movement through empty architecture and shifting light fields.">
+
+                <img src="images/poster6.jpg" alt="">
+            </div>
+
+            <!-- POSTER 7 -->
+            <div class="poster"
+                 data-title="Project Seven"
+                 data-meta="Visual Study • 2022"
+                 data-logline="A visual meditation on texture, decay, and the passage of time.">
+
+                <img src="images/poster7.jpg" alt="">
+            </div>
+
+        </div>
+
+        <button class="carousel-btn next">&#10095;</button>
+
+    </div>
+
+    <!-- DYNAMIC FILM INFO -->
+    <div class="film-info">
+
+        <h3 id="filmTitle"></h3>
+
+        <p id="filmMeta" class="film-meta"></p>
+
+        <p id="filmLogline" class="film-description"></p>
+
+    </div>
+
+</section>
+
+<!-- =========================
+FOOTER
+========================= -->
+<footer></footer>
+
+<!-- JS -->
+<script src="newfilm.js"></script>
+
+</body>
+</html>
