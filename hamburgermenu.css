@@ -218,46 +218,43 @@
 
 .submenu {
 
-	position: absolute;
-
-	left: 120%;
-	top: 0;
-
 	display: flex;
 	flex-direction: column;
-	gap: 0.5rem;
+
+	gap: 0.75rem;
+
+	max-height: 0;
+
+	overflow: hidden;
 
 	opacity: 0;
-	visibility: hidden;
 
-	transform: translateX(-10px);
+	margin-left: 1.5rem;
 
-	transition: all 0.3s ease;
-
-	white-space: nowrap;
+	transition:
+		max-height .4s ease,
+		opacity .3s ease;
 }
 
 .menu-item:hover .submenu {
 
-	opacity: 1;
-	visibility: visible;
+	max-height: 300px;
 
-	transform: translateX(0);
+	opacity: 1;
 }
 
 .submenu a {
 
-	font-size: 0.85rem;
+	font-size: 1rem;
 
-	opacity: 0.7;
+	font-family: "Inter", sans-serif;
 
 	letter-spacing: 0.08em;
 
-	text-transform: lowercase;
+	opacity: .75;
 
-	transition: opacity 0.3s ease;
+	transition: opacity .3s ease;
 }
-
 
 /* =========================
    MOBILE
