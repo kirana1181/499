@@ -1,1 +1,548 @@
+html {
+    scroll-behavior: smooth;
+}
+/* =========================
+   RESET
+========================= */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    background: #050505;
+    color: white;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    animation: heroZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.2),
+            rgba(0,0,0,0.7)
+        );
+
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 2rem;
+}
+.hero-content h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(4rem, 10vw, 9rem);
+
+    letter-spacing: 0.1em;
+
+    font-weight: 300;
+
+    margin-bottom: 1rem;
+}
+.hero-content p {
+    max-width: 700px;
+
+    font-size: 1.2rem;
+
+    line-height: 1.7;
+
+    opacity: 0.9;
+
+    margin-bottom: 2rem;
+}
+.scroll-btn {
+    color: white;
+
+    text-decoration: none;
+
+    border: 1px solid rgba(255,255,255,0.5);
+
+    padding: 1rem 2rem;
+
+    transition: 0.4s;
+}
+
+.scroll-btn:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 100;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 4rem;
+
+    color: white;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.45),
+        rgba(0,0,0,0)
+    );
+}
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a,
+.logo {
+    color: white;
+    text-decoration: none;
+
+    letter-spacing: 0.08em;
+}
+.reel-section {
+    background: #050505;
+
+    padding: 10rem 6vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.reel-header {
+    text-align: center;
+
+    margin-bottom: 4rem;
+}
+
+
+.reel-header h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    color: white;
+
+    font-weight: 300;
+
+    font-size: clamp(4rem, 8vw, 8rem);
+
+    line-height: 1;
+
+    letter-spacing: 0.05em;
+
+    text-transform: uppercase;
+}
+.reel-video {
+    width: 100%;
+    max-width: 1400px;
+}
+.reel-video video {
+    width: 100%;
+
+    display: block;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 40px 80px rgba(0,0,0,0.5);
+}
+.reel-section {
+    position: relative;
+}
+.reel-section::before,
+.reel-section::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 80%;
+
+    height: 1px;
+
+    background: rgba(255,255,255,0.08);
+}
+.reel-section::before {
+    top: 4rem;
+}
+
+.reel-section::after {
+    bottom: 4rem;
+}
+.selected-work {
+    background: #050505;
+
+    padding: 10rem 8vw;
+}
+.section-title {
+    text-align: center;
+
+    margin-bottom: 8rem;
+}
+
+.section-title h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(4rem, 8vw, 7rem);
+
+    font-weight: 300;
+
+    color: white;
+}
+.project {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 5rem;
+
+    align-items: center;
+
+    margin-bottom: 10rem;
+}
+.project.reverse .project-media {
+    order: 2;
+}
+
+.project.reverse .project-info {
+    order: 1;
+}
+.project-media {
+    overflow: hidden;
+
+    border-radius: 12px;
+}
+.project-media video {
+    width: 100%;
+
+    display: block;
+
+    transition: transform 1s ease;
+}
+.project:hover video {
+    transform: scale(1.04);
+}
+.project-info {
+    color: white;
+}
+.project-info h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+
+    font-weight: 300;
+
+    margin-bottom: 1rem;
+
+}
+
+.project-info p:first-of-type {
+    text-transform: uppercase;
+
+    letter-spacing: 0.2em;
+
+    opacity: 0.5;
+
+    margin-bottom: 1.5rem;
+}
+.project-info p:last-of-type {
+    line-height: 1.8;
+
+    opacity: 0.8;
+}
+
+
+.film-archive {
+    padding: 12rem 8vw;
+
+    background: #080808;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.archive-header {
+    text-align: center;
+
+    margin-bottom: 5rem;
+}
+.archive-header h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    color: white;
+
+    font-size: clamp(4rem, 8vw, 7rem);
+
+    font-weight: 300;
+}
+.archive-header p {
+    color: rgba(255,255,255,0.6);
+
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+.carousel-wrapper {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    margin-bottom: 4rem;
+}
+
+.poster-carousel {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1600px;
+}
+
+.poster {
+    position: relative;
+
+    aspect-ratio: 2 / 3;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.8s ease,
+        opacity 0.8s ease;
+
+    margin-left: -60px;
+}
+
+
+
+.poster img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.poster.active {
+    width: 340px;
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    z-index: 10;
+}
+
+.poster-1 {
+    width: 280px;
+
+    opacity: .65;
+
+    transform: scale(.9);
+
+    z-index: 8;
+}
+
+.poster-2 {
+    width: 240px;
+
+    opacity: .35;
+
+    transform: scale(.8);
+
+    z-index: 6;
+}
+
+.poster-3 {
+    width: 200px;
+
+    opacity: .15;
+
+    transform: scale(.7);
+
+    z-index: 4;
+}
+
+.poster:hover {
+    cursor: pointer;
+}
+
+.film-info {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: white;
+}
+
+.film-info h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+
+    font-weight: 300;
+
+    margin-bottom: 1rem;
+}
+
+.film-meta {
+    opacity: .5;
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 1rem;
+}
+
+.film-description {
+    opacity: .8;
+
+    line-height: 1.8;
+}
+
+.carousel-btn {
+    background: none;
+
+    border: none;
+
+    color: rgba(255,255,255,.7);
+
+    font-size: 3rem;
+
+    cursor: pointer;
+
+    z-index: 20;
+
+    padding: 1rem;
+
+    transition: .3s;
+}
+.carousel-btn:hover {
+    color: white;
+}
+
+.film-archive::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 45%;
+
+    transform: translate(-50%, -50%);
+
+    width: 800px;
+    height: 800px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.08),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+@media (max-width: 900px) {
+
+    .project,
+    .project.reverse {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .project.reverse .project-media,
+    .project.reverse .project-info {
+        order: unset;
+    }
+
+    .navbar {
+        padding: 1.5rem 2rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
