@@ -18,8 +18,9 @@
   }
 
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
 body {
     background:
         radial-gradient(circle at top left,
@@ -458,7 +459,7 @@ grid-column: span 2;
     color: white;
     border-color: var(--gold);
 }
-.view-btn {
+/* .view-btn {
     border: 1px solid rgba(0,0,0,.15);
     background: rgba(255,255,255,.3);
     padding: 0.6rem 1rem;
@@ -474,4 +475,4 @@ grid-column: span 2;
 .view-btn.active {
     background: var(--ink);
     color: white;
-}
+} */
