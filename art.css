@@ -1,4 +1,8 @@
-
+:root {
+    --ink: #1a1a1a;
+    --umber: #6b4e3d;
+    --gold: #b89257;
+}
 
 
 * {
@@ -466,3 +470,7 @@ grid-column: span 2;
     background: var(--ink);
     color: white;
 } */
+
+.hidden {
+    display: none !important;
+}
