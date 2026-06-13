@@ -230,6 +230,22 @@ background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(56, 44, 6, 1) 17%, 
     bottom: 4rem;
 }
 
+.reel-divider-title {
+	text-align: center;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 1.5rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: rgba(255,255,255,0.7);
+
+	margin: 6rem 0 3rem;
+
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 1s ease, transform 1s ease;
+}
+
+
 .selected-work {
     background: #050505;
 
