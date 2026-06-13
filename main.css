@@ -225,20 +225,8 @@ body {
 /* ABOUT */
 
 .about {
-	display: grid;
-	grid-template-columns: 1fr minmax(350px, 500px);
-
-	gap: 6rem;
-
-	align-items: center;
-
-	padding: 8rem 8vw;
-
-	background: linear-gradient(
-		90deg,
-		rgba(13, 20, 18, 1) 0%,
-		rgba(32, 66, 46, 1) 76%
-	);
+	background: red !important;
+	min-height: 400px;
 }
 
 /* TEXT */
