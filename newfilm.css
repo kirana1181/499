@@ -251,15 +251,17 @@ background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(207, 166, 31, 1) 16
 }
 .project {
     display: grid;
-
     grid-template-columns: 1.5fr 1fr;
-
     gap: 5rem;
 
     align-items: center;
 
-    margin-bottom: 10rem;
+    max-width: 1200px;
+    margin: 0 auto 10rem auto;
+
+    padding: 0 2rem;
 }
+
 .project.reverse .project-media {
     order: 2;
 }
