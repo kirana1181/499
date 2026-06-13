@@ -247,6 +247,7 @@ background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(56, 44, 6, 1) 17%, 
 
 
 .selected-work {
+	 margin-top: 3rem;
     background: #050505;
 
     padding: 10rem 8vw;
