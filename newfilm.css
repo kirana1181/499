@@ -162,7 +162,8 @@ body {
 }
 
 .reel-section {
-    background: #050505;
+  background: #020024;
+background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(207, 166, 31, 1) 16%, rgba(179, 127, 43, 1) 25%, rgba(70, 91, 117, 1) 43%, rgba(25, 25, 110, 1) 69%, rgba(0, 145, 255, 1) 100%);
     padding: 10rem 6vw;
     position: relative;
 }
