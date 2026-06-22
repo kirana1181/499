@@ -20,7 +20,6 @@ body {
     color: white;
     position: relative;
 }
-
 body::before {
     content: "";
     position: fixed;
@@ -28,10 +27,29 @@ body::before {
     pointer-events: none;
     z-index: -1;
 
+    animation: drift 25s ease-in-out infinite;
+    will-change: transform;
+
     background:
-        radial-gradient(circle at 20% 15%, rgba(255,255,255,.06), transparent 45%),
-        radial-gradient(circle at 80% 40%, rgba(255,255,255,.04), transparent 50%),
-        radial-gradient(circle at 50% 90%, rgba(255,255,255,.03), transparent 55%);
+        radial-gradient(circle at 10% 20%, rgba(120,180,255,.06), transparent 45%),
+        radial-gradient(circle at 35% 70%, rgba(255,120,200,.05), transparent 50%),
+        radial-gradient(circle at 70% 20%, rgba(120,255,220,.05), transparent 48%),
+        radial-gradient(circle at 85% 80%, rgba(255,200,120,.04), transparent 55%),
+        radial-gradient(circle at 50% 50%, rgba(180,140,255,.04), transparent 60%),
+        radial-gradient(circle at 20% 90%, rgba(255,255,255,.03), transparent 55%);
+
+    opacity: 1;
+}
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+
+    background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.02), transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(255,255,255,.02), transparent 60%);
 }
 /* =========================
    HERO
@@ -644,4 +662,17 @@ width: 260px;
 
 .watch-links a:hover {
     opacity: .6;
+}
+
+@keyframes drift {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(-2%, 1%, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
 }
