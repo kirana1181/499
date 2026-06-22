@@ -578,36 +578,42 @@ background: #020024;
 }
 
 .watch-section {
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .watch-arrow {
-    font-size: 2rem;
-    opacity: .5;
-    margin-bottom: 1rem;
+    width: 120px;
+    height: 60px;
+
+    border-left: 1px solid rgba(255,255,255,.25);
+    border-bottom: 1px solid rgba(255,255,255,.25);
+
+    margin-bottom: 1.5rem;
 }
 
 .watch-links span {
     display: block;
 
+    font-size: 0.8rem;
+
+    letter-spacing: 0.25em;
     text-transform: uppercase;
-    letter-spacing: .15em;
 
-    opacity: .6;
+    color: rgba(255,255,255,.5);
 
-    margin-bottom: .75rem;
+    margin-bottom: 0.75rem;
 }
 
 .watch-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: .6rem;
-
     color: white;
+
     text-decoration: none;
+
+    letter-spacing: 0.08em;
+
+    transition: opacity .3s ease;
 }
 
-.watch-links img {
-    width: 20px;
-    height: 20px;
+.watch-links a:hover {
+    opacity: .6;
 }
