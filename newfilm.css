@@ -157,7 +157,7 @@ body {
 .logo {
     color: white;
     text-decoration: none;
-
+    font: georgia;
     letter-spacing: 0.08em;
 }
 
