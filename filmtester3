@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Festival Wash</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    font-family: sans-serif;
+
+    background: #0b0d10;
+}
+
+.bg {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,80,120,0.18), transparent 45%),
+        radial-gradient(circle at 80% 30%, rgba(80,180,255,0.18), transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(120,255,180,0.12), transparent 50%);
+}
+
+.glow {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, transparent 40%, rgba(0,0,0,0.4));
+}
+
+.content {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="glow"></div>
+
+<div class="content">
+    Film Festival Gradient
+</div>
+
+</body>
+</html>
