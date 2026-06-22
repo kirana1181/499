@@ -35,7 +35,7 @@ body {
     border-radius: 50%;
     mix-blend-mode: screen;
     filter: blur(60px); 
-    opacity: 0.5;        
+    opacity: 0.25;        
 }
 
 /* blob 1 */
@@ -220,7 +220,7 @@ body {
 .reel-section {
 	 margin-top: 6rem;
     margin-bottom: 3rem;
-background: transparent;
+background: black;
     position: relative;
 }
 
