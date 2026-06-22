@@ -153,6 +153,10 @@ body::after {
     background: rgba(255,255,255,0.15);
 }
 
+/* =========================
+   NAV BAR
+========================= */
+
 .navbar {
     position: fixed;
 
@@ -190,6 +194,9 @@ body::after {
     letter-spacing: 0.08em;
 }
 
+/* =========================
+   REEL
+========================= */
 .reel-section {
 	 margin-top: 3rem;
     margin-bottom: 3rem;
@@ -274,7 +281,9 @@ background: transparent;
 	transition: opacity 1s ease, transform 1s ease;
 }
 
-
+/* =========================
+   SELECTED WORKS
+========================= */
 .selected-work {
 	 margin-top: 3rem;
     background: transparent;
@@ -381,6 +390,10 @@ background: transparent;
 	filter: blur(40px);
 }
 
+/* =========================
+   ARCHIVE
+========================= */
+
 .film-archive {
     padding: 12rem 8vw;
 
@@ -411,11 +424,6 @@ background: transparent;
 
     margin-top: 1rem;
 }
-
-
-
-
-
 
 .carousel-wrapper {
     display: flex;
@@ -456,8 +464,6 @@ width: 260px;
 
     margin-left: -60px;
 }
-
-
 
 .poster img {
     width: 100%;
