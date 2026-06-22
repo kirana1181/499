@@ -576,3 +576,38 @@ background: #020024;
         padding-right: 0;
     }
 }
+
+.watch-section {
+    margin-top: 2rem;
+}
+
+.watch-arrow {
+    font-size: 2rem;
+    opacity: .5;
+    margin-bottom: 1rem;
+}
+
+.watch-links span {
+    display: block;
+
+    text-transform: uppercase;
+    letter-spacing: .15em;
+
+    opacity: .6;
+
+    margin-bottom: .75rem;
+}
+
+.watch-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+
+    color: white;
+    text-decoration: none;
+}
+
+.watch-links img {
+    width: 20px;
+    height: 20px;
+}
