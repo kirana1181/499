@@ -19,21 +19,18 @@ html {
     inset: 0;
     z-index: -1;
     overflow: hidden;
-
-    filter: blur(60px);
-    opacity: 0.9;
+      background: #000000;
 }
 
-/* shared blob style */
+/* blob base */
 .blob {
     position: absolute;
     width: 500px;
     height: 500px;
     border-radius: 50%;
-
     mix-blend-mode: screen;
-
-    animation: float 14s ease-in-out infinite;
+    filter: blur(60px); 
+    opacity: 0.9;        
 }
 
 /* blob 1 */
