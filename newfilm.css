@@ -649,7 +649,6 @@ width: 260px;
     bottom: 1rem;
     left: 1rem;
     z-index: 2;
-	margin-top: 1.5rem;
 }
 
 .watch-arrow {
@@ -658,7 +657,7 @@ width: 260px;
 
     border-left: 1px solid rgba(255,255,255,.25);
     border-bottom: 1px solid rgba(255,255,255,.25);
-margin-top: 1.5rem;
+margin-top: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
