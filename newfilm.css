@@ -281,13 +281,14 @@ background: black;
 
     color: white;
 }
+
 .project {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 5rem;
     align-items: start;
-    grid-auto-rows: max-content;
-	    margin-bottom: 8rem;
+    max-width: 1200px;
+    margin: 0 auto 8rem auto;
 
 }
 .project.reverse .project-media {
@@ -300,27 +301,23 @@ background: black;
 .project-media {
     width: 100%;
     aspect-ratio: 16 / 9;
-    height: auto;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-
+    position: relative;
     overflow: hidden;
     border-radius: 12px;
-    outline: 2px solid grey;
 }
 
 .project-media video {
     width: 100%;
     height: 100%;
-    object-fit: cover;  
+    object-fit: cover;
     display: block;
+    border-radius: 12px;
 }
-.project:hover video {
-    transform: scale(1.04);
-}
+
 .project-info {
     color: white;
 }
@@ -331,7 +328,6 @@ background: black;
     margin-bottom: 1rem;
 
 }
-
 .project-info p:first-of-type {
     text-transform: uppercase;
     letter-spacing: 0.2em;
