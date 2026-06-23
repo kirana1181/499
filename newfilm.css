@@ -288,7 +288,7 @@ background: black;
    gap: 2rem 5rem; /* row + column spacing */
     align-items: start;
     max-width: 1200px;
-    margin: 0 auto 8rem;
+    margin: 0 auto 12rem;
 
 }
 .project.reverse .project-media {
