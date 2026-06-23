@@ -269,7 +269,7 @@ background: black;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
-    height: 1px;
+    height: 2px;
     background: rgba(255,255,255,0.08);
 }
 .reel-section::before {
@@ -277,7 +277,7 @@ background: black;
 }
 
 .reel-section::after {
-    bottom: 2rem;
+    bottom: 3rem;
 }
 
 .reel-divider-title {
