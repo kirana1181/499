@@ -285,10 +285,10 @@ background: black;
 .project {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    gap: 7rem;
     align-items: start;
     max-width: 1200px;
-    margin: 0 auto 8rem auto;
+    margin: 0 auto 7rem auto;
 
 }
 .project.reverse .project-media {
