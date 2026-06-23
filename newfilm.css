@@ -299,9 +299,15 @@ background: black;
     width: 100%;
     aspect-ratio: 16 / 9;
     height: auto;
-    display: block;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
     overflow: hidden;
-    outline: 2px grey;
+    border-radius: 12px;
+    outline: 2px solid grey;
 }
 
 .project-media video {
@@ -569,11 +575,10 @@ width: 260px;
 }
 
 .watch-section {
-	top: 2rem;
-    bottom: 1rem;
-    left: 1rem;
-    z-index: 2;
-	align: left;
+    position: relative;
+    align-self: flex-start; /* forces left alignment */
+    margin-top: 1rem;
+
 }
 
 .watch-arrow {
