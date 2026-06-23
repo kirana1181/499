@@ -254,7 +254,7 @@ background: black;
 	text-transform: uppercase;
 	color: rgba(255,255,255,0.7);
 	margin: 3rem 0 3rem;
-	opacity: 0;
+	opacity: 1;
 	transform: translateY(30px);
 	transition: opacity 1s ease, transform 1s ease;
 }
