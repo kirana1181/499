@@ -284,7 +284,7 @@ background: black;
 
 .project {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 5rem;
     align-items: start;
     max-width: 1200px;
@@ -318,6 +318,11 @@ background: black;
     border-radius: 12px;
 }
 
+
+/* =========================
+   PROJECT INFO
+========================= */
+
 .project-info {
     color: white;
 }
@@ -326,7 +331,6 @@ background: black;
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 300;
     margin-bottom: 1rem;
-
 }
 .project-info p:first-of-type {
     text-transform: uppercase;
@@ -339,20 +343,6 @@ background: black;
     opacity: 0.8;
 }
 
-.project-media::before {
-	content: "";
-	position: absolute;
-	inset: -50px;
-	z-index: -1;
-	background:
-		radial-gradient(
-			circle,
-			rgba(255,255,255,.08),
-			transparent 70%
-		);
-	filter: blur(40px);
-}
-
 /* =========================
    ARCHIVE
 ========================= */
@@ -363,7 +353,6 @@ background: black;
     position: relative;
     overflow: hidden;
 }
-
 
 .archive-header {
     text-align: center;
