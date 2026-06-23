@@ -222,6 +222,8 @@ body {
     margin-bottom: 1rem;
 background: black;
     position: relative;
+	   padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 /* NEW FLEX CONTAINER */
@@ -275,7 +277,6 @@ background: black;
 .reel-section::before {
     top: 2rem;
 }
-
 .reel-section::after {
     bottom: 3rem;
 }
