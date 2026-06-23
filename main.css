@@ -229,8 +229,7 @@ body {
 		gap: 6rem; 
 		align-items: center; 
 		padding: 8rem 8vw; 
-		background: #273b30;
-background: radial-gradient(circle,rgba(39, 59, 48, 1) 6%, rgba(17, 48, 30, 1) 76%);
+		background: black;
 }
 
 
@@ -411,113 +410,76 @@ HORIZONTAL GALLERY
 ======================================== */
 
 .horizontal-gallery {
-
 	height: 450vh;
-
 	position: relative;
-
 	background: #D8D1C5;
 
 }
 
 .gallery-sticky {
-
 	position: sticky;
-
 	top: 0;
-
 	height: 100vh;
-
 	overflow: hidden;
-
 	display: flex;
-
 	align-items: center;
 
 }
 
 .gallery-intro {
-
 	position: absolute;
-
 	top: 8vh;
 	left: 5vw;
-
 	z-index: 50;
-
 	max-width: 500px;
 
 }
 
 .gallery-intro p {
-
 	font-family: "Cormorant Garamond", serif;
-
 	font-size: 2rem;
-
 	line-height: 1.1;
-
 	color: rgba(255,255,255,.8);
 
 }
 
 .gallery-track {
-
 	display: flex;
-
 	align-items: center;
-
 	gap: 3rem;
-
 	padding-left: 45vw;
 	padding-right: 20vw;
-
 	will-change: transform;
 
 }
 
 .gallery-item {
-
 	width: 50vw;
-
 	height: 70vh;
-
 	flex-shrink: 0;
-
 	overflow: hidden;
-
 	background: #111;
 
 }
 
 .gallery-item.wide {
-
 	width: 70vw;
 
 }
-
 .gallery-item.tall {
-
 	width: 40vw;
 	height: 85vh;
 
 }
-
 .gallery-item img {
-
 	width: 100%;
 	height: 100%;
-
-	object-fit: cover;
-
+	object-fit: contain;
 	display: block;
-
 	transition: transform 1.5s ease;
 
 }
-
 .gallery-item:hover img {
-
 	transform: scale(1.05);
 
 }
@@ -528,17 +490,11 @@ CHAPTER ARCHIVE
 .chapters-section {
 
 	background: #f4f1eb;
-
 	color: #0b0d0f;
-
 	padding: 10rem 6vw;
-
 	display: grid;
-
 	grid-template-columns: 1fr 1.5fr;
-
 	gap: 5rem;
-
 	align-items: start;
 
 }
@@ -546,35 +502,24 @@ CHAPTER ARCHIVE
 .chapter-label {
 
 	font-size: .7rem;
-
 	letter-spacing: .25em;
-
 	text-transform: uppercase;
-
 	margin-bottom: 1rem;
-
 	opacity: .6;
 
 }
-
 .chapters-copy {
 
 	position: sticky;
-
 	top: 120px;
 
 }
-
 .chapters-copy h2 {
 
 	font-family: "Cormorant Garamond", serif;
-
 	font-size: clamp(4rem,8vw,8rem);
-
 	font-weight: 300;
-
 	line-height: .9;
-
 	margin-bottom: 2rem;
 
 }
@@ -582,9 +527,7 @@ CHAPTER ARCHIVE
 .chapter-description {
 
 	max-width: 400px;
-
 	line-height: 1.8;
-
 	opacity: .8;
 
 }
@@ -592,9 +535,7 @@ CHAPTER ARCHIVE
 .chapters-grid {
 
 	display: grid;
-
 	grid-template-columns: repeat(2,1fr);
-
 	gap: 2rem;
 
 }
@@ -602,45 +543,30 @@ CHAPTER ARCHIVE
 .chapter-card {
 
 	text-decoration: none;
-
 	color: inherit;
-
 	display: flex;
-
 	flex-direction: column;
-
 	gap: 1rem;
 
 }
-
 .chapter-card img {
 
 	width: 100%;
-
 	aspect-ratio: 4 / 6;
-
 	object-fit: cover;
-
 	display: block;
-
 	transition:
 		transform .7s ease,
 		filter .7s ease;
-
 }
 
 .chapter-card:hover img {
-
 	transform: scale(1.03);
-
 }
 
 .chapter-card span {
-
 	font-size: .75rem;
-
 	letter-spacing: .15em;
-
 	text-transform: uppercase;
 
 }
