@@ -229,7 +229,7 @@ background: black;
     display: flex;
     align-items: center;   /* vertical alignment */
     justify-content: space-between;
-    gap: 6rem;
+    gap: 3rem;
 
     max-width: 1400px;
     margin: 0 auto;
@@ -265,25 +265,19 @@ background: black;
 .reel-section::before,
 .reel-section::after {
     content: "";
-
     position: absolute;
-
     left: 50%;
-
     transform: translateX(-50%);
-
     width: 80%;
-
     height: 1px;
-
     background: rgba(255,255,255,0.08);
 }
 .reel-section::before {
-    top: 4rem;
+    top: 2rem;
 }
 
 .reel-section::after {
-    bottom: 4rem;
+    bottom: 2rem;
 }
 
 .reel-divider-title {
@@ -294,7 +288,7 @@ background: black;
 	text-transform: uppercase;
 	color: rgba(255,255,255,0.7);
 
-	margin: 6rem 0 3rem;
+	margin: 3rem 0 3rem;
 
 	opacity: 0;
 	transform: translateY(30px);
@@ -312,7 +306,6 @@ background: black;
 }
 .section-title {
     text-align: center;
-
     margin-bottom: 8rem;
 }
 
