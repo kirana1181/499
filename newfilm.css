@@ -286,11 +286,8 @@ background: black;
     grid-template-columns: 1.5fr 1fr;
     gap: 5rem;
     align-items: start;
-    max-width: 1200px;
-    margin: 0 auto 10rem auto;
-    padding: 0 2rem;
+    grid-auto-rows: max-content;
 }
-
 .project.reverse .project-media {
     order: 2;
 }
@@ -299,12 +296,11 @@ background: black;
     order: 1;
 }
 .project-media {
-    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    display: block;
     overflow: hidden;
-    border-radius: 12px;
-    aspect-ratio: 16 / 9; 
-	width: 100%;
-	display: block;
     outline: 2px grey;
 }
 
