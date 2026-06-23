@@ -285,10 +285,10 @@ background: black;
 .project {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 7rem;
+   gap: 2rem 5rem; /* row + column spacing */
     align-items: start;
     max-width: 1200px;
-    margin: 0 auto 7rem auto;
+    margin: 0 auto 8rem;
 
 }
 .project.reverse .project-media {
@@ -562,10 +562,11 @@ width: 260px;
 }
 
 .watch-section {
-    position: relative;
-    align-self: flex-start; /* forces left alignment */
-    margin-top: 1rem;
-
+     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-top: 1rem;   /* space under video */
 }
 
 .watch-arrow {
