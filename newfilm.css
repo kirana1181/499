@@ -287,6 +287,8 @@ background: black;
     gap: 5rem;
     align-items: start;
     grid-auto-rows: max-content;
+	    margin-bottom: 8rem;
+
 }
 .project.reverse .project-media {
     order: 2;
