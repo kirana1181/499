@@ -253,7 +253,7 @@ background: black;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	color: rgba(255,255,255,0.7);
-	margin: 3rem 0 3rem;
+	margin: 1rem 0 5rem;
 	opacity: 1;
 	transform: translateY(30px);
 	transition: opacity 1s ease, transform 1s ease;
