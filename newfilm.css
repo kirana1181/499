@@ -231,7 +231,7 @@ background: black;
     display: flex;
     align-items: center;   /* vertical alignment */
     justify-content: space-between;
-    gap: 3rem;
+    gap: 2rem;
 
     max-width: 1400px;
     margin: 0 auto;
@@ -244,10 +244,8 @@ background: black;
 
 .reel-header h2 {
     font-family: "Cormorant Garamond", serif;
-
     font-weight: 300;
     font-size: clamp(3rem, 6vw, 6rem);
-
     color: white;
     line-height: 1.1;
 }
