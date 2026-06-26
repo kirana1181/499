@@ -146,3 +146,35 @@ button.addEventListener("click", () => {
 	index = (index + 1) % images.length;
 	showImage(index);
 });
+
+/* =========================
+ABOUT
+========================= */
+
+const images = document.querySelectorAll(".stack-image");
+const nextBtn = document.querySelector(".image-next-btn");
+
+let current = 0;
+let timer;
+
+function showImage(index) {
+    images[current].classList.remove("active");
+    current = index;
+    images[current].classList.add("active");
+}
+
+function nextImage() {
+    showImage((current + 1) % images.length);
+}
+
+function startTimer() {
+    clearInterval(timer);
+    timer = setInterval(nextImage, 3000);
+}
+
+nextBtn.addEventListener("click", () => {
+    nextImage();
+    startTimer();
+});
+
+startTimer();
