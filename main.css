@@ -28,11 +28,8 @@ html {
 body {
 
 	background: var(--ink);
-
 	color: white;
-
 	font-family: Inter, sans-serif;
-
 	overflow-x: hidden;
 
 }
@@ -42,23 +39,15 @@ body {
 .nav {
 
 	position: fixed;
-
 	top: 0;
 	left: 0;
-
 	width: 100%;
-
 	padding: 2rem 4vw;
-
 	display: flex;
-
 	justify-content: space-between;
 	align-items: center;
-
 	z-index: 1000;
-
 	background: rgba(0,0,0,.15);
-
 	backdrop-filter: blur(20px);
 
 }
@@ -66,9 +55,7 @@ body {
 .logo {
 
 	font-family: "Cormorant Garamond", serif;
-
 	font-size: 1.1rem;
-
 	letter-spacing: .2em;
 
 }
@@ -84,19 +71,14 @@ body {
 
 	text-decoration: none;
 	color: white;
-
 	font-size: .75rem;
-
 	text-transform: uppercase;
-
 	letter-spacing: .18em;
-
 	opacity: .75;
 
 }
 
 .nav-links a:hover {
-
 	opacity: 1;
 
 }
@@ -104,41 +86,28 @@ body {
 /* HERO */
 
 .hero {
-
 	height: 100vh;
-
 	position: relative;
-
 	display: flex;
-
 	align-items: center;
-
 	padding: 0 8vw;
-
 	overflow: hidden;
-
-
 }
 
 
 .hero-video {
 	position: absolute;
 	inset: 0;
-
 	width: 100%;
 	height: 100%;
     object-fit: cover;
 	object-position: center;
 	transform-origin: center;
-
 	z-index: 1;
-
 }
 
 .hero-content {
-
 	position: relative;
-
 	z-index: 4;
 
 }
@@ -164,25 +133,16 @@ body {
 
 }
 .eyebrow {
-
 	letter-spacing: .25em;
-
 	font-size: .75rem;
-
 	margin-bottom: 1rem;
-
 }
 
 .hero h1 {
-
 	font-family: "Cormorant Garamond", serif;
-
 	font-size: clamp(5rem, 13vw, 12rem);
-
 	line-height: .85;
-
 	font-weight: 300;
-
 }
 
 /* MANIFESTO */
@@ -190,16 +150,13 @@ body {
 .manifesto {
 	    position: relative;
     min-height: 100vh;
-
     background-image: url("images/index/updatedabout.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 4rem;
 }
 
@@ -207,18 +164,12 @@ body {
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(1.5rem, 4vw, 4rem);
     line-height: 1;
-
     max-width: 1000px;
     text-align: center;
-
     background: rgba(233, 228, 221, 0.92);
-
     color: var(--ink);
-
     padding: 3rem 4rem;
-
     border-radius: 2px;
-
     box-shadow: 0 20px 60px rgba(0,0,0,.25);
 }
 
@@ -231,10 +182,6 @@ body {
 		padding: 8rem 8vw; 
 		background: black;
 }
-
-
-/* TEXT */
-
 .about-copy {
 	display: flex;
 	flex-direction: column;
@@ -258,58 +205,46 @@ body {
 /* IMAGE STACK */
 
 .about-image {
-	position: relative;
-	width: 100%;
-	height: 700px;
-	overflow: hidden;
-	border-radius: 12px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    overflow: hidden;
 }
 
 /* all images */
 
 .stack-image {
-	position: absolute;
-	inset: 0;
-
-	width: 100%;
-	height: 100%;
-	object-fit: contain;
-	opacity: 0;
-	transition: opacity 0.8s ease;
-	pointer-events: none;
+    position: absolute;
+    inset: 0;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: auto;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .8s ease;
 }
-
-/* visible image */
 
 .stack-image.active {
 	opacity: 1;
 }
-
-/* next button */
-
 .image-next-btn {
 	position: absolute;
-
 	right: 0;
 	top: 50%;
-
-	transform: translateY(-50%);
-
+    transform: translateY(-50%); 
 	width: 90px;
 	height: 120px;
-
 	border: none;
-
 	background: rgba(0, 0, 0, 0.35);
-	backdrop-filter: blur(10px);
-
+	   /* backdrop-filter: blur(10px); */
 	color: white;
 	font-size: 3rem;
-
 	cursor: pointer;
-
 	z-index: 100;
-
 	transition: background 0.3s ease;
 }
 
@@ -321,88 +256,58 @@ body {
 /* REVEAL */
 
 .reveal {
-
 	opacity: 0;
-
 	transform: translateY(80px);
-
 	transition:
 		opacity 1.2s ease,
 		transform 1.2s ease;
-
 }
 
 .reveal.visible {
-
 	opacity: 1;
-
 	transform: translateY(0);
-
 }
 
 /* MOBILE */
 
 @media(max-width:900px){
-
 	.about {
-
 		grid-template-columns: 1fr;
-
 	}
-
 	.about-copy {
-
 		padding: 4rem 2rem;
-
 	}
-
 	.manifesto {
-
 		padding: 6rem 2rem;
-
 	}
-
 
 .chapters-section {
-
 	grid-template-columns: 1fr;
-
 	padding: 5rem 2rem;
 
 }
 
 .chapters-copy {
-
 	position: static;
-
 }
 
 .chapters-grid {
-
 	grid-template-columns: 1fr;
-
 }
 
 .footer {
-
 	padding: 5rem 2rem 2rem;
 
 }
 
 .footer-grid {
-
 	grid-template-columns: 1fr;
-
 	gap: 2rem;
-
 }
 
 .footer-bottom {
-
 	flex-direction: column;
-
 	gap: .75rem;
-
 }
 	}
 /* ========================================
