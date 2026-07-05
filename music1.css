@@ -12,10 +12,10 @@ html,body {
 	position: absolute;
 	top: 12.5%;
 	left: 12.5%;
-	height: 50vw;
-	width: 50%;
-	max-height: 75%;
-	max-width: 75vh;
+	height: 5vw;
+	width: 5%;
+	max-height: 25%;
+	max-width: 25vh;
 }
 #cover {
 	position: absolute;
