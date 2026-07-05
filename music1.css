@@ -72,30 +72,10 @@ h1{
 
 }
 
-.records{
-
-    display:flex;
-    justify-content:space-between;
-
-    margin-top:-205px;
-
-    padding:0 10px;
-
-}
-
-.album{
-
-    position:relative;
-
-    width:105px;
-    height:190px;
-
-}
-
 #wrap {
 	background-color: rgba(0,0,0,0.8);	
 }
-.album {
+#album {
 	position: absolute;
 	top: 12.5%;
 	left: 12.5%;
