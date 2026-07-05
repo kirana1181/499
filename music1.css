@@ -62,14 +62,13 @@ h1{
 .shelf{
 
     position:relative;
-    width:100%;
+    width:150%;
     height:14px;
 
     background:#9A7053;
     border-radius:20px;
 
-    box-shadow:
-        0 8px 18px rgba(0,0,0,.18);
+
 
 }
 
