@@ -1305,18 +1305,17 @@
 		});
 	}
 
-	/**
-	 * Call Masonry on the initial grid.
-	 */
-	function initGridLayout(callback) {
+function initGridLayout(callback) {
     imagesLoaded(views.grid, function() {
 
-        // Masonry removed.
-        // The CSS Grid layout handles positioning now.
+        // new Masonry('.grid', {
+        //     itemSelector: '.grid__item'
+        // });
 
         if (typeof callback === 'function') {
             callback();
         }
+
     });
 }
 	function loadTurntableAssets(callback) {
