@@ -180,14 +180,27 @@ html.js,
 
 /* grid */
 
-.grid {
-	position: relative;
-	min-height: 100vh;
-	margin: 0 auto;
-	padding: 0;
-	list-style: none;
-}
+.grid{
 
+    display:grid;
+
+    grid-template-columns:repeat(3, 1fr);
+
+    gap:120px 80px;
+
+    justify-items:center;
+
+    align-items:end;
+
+    max-width:900px;
+
+    margin:80px auto;
+
+    padding:0;
+
+    list-style:none;
+
+}
 .js .grid::after {
 	content: '';
 	position: absolute;
@@ -235,7 +248,7 @@ html.js,
 }
 
 .js .grid__item {
-	position: absolute;
+	position: relative;
 	opacity: 0;
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
