@@ -1309,17 +1309,17 @@
 	 * Call Masonry on the initial grid.
 	 */
 	function initGridLayout(callback) {
-		imagesLoaded(views.grid, function() {
-			// new Masonry('.grid', {
-//     itemSelector: '.grid__item'
-// });
-			});
-			if( typeof callback === 'function' ) {
-				callback();
-			}
-		});
-	}
+    imagesLoaded(views.grid, function() {
 
+        // Masonry removed.
+        // The CSS Grid layout handles positioning now.
+
+        if (typeof callback === 'function') {
+            callback();
+        }
+
+    });
+}
 	function loadTurntableAssets(callback) {
 		new AbbeyLoad([{ 
 			'room1' : 'mp3/room1.mp3',
