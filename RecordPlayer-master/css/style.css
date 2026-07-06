@@ -252,7 +252,7 @@ html.js,
 	margin: 3rem auto 0;
 	padding: 0 2rem;
 	transform:translateX(-6%);
-	transform:translateX(5%);
+	transform:translateY(5%);
 }
 
 .grid__item {
