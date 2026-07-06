@@ -249,21 +249,89 @@ a:focus {
    GRID LAYOUT
    ======================================== */
 
+/* ========================================
+   RECORD SHELVES
+   ======================================== */
+
 .grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: var(--grid-gap-row) var(--grid-gap-col);
-	max-width: var(--grid-max-width);
-	margin: var(--grid-margin) auto 0;
-	padding: 0 var(--grid-padding);
-	list-style: none;
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+
+    justify-content: start;
+
+    justify-items: center;
+
+    align-items: end;
+
+    column-gap: clamp(2rem, 5vw, 5rem);
+
+    row-gap: 8rem;
+
+    width: min(1450px, 92vw);
+
+    margin: 5rem auto;
+
+    padding: 0;
+
+    list-style: none;
+
+	  transform:translateX(-5%);
 }
 
-.grid__item {
-	position: relative;
-	width: 100%;
-	padding: 0;
-	margin: 0;
+/* shelf */
+
+.grid::before,
+.grid::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: rgba(255,255,255,.18);
+
+    box-shadow:
+        0 1px 0 rgba(255,255,255,.06),
+        0 8px 18px rgba(0,0,0,.45);
+
+    pointer-events: none;
+
+}
+
+/* first shelf */
+
+.grid::before{
+
+    top: 265px;
+
+}
+
+/* second shelf */
+
+.grid::after{
+
+    bottom: 0;
+
+}
+
+.grid__item{
+
+    position: relative;
+
+    width: clamp(190px,18vw,250px);
+
+    margin: 0;
+
+    padding: 0;
+
 }
 
 .js .grid__item {
@@ -357,14 +425,20 @@ a:focus {
 	width: 100%;
 }
 
-.img--grid {
-	display: block;
-	width: 100%;
-	max-width: 260px;
-	margin: 0 auto;
-	box-shadow: 0 14px 28px rgba(36, 33, 69, 0.22);
-	transform: translateZ(0);
-	border-radius: var(--border-radius-subtle);
+.img--grid{
+
+    max-width:250px;
+
+    margin:0 auto;
+
+    display:block;
+
+    border-radius:2px;
+
+    box-shadow:
+
+        0 18px 40px rgba(0,0,0,.35);
+
 }
 
 /* ========================================
