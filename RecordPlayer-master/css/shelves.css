@@ -1,0 +1,440 @@
+/* ========================================
+   SHELVING SYSTEM FOR RECORD DISPLAY
+   ======================================== */
+
+:root {
+	/* Shelf dimensions */
+	--shelf-height: 2.5rem;
+	--shelf-depth: 8rem;
+	--shelf-spacing: 12rem;
+	--album-width: 260px;
+	--album-margin: 1rem;
+
+	/* Shelf colors */
+	--shelf-color: #5c3d2e;
+	--shelf-color-light: #7a5c4d;
+	--shelf-shadow-color: rgba(0, 0, 0, 0.4);
+	--shelf-highlight: rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   SHELF CONTAINER
+   ======================================== */
+
+.shelf-system {
+	position: relative;
+	width: 100%;
+	padding: 4rem 2rem;
+	background: #f5f5f5;
+}
+
+/* Individual Shelf */
+
+.shelf {
+	position: relative;
+	width: 100%;
+	height: var(--shelf-height);
+	margin: var(--shelf-spacing) 0;
+	background: linear-gradient(
+		to bottom,
+		var(--shelf-color-light),
+		var(--shelf-color),
+		var(--shelf-color)
+	);
+	border-radius: 2px;
+	box-shadow: 
+		0 2px 4px var(--shelf-shadow-color),
+		inset 0 1px 0 var(--shelf-highlight),
+		0 8px 16px rgba(0, 0, 0, 0.2);
+	transform: translateZ(0);
+	will-change: transform;
+}
+
+/* Shelf depth/3D effect */
+
+.shelf::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	height: 1rem;
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0.15),
+		rgba(0, 0, 0, 0.05)
+	);
+	border-radius: 0 0 2px 2px;
+	pointer-events: none;
+}
+
+/* Wood grain texture overlay */
+
+.shelf::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: 
+		repeating-linear-gradient(
+			90deg,
+			transparent,
+			transparent 2px,
+			rgba(0, 0, 0, 0.03) 2px,
+			rgba(0, 0, 0, 0.03) 4px
+		),
+		repeating-linear-gradient(
+			0deg,
+			transparent,
+			transparent 1px,
+			rgba(255, 255, 255, 0.02) 1px,
+			rgba(255, 255, 255, 0.02) 2px
+		);
+	pointer-events: none;
+	border-radius: 2px;
+}
+
+/* ========================================
+   SHELF ROW CONTAINER
+   ======================================== */
+
+.shelf-row {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	width: 100%;
+	height: var(--shelf-depth);
+	margin-bottom: calc(var(--shelf-spacing) - var(--shelf-depth));
+	perspective: 1000px;
+}
+
+.shelf-row--primary {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ========================================
+   ALBUM ON SHELF - POSITIONING
+   ======================================== */
+
+.grid__item--shelved {
+	position: relative;
+	width: var(--album-width);
+	height: auto;
+	margin: 0 var(--album-margin);
+	transform: translateZ(0);
+	transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Shelf alignment - align album bottom with shelf top */
+
+.grid__item--shelved {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+/* Album card styling on shelf */
+
+.grid__link--shelved {
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
+/* Add slight tilt variation for each album (natural placement) */
+
+.grid__item--shelved:nth-child(1) {
+	transform: rotateZ(-1.5deg) translateY(0);
+}
+
+.grid__item--shelved:nth-child(2) {
+	transform: rotateZ(0.8deg) translateY(2px);
+}
+
+.grid__item--shelved:nth-child(3) {
+	transform: rotateZ(-0.5deg) translateY(1px);
+}
+
+.grid__item--shelved:nth-child(4) {
+	transform: rotateZ(1.2deg) translateY(0);
+}
+
+.grid__item--shelved:nth-child(5) {
+	transform: rotateZ(-0.9deg) translateY(1px);
+}
+
+.grid__item--shelved:nth-child(6) {
+	transform: rotateZ(0.6deg) translateY(0);
+}
+
+/* Hover effect - albums tilt and lift off shelf */
+
+.grid__item--shelved:hover {
+	transform: rotateZ(var(--tilt)) translateY(-1rem) translateZ(20px);
+	z-index: 10;
+}
+
+.grid__item--shelved:nth-child(1):hover {
+	--tilt: -1.5deg;
+}
+
+.grid__item--shelved:nth-child(2):hover {
+	--tilt: 0.8deg;
+}
+
+.grid__item--shelved:nth-child(3):hover {
+	--tilt: -0.5deg;
+}
+
+.grid__item--shelved:nth-child(4):hover {
+	--tilt: 1.2deg;
+}
+
+.grid__item--shelved:nth-child(5):hover {
+	--tilt: -0.9deg;
+}
+
+.grid__item--shelved:nth-child(6):hover {
+	--tilt: 0.6deg;
+}
+
+/* Shadow under lifted album */
+
+.grid__item--shelved:hover::after {
+	content: '';
+	position: absolute;
+	bottom: -1.5rem;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 0.5rem;
+	background: radial-gradient(
+		ellipse at center,
+		rgba(0, 0, 0, 0.3) 0%,
+		rgba(0, 0, 0, 0) 70%
+	);
+	border-radius: 50%;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.grid__item--shelved:hover::after {
+	opacity: 1;
+}
+
+/* ========================================
+   ALBUM SHADOW ON SHELF
+   ======================================== */
+
+.grid__item--shelved::before {
+	content: '';
+	position: absolute;
+	bottom: -0.3rem;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 0.3rem;
+	background: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0.2) 0%,
+		rgba(0, 0, 0, 0.15) 50%,
+		rgba(0, 0, 0, 0.2) 100%
+	);
+	border-radius: 50%;
+	filter: blur(1px);
+}
+
+/* ========================================
+   SHELF BOOKEND ACCENTS
+   ======================================== */
+
+.shelf-divider {
+	position: absolute;
+	bottom: 0;
+	width: 1.5rem;
+	height: 3rem;
+	background: linear-gradient(
+		to right,
+		#3d2821,
+		#5c3d2e,
+		#3d2821
+	);
+	border-radius: 0 2px 2px 0;
+	box-shadow: 
+		inset -1px 0 1px rgba(255, 255, 255, 0.1),
+		-2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.shelf-divider--left {
+	left: 0;
+	border-radius: 2px 0 0 2px;
+	box-shadow: 
+		inset 1px 0 1px rgba(255, 255, 255, 0.1),
+		2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.shelf-divider--right {
+	right: 0;
+}
+
+/* ========================================
+   RESPONSIVE SHELVES
+   ======================================== */
+
+@media (max-width: 1200px) {
+	:root {
+		--shelf-spacing: 10rem;
+		--album-width: 220px;
+	}
+}
+
+@media (max-width: 900px) {
+	:root {
+		--shelf-spacing: 9rem;
+		--album-width: 200px;
+	}
+
+	.shelf-row {
+		justify-content: flex-start;
+		overflow-x: auto;
+		overflow-y: hidden;
+		scroll-behavior: smooth;
+		padding: 0 1rem;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.shelf-row::-webkit-scrollbar {
+		height: 4px;
+	}
+
+	.shelf-row::-webkit-scrollbar-track {
+		background: #f0f0f0;
+	}
+
+	.shelf-row::-webkit-scrollbar-thumb {
+		background: #ccc;
+		border-radius: 2px;
+	}
+
+	.shelf-row::-webkit-scrollbar-thumb:hover {
+		background: #999;
+	}
+}
+
+@media (max-width: 600px) {
+	:root {
+		--shelf-spacing: 8rem;
+		--album-width: 160px;
+		--shelf-depth: 6rem;
+	}
+
+	.shelf-row {
+		padding: 0 0.5rem;
+	}
+
+	.grid__item--shelved {
+		margin: 0 0.5rem;
+	}
+}
+
+/* ========================================
+   SHELF LIGHTING & AMBIENT EFFECTS
+   ======================================== */
+
+.shelf-system {
+	position: relative;
+	background: linear-gradient(
+		to bottom,
+		#fafafa,
+		#f5f5f5,
+		#efefef
+	);
+}
+
+/* Ambient light reflection on albums */
+
+.img--grid {
+	box-shadow: 
+		0 14px 28px rgba(36, 33, 69, 0.22),
+		inset -2px -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Wall texture behind shelves */
+
+.shelf-system::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: 
+		repeating-linear-gradient(
+			90deg,
+			transparent,
+			transparent 1px,
+			rgba(0, 0, 0, 0.01) 1px,
+			rgba(0, 0, 0, 0.01) 2px
+		);
+	pointer-events: none;
+	z-index: 0;
+}
+
+.shelf-row {
+	position: relative;
+	z-index: 1;
+}
+
+/* ========================================
+   ANIMATION: ALBUMS SETTLING ON SHELF
+   ======================================== */
+
+@keyframes settleOnShelf {
+	0% {
+		opacity: 0;
+		transform: translateY(-3rem) rotateZ(var(--initial-tilt, 0deg));
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0) rotateZ(var(--initial-tilt, 0deg));
+	}
+}
+
+.grid__item--shelved {
+	animation: settleOnShelf 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+.grid__item--shelved:nth-child(1) { animation-delay: 0.1s; --initial-tilt: -1.5deg; }
+.grid__item--shelved:nth-child(2) { animation-delay: 0.15s; --initial-tilt: 0.8deg; }
+.grid__item--shelved:nth-child(3) { animation-delay: 0.2s; --initial-tilt: -0.5deg; }
+.grid__item--shelved:nth-child(4) { animation-delay: 0.25s; --initial-tilt: 1.2deg; }
+.grid__item--shelved:nth-child(5) { animation-delay: 0.3s; --initial-tilt: -0.9deg; }
+.grid__item--shelved:nth-child(6) { animation-delay: 0.35s; --initial-tilt: 0.6deg; }
+
+/* ========================================
+   FOCUS & ACCESSIBILITY
+   ======================================== */
+
+.grid__link--shelved:focus {
+	outline: 2px solid var(--color-primary-alt);
+	outline-offset: 4px;
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+	.shelf {
+		page-break-inside: avoid;
+	}
+}
