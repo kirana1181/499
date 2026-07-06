@@ -1317,7 +1317,6 @@
         if (typeof callback === 'function') {
             callback();
         }
-
     });
 }
 	function loadTurntableAssets(callback) {
