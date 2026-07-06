@@ -180,12 +180,18 @@ html.js,
 
 /* grid */
 
-.grid {
-	position: relative;
-	min-height: 100vh;
-	margin: 0 auto;
-	padding: 0;
-	list-style: none;
+.grid{
+
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:120px 80px;
+    justify-items:center;
+    align-items:end;
+    max-width:900px;
+    margin:80px auto;
+    padding:0;
+    list-style:none;
+
 }
 
 .js .grid::after {
@@ -234,11 +240,14 @@ html.js,
 	padding: 1em 4em 0;
 }
 
-.js .grid__item {
-	position: absolute;
-	opacity: 0;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
+.js .grid__item{
+
+    position:relative;
+
+    opacity:0;
+
+    transition:opacity .3s;
+
 }
 
 .js .grid--loaded .grid__item {
@@ -256,12 +265,7 @@ html.js,
 		width: 33.33%;
 		margin: 0 0 9em;
 	}
-	.js .grid__item:first-child {
-		margin-top: 5em;
-	}
-	.js .grid__item:nth-child(2) {
-		margin-top: 14em;
-	}
+
 }
 
 @media screen and (max-width: 36em) {
