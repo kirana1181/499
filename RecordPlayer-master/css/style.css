@@ -178,7 +178,7 @@ html.js,
 }
 
 
-/* grid */
+/* grid 
 
 .grid{
 
@@ -237,9 +237,9 @@ html.js,
 .page-header,
 .grid {
 	max-width: 1200px;
-}
+}  
 
-/* =========================
+=========================
    GRID LAYOUT
 ========================= */
 
@@ -250,6 +250,7 @@ html.js,
 	max-width: 1100px;
 	margin: 3rem auto 0;
 	padding: 0 2rem;
+	transform:translateX(-5%);
 }
 
 .grid__item {
@@ -274,13 +275,11 @@ html.js,
 }
 
 /* Responsive */
-
 @media (max-width: 900px) {
 	.grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
-
 @media (max-width: 600px) {
 	.grid {
 		grid-template-columns: 1fr;
@@ -289,11 +288,9 @@ html.js,
 	}
 }
 
-
 /* =========================
    GRID LINKS
 ========================= */
-
 .grid__link {
 	display: block;
 	position: relative;
@@ -301,16 +298,12 @@ html.js,
 	perspective: 1200px;
 	text-decoration: none;
 }
-
 .grid__link:hover {
 	color: inherit;
 }
-
-
 /* =========================
    ALBUM ART
 ========================= */
-
 .img-wrap {
 	position: relative;
 	width: 100%;
@@ -330,7 +323,6 @@ html.js,
 	transform: translateZ(0);
 	border-radius: 2px;
 }
-
 
 /* =========================
    VINYL
