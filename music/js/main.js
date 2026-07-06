@@ -1310,8 +1310,9 @@
 	 */
 	function initGridLayout(callback) {
 		imagesLoaded(views.grid, function() {
-			new Masonry( '.grid', {
-				itemSelector: '.grid__item'
+			// new Masonry('.grid', {
+//     itemSelector: '.grid__item'
+// });
 			});
 			if( typeof callback === 'function' ) {
 				callback();
