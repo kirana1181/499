@@ -280,10 +280,10 @@ HORIZONTAL GALLERY
 
 .gallery-intro {
 	position: absolute;
-	top: 8vh;
+	top: 9vh;
 	left: 5vw;
 	z-index: 50;
-	max-width: 500px;
+	max-width: 600px;
 
 }
 
