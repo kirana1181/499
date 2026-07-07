@@ -374,6 +374,18 @@ HORIZONTAL GALLERY
 CHAPTER ARCHIVE
 ======================================== */
 
+.reel-divider-title {
+	text-align: center;
+	font-family: "Cormorant Garamond", serif;
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	color: rgba(255,255,255,0.7);
+	margin: 0rem 0 10rem;
+	opacity: 1;
+	transform: translateY(30px);
+	transition: opacity 1s ease, transform 1s ease;
+}
+
 .chapters-section {
 
 	background: #f4f1eb;
