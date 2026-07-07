@@ -129,7 +129,10 @@ body {
 		gap: 6rem; 
 		align-items: center; 
 		padding: 8rem 8vw; 
-		background: black;
+		linear-gradient(
+180deg,
+#f6f2eb 0%,
+#ebe5dc 100%
 }
 .about-copy {
 	display: flex;
