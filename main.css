@@ -398,7 +398,16 @@ CHAPTER ARCHIVE
 
 .chapters-section {
 
-	background: black;
+	background:
+radial-gradient(circle at top left,
+rgba(0,80,110,.18),
+transparent 45%),
+
+radial-gradient(circle at bottom right,
+rgba(15,80,40,.18),
+transparent 55%),
+
+#050607;
 	color: #0b0d0f;
 	padding: 10rem 6vw;
 	display: grid;
