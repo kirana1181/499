@@ -251,7 +251,7 @@ html.js,
 	max-width: 1100px;
 	margin: 3rem auto 0;
 	padding: 0 2rem;
-	transform:translateX(-10%);
+	transform:translateX(-100%);
 	transform:translateY(15%);
 }
 
