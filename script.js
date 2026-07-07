@@ -129,23 +129,6 @@ scenes.forEach(scene => {
 	sceneObserver.observe(scene);
 });
 
-/* about section */
-
-const frame = document.getElementById("aboutFrame");
-const images = frame.querySelectorAll(".stack-image");
-const button = frame.querySelector(".image-next-btn");
-
-let index = 0;
-
-function showImage(i) {
-	images.forEach(img => img.classList.remove("active"));
-	images[i].classList.add("active");
-}
-
-button.addEventListener("click", () => {
-	index = (index + 1) % images.length;
-	showImage(index);
-});
 
 /* =========================
 ABOUT
