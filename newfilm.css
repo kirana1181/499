@@ -292,11 +292,11 @@ background: black;
 
 }
 .project.reverse .project-media {
-    order: 2;
+    grid-column: 2;
 }
 
 .project.reverse .project-info {
-    order: 1;
+    grid-column: 1;
 }
 .project-media {
     width: 100%;
