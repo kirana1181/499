@@ -670,7 +670,26 @@ body {
 .scene {
 	height: 140vh; /* longer = more cinematic pacing */
 	position: relative;
-	background: green;
+	background:
+radial-gradient(circle at 15% 25%,
+rgba(165,214,167,.08),
+transparent 25%),
+
+radial-gradient(circle at 85% 70%,
+rgba(91,140,90,.12),
+transparent 30%),
+
+radial-gradient(circle at 50% 90%,
+rgba(255,255,255,.03),
+transparent 40%),
+
+linear-gradient(
+180deg,
+#08110d,
+#122117,
+#08110d
+);
+	
 }
 
 .scene-sticky {
@@ -693,6 +712,11 @@ body {
 
 .scene-image {
 	height: 65vh;
+	overflow: hidden;
+}
+
+.scene-image2 {
+	height: 75vh;
 	overflow: hidden;
 }
 
