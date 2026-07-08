@@ -129,7 +129,25 @@ body {
 		gap: 6rem; 
 		align-items: center; 
 		padding: 8rem 8vw; 
-	  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+	 background:
+radial-gradient(circle at 15% 25%,
+rgba(165,214,167,.08),
+transparent 25%),
+
+radial-gradient(circle at 85% 70%,
+rgba(91,140,90,.12),
+transparent 30%),
+
+radial-gradient(circle at 50% 90%,
+rgba(255,255,255,.03),
+transparent 40%),
+
+linear-gradient(
+180deg,
+#08110d,
+#122117,
+#08110d
+);
 		
 }
 .about-copy {
@@ -265,14 +283,7 @@ HORIZONTAL GALLERY
 .horizontal-gallery {
 	height: 450vh;
 	position: relative;
-	  background:
-        radial-gradient(circle at 20% 30%, rgba(79,150,113,.15), transparent 40%),
-        radial-gradient(circle at 80% 70%, rgba(125,176,141,.12), transparent 45%),
-        radial-gradient(circle at 50% 10%, rgba(255,255,255,.04), transparent 50%),
-        linear-gradient(180deg,
-            #08100d 0%,
-            #11231a 45%,
-            #08100d 100%);
+	  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
 
 }
 
