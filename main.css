@@ -384,7 +384,137 @@ HORIZONTAL GALLERY
     max-width: 32rem;
 }
 
+/* =========================
+   FILM SEQUENCE WRAPPER
+========================= */
 
+.film {
+	background: #0b0d0f;
+}
+
+/* =========================
+   SCENE (PINNED CUT SYSTEM)
+========================= */
+
+.scene {
+	height: 140vh; /* longer = more cinematic pacing */
+	position: relative;
+	background:
+radial-gradient(circle at 15% 25%,
+rgba(165,214,167,.08),
+transparent 25%),
+
+radial-gradient(circle at 85% 70%,
+rgba(91,140,90,.12),
+transparent 30%),
+
+radial-gradient(circle at 50% 90%,
+rgba(255,255,255,.03),
+transparent 40%),
+
+linear-gradient(
+180deg,
+#08110d,
+#122117,
+#08110d
+);
+	
+}
+
+.scene-sticky {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+
+	display: grid;
+	grid-template-columns: 1.2fr 1fr;
+	align-items: center;
+
+	padding: 0 6vw;
+
+	overflow: hidden;
+}
+
+/* =========================
+   IMAGE LAYER (CINEMATIC MOVE)
+========================= */
+
+.scene-image {
+	height: 65vh;
+	overflow: hidden;
+}
+
+.scene-image2 {
+	height: 75vh;
+	overflow: hidden;
+}
+
+.scene-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform: scale(1.15);
+	transition: transform 1.2s ease;
+}
+
+/* =========================
+   TEXT LAYER
+========================= */
+
+.scene-content {
+	padding-left: 4vw;
+	color: white;
+	max-width: 600px;
+
+	transform: translateY(80px);
+	opacity: 0;
+	transition: all 1s ease;
+}
+
+.scene-label {
+	font-size: .7rem;
+	letter-spacing: .3em;
+	text-transform: uppercase;
+	opacity: .5;
+	margin-bottom: 1rem;
+}
+
+.scene-content h2 {
+	font-family: "Cormorant Garamond", serif;
+	font-size: clamp(3rem, 6vw, 6rem);
+	font-weight: 300;
+	line-height: .9;
+	margin-bottom: 1.5rem;
+}
+
+.scene-content p {
+	line-height: 1.8;
+	opacity: .8;
+	max-width: 500px;
+}
+
+/* =========================
+   ACTIVE STATE (THE CUT)
+========================= */
+
+.scene.active .scene-content {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.scene.active .scene-image img {
+	transform: scale(1.02);
+}
+
+/* subtle cinematic fade */
+.scene {
+	opacity: 0.4;
+	transition: opacity 1s ease;
+}
+
+.scene.active {
+	opacity: 1;
+}
 /* ========================================
 CHAPTER ARCHIVE
 ======================================== */
@@ -403,7 +533,7 @@ CHAPTER ARCHIVE
 
 .chapters-section {
 
-	background: biege;
+	background: F2F1E4;
 	color: #0b0d0f;
 	padding: 10rem 6vw;
 	display: grid;
@@ -654,137 +784,6 @@ html {
 
 body {
 	will-change: transform;
-}
-/* =========================
-   FILM SEQUENCE WRAPPER
-========================= */
-
-.film {
-	background: #0b0d0f;
-}
-
-/* =========================
-   SCENE (PINNED CUT SYSTEM)
-========================= */
-
-.scene {
-	height: 140vh; /* longer = more cinematic pacing */
-	position: relative;
-	background:
-radial-gradient(circle at 15% 25%,
-rgba(165,214,167,.08),
-transparent 25%),
-
-radial-gradient(circle at 85% 70%,
-rgba(91,140,90,.12),
-transparent 30%),
-
-radial-gradient(circle at 50% 90%,
-rgba(255,255,255,.03),
-transparent 40%),
-
-linear-gradient(
-180deg,
-#08110d,
-#122117,
-#08110d
-);
-	
-}
-
-.scene-sticky {
-	position: sticky;
-	top: 0;
-	height: 100vh;
-
-	display: grid;
-	grid-template-columns: 1.2fr 1fr;
-	align-items: center;
-
-	padding: 0 6vw;
-
-	overflow: hidden;
-}
-
-/* =========================
-   IMAGE LAYER (CINEMATIC MOVE)
-========================= */
-
-.scene-image {
-	height: 65vh;
-	overflow: hidden;
-}
-
-.scene-image2 {
-	height: 75vh;
-	overflow: hidden;
-}
-
-.scene-image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	transform: scale(1.15);
-	transition: transform 1.2s ease;
-}
-
-/* =========================
-   TEXT LAYER
-========================= */
-
-.scene-content {
-	padding-left: 4vw;
-	color: white;
-	max-width: 600px;
-
-	transform: translateY(80px);
-	opacity: 0;
-	transition: all 1s ease;
-}
-
-.scene-label {
-	font-size: .7rem;
-	letter-spacing: .3em;
-	text-transform: uppercase;
-	opacity: .5;
-	margin-bottom: 1rem;
-}
-
-.scene-content h2 {
-	font-family: "Cormorant Garamond", serif;
-	font-size: clamp(3rem, 6vw, 6rem);
-	font-weight: 300;
-	line-height: .9;
-	margin-bottom: 1.5rem;
-}
-
-.scene-content p {
-	line-height: 1.8;
-	opacity: .8;
-	max-width: 500px;
-}
-
-/* =========================
-   ACTIVE STATE (THE CUT)
-========================= */
-
-.scene.active .scene-content {
-	transform: translateY(0);
-	opacity: 1;
-}
-
-.scene.active .scene-image img {
-	transform: scale(1.02);
-}
-
-/* subtle cinematic fade */
-.scene {
-	opacity: 0.4;
-	transition: opacity 1s ease;
-}
-
-.scene.active {
-	opacity: 1;
 }
 
 /* =========================
