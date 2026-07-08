@@ -444,6 +444,14 @@ linear-gradient(
 	transition: transform 1.2s ease;
 }
 
+.scene-image2 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform: scale(1.15);
+	transition: transform 1.2s ease;
+}
+
 /* =========================
    TEXT LAYER
 ========================= */
@@ -522,7 +530,7 @@ CHAPTER ARCHIVE
 .chapters-section {
 
 	background: #D8D1C5;
-	color: #D8D1C5;
+	color: black;
 	padding: 10rem 6vw;
 	display: grid;
 	grid-template-columns: 1fr 1.5fr;
