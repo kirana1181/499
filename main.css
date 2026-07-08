@@ -521,8 +521,8 @@ CHAPTER ARCHIVE
 
 .chapters-section {
 
-	background: sand;
-	color: sand;
+	background: #D8D1C5;
+	color: #D8D1C5;
 	padding: 10rem 6vw;
 	display: grid;
 	grid-template-columns: 1fr 1.5fr;
@@ -608,49 +608,96 @@ FOOTER
 ======================================== */
 
 .footer {
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
 
-	background: #0b0d0f;
+	background: linear-gradient(
+		to bottom,
+		#0b0b2b,
+		#1b2735 70%,
+		#090a0f
+	);
 
 	color: white;
-
 	padding: 10rem 6vw 4rem;
+}
 
+.footer > * {
+	position: relative;
+	z-index: 2;
+}
+
+
+/* STAR FIELD */
+
+.footer::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	width: 1px;
+	height: 1px;
+	background: white;
+	box-shadow: 2vw 5vh 2px white,	10vw 8vh 2px white,	15vw 15vh 1px white,	22vw 22vh 1px white,
+	28vw 12vh 2px white,	32vw 32vh 1px white,	38vw 18vh 2px white, 42vw 35vh 1px white,	48vw 25vh 2px white,	53vw 42vh 1px white,	58vw 15vh 2px white,	63vw 38vh 1px white,	68vw 28vh 2px white,
+	73vw 45vh 1px white,	78vw 32vh 2px white,	83vw 48vh 1px white,	88vw 20vh 2px white,
+	93vw 52vh 1px white,	98vw 35vh 2px white,5vw 60vh 1px white,
+	12vw 65vh 2px white, 18vw 72vh 1px white, 25vw 78vh 2px white,30vw 85vh 1px white,	35vw 68vh 2px white, 40vw 82vh 1px white, 45vw 92vh 2px white,	50vw 75vh 1px white,	55vw 88vh 2px white,	60vw 95vh 1px white,	65vw 72vh 2px white,	70vw 85vh 1px white,	75vw 78vh 2px white,	80vw 92vh 1px white,	85vw 82vh 2px white,	90vw 88vh 1px white,	95vw 75vh 2px white;
+	animation: twinkle 8s infinite linear;
+
+	z-index: 1;
+}
+
+
+.footer::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+
+	width: 1px;
+	height: 1px;
+	background: white;
+
+	box-shadow:
+	8vw 12vh 2px white,
+	16vw 18vh 1px white,
+	24vw 25vh 2px white,
+	33vw 15vh 1px white,
+	41vw 28vh 2px white,
+	49vw 35vh 1px white,
+	57vw 22vh 2px white,
+	65vw 42vh 1px white,
+	73vw 28vh 2px white,
+	81vw 48vh 1px white,
+	89vw 32vh 2px white,
+	97vw 45vh 2px white;
+
+	animation: twinkle 6s infinite linear reverse;
+
+	z-index: 1;
 }
 
 .footer-top {
-
 	max-width: 1400px;
-
 	margin-bottom: 6rem;
 
 }
 
 .footer-label {
-
 	font-size: .7rem;
-
 	letter-spacing: .25em;
-
 	text-transform: uppercase;
-
 	opacity: .6;
-
 	margin-bottom: 1.5rem;
 
 }
 
 .footer h2 {
-
 	font-family: "Cormorant Garamond", serif;
-
 	font-size: clamp(5rem,10vw,10rem);
-
 	font-weight: 300;
-
 	line-height: .85;
-
 	max-width: 900px;
-
 	margin-bottom: 2rem;
 
 }
@@ -766,13 +813,67 @@ FOOTER
 
 }
 
-html {
-	background: #0b0d0f;
+.shooting-star {
+	position: absolute;
+	width: 100px;
+	height: 2px;
+	background: linear-gradient(90deg, white, transparent);
+
+	animation: shoot 3s infinite ease-in;
+
+	z-index: 1;
 }
 
-body {
-	will-change: transform;
+.shooting-star:nth-child(1) {
+	top:20%;
+	left:-100px;
+	animation-delay:0s;
 }
+
+.shooting-star:nth-child(2) {
+	top:40%;
+	left:-100px;
+	animation-delay:1s;
+}
+
+.shooting-star:nth-child(3) {
+	top:60%;
+	left:-100px;
+	animation-delay:2s;
+}
+
+
+@keyframes twinkle {
+	0%,100% {
+		opacity:.8;
+	}
+	50% {
+		opacity:.35;
+	}
+}
+
+
+@keyframes shoot {
+
+	0% {
+		transform:
+		translateX(0)
+		translateY(0)
+		rotate(25deg);
+
+		opacity:1;
+	}
+
+	100% {
+		transform:
+		translateX(120vw)
+		translateY(50vh)
+		rotate(25deg);
+
+		opacity:0;
+	}
+}
+
 
 /* =========================
    MOBILE
