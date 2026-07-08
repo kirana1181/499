@@ -670,6 +670,7 @@ body {
 .scene {
 	height: 140vh; /* longer = more cinematic pacing */
 	position: relative;
+	background: green;
 }
 
 .scene-sticky {
@@ -691,7 +692,7 @@ body {
 ========================= */
 
 .scene-image {
-	height: 85vh;
+	height: 65vh;
 	overflow: hidden;
 }
 
@@ -699,7 +700,6 @@ body {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-
 	transform: scale(1.15);
 	transition: transform 1.2s ease;
 }
