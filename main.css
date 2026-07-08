@@ -522,7 +522,7 @@ CHAPTER ARCHIVE
 .chapters-section {
 
 	background: sand;
-	color: #0b0d0f;
+	color: sand;
 	padding: 10rem 6vw;
 	display: grid;
 	grid-template-columns: 1fr 1.5fr;
