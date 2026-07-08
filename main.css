@@ -513,6 +513,7 @@ CHAPTER ARCHIVE
 ======================================== */
 
 .reel-divider-title {
+		position: absolute;
 	text-align: center;
 	font-family: "Cormorant Garamond", serif;
 	font-size: 3.5rem;
