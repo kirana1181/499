@@ -1,0 +1,844 @@
+:root{
+
+--paper:#F8F4EC;
+--cream:#FFF9F1;
+
+--yellow:#FFF2A8;
+--pink:#FFD5E5;
+--blue:#D7ECFF;
+--green:#DFF2D3;
+
+--ink:#222222;
+
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:
+    linear-gradient(
+        rgba(248,244,236,.92),
+        rgba(248,244,236,.92)
+    ),
+    url("images/textures/paper.jpg");
+
+background-size:cover;
+
+color:var(--ink);
+
+font-family:Inter,sans-serif;
+
+overflow-x:hidden;
+
+
+}
+
+/* NAV */
+
+.nav{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+padding:2rem 4vw;
+
+z-index:1000;
+
+}
+
+.logo{
+
+
+text-decoration:none;
+
+color:var(--ink);
+
+letter-spacing:.2em;
+
+font-size:.8rem;
+
+
+}
+
+/* HERO */
+
+.hero{
+
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+padding:8rem 2rem;
+
+}
+
+.hero-content{
+
+max-width:1100px;
+
+
+}
+
+.eyebrow{
+
+letter-spacing:.3em;
+
+text-transform:uppercase;
+
+font-size:.75rem;
+
+margin-bottom:2rem;
+
+
+}
+
+.hero h1{
+
+
+font-family:"Cormorant Garamond",serif;
+
+font-weight:400;
+
+font-size:clamp(4rem,10vw,9rem);
+
+line-height:.85;
+
+margin-bottom:2rem;
+
+
+}
+
+.hero-description{
+
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.8;
+
+
+}
+
+/* SCRAPBOOK */
+
+.scrapbook-intro{
+
+
+display:grid;
+
+grid-template-columns:
+    1fr
+    1fr
+    1fr;
+
+gap:3rem;
+
+padding:6rem 8vw;
+
+align-items:center;
+
+
+}
+
+.polaroid{
+
+background:white;
+
+padding:1rem 1rem 3rem;
+
+box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+
+position:relative;
+
+}
+
+.polaroid img{
+
+
+width:100%;
+
+display:block;
+
+}
+
+.polaroid p{
+
+
+margin-top:1rem;
+
+text-align:center;
+
+font-family:"Caveat",cursive;
+
+font-size:1.5rem;
+
+
+}
+
+.rotate-left{
+transform:rotate(-3deg);
+}
+
+.rotate-right{
+transform:rotate(3deg);
+}
+
+.note-card{
+
+
+padding:3rem;
+
+border-radius:16px;
+
+box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+
+
+}
+
+.yellow{
+background:var(--yellow);
+}
+
+.note-label{
+
+text-transform:uppercase;
+
+letter-spacing:.2em;
+
+font-size:.7rem;
+
+
+}
+
+.note-card h2{
+
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:3rem;
+
+margin:1rem 0;
+
+
+}
+
+.note-card p{
+
+line-height:1.8;
+
+
+}
+
+/* DOODLES */
+
+.doodle-section{
+
+
+display:flex;
+
+justify-content:center;
+
+gap:6rem;
+
+padding:2rem;
+
+
+}
+
+.doodle{
+
+font-family:"Caveat",cursive;
+
+font-size:2rem;
+
+opacity:.6;
+
+
+}
+
+/* =========================
+FEATURED BUILDS
+========================= */
+
+.featured-builds{
+
+padding:8rem 8vw;
+
+display:flex;
+
+flex-direction:column;
+
+gap:8rem;
+
+
+}
+
+.section-heading{
+
+
+text-align:center;
+
+
+}
+
+.section-heading span{
+
+
+text-transform:uppercase;
+
+letter-spacing:.2em;
+
+font-size:.8rem;
+
+
+}
+
+.section-heading h2{
+
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:clamp(3rem,6vw,5rem);
+
+font-weight:400;
+
+margin-top:1rem;
+
+}
+
+.build{
+
+
+display:grid;
+
+grid-template-columns:
+    1.2fr
+    1fr;
+
+gap:4rem;
+
+align-items:center;
+
+
+}
+
+.build.reverse{
+
+grid-template-columns:
+    1fr
+    1.2fr;
+
+
+}
+
+.build.reverse .build-image{
+
+
+order:2;
+
+
+}
+
+.build.reverse .build-info{
+
+
+order:1;
+
+
+}
+
+.build-image img{
+
+
+width:100%;
+
+display:block;
+
+border-radius:20px;
+
+box-shadow:
+    0 20px 50px rgba(0,0,0,.08);
+
+
+}
+
+.build-info h3{
+
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:3rem;
+
+font-weight:400;
+
+margin:1rem 0;
+
+
+}
+
+.build-info p{
+
+
+line-height:1.8;
+
+margin-bottom:1.5rem;
+
+
+}
+
+.build-info ul{
+
+
+padding-left:1.5rem;
+
+line-height:2;
+
+
+}
+
+/* TAGS */
+
+.tag-row{
+
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:.75rem;
+
+
+}
+
+.tag{
+
+
+padding:.5rem 1rem;
+
+border-radius:999px;
+
+font-size:.8rem;
+
+text-transform:uppercase;
+
+letter-spacing:.1em;
+
+
+}
+
+.blue{
+background:var(--blue);
+}
+
+.pink{
+background:var(--pink);
+}
+
+.green{
+background:var(--green);
+}
+
+/* MOBILE */
+
+@media (max-width:900px){
+
+
+.scrapbook-intro{
+
+    grid-template-columns:1fr;
+}
+
+.build,
+.build.reverse{
+
+    grid-template-columns:1fr;
+}
+
+.build.reverse .build-image,
+.build.reverse .build-info{
+
+    order:unset;
+}
+
+
+}
+
+/* =========================
+WORKBENCH
+========================= */
+
+.workbench{
+
+
+padding:8rem 8vw;
+
+
+}
+
+.workbench-grid{
+
+
+margin-top:4rem;
+
+display:grid;
+
+grid-template-columns:
+    repeat(4,1fr);
+
+gap:2rem;
+
+
+}
+
+.bench-card{
+
+
+padding:2rem;
+
+border-radius:18px;
+
+box-shadow:
+    0 15px 35px rgba(0,0,0,.08);
+
+transition:
+    transform .3s ease;
+
+
+}
+
+.bench-card:hover{
+
+
+transform:
+    translateY(-8px)
+    rotate(-1deg);
+
+
+}
+
+.bench-card h3{
+
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:2rem;
+
+margin-bottom:1rem;
+
+
+}
+
+.bench-card ul{
+
+
+list-style:none;
+
+line-height:2;
+
+
+}
+
+@media (max-width:1000px){
+
+.workbench-grid{
+
+    grid-template-columns:
+        repeat(2,1fr);
+}
+
+
+}
+
+@media (max-width:700px){
+
+
+.workbench-grid{
+
+    grid-template-columns:1fr;
+}
+
+
+}
+
+/* =========================
+ARCHIVE WALL
+========================= */
+
+.archive-wall{
+
+
+padding:8rem 8vw;
+
+
+}
+
+.archive-grid{
+
+
+margin-top:4rem;
+
+display:grid;
+
+grid-template-columns:
+    repeat(3,1fr);
+
+gap:2.5rem;
+
+}
+
+.archive-item{
+
+
+background:white;
+
+padding:1rem 1rem 2rem;
+
+box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+position:relative;
+transition:
+    transform .3s ease;
+
+
+}
+
+.archive-item:nth-child(odd){
+
+transform:rotate(-2deg);
+
+}
+
+.archive-item:nth-child(even){
+
+transform:rotate(2deg);
+
+
+}
+
+.archive-item:hover{
+
+transform:
+    translateY(-10px)
+    rotate(0deg);
+
+
+}
+
+.archive-item img{
+
+
+width:100%;
+
+display:block;
+
+
+}
+
+.archive-item figcaption{
+
+
+margin-top:1rem;
+
+text-align:center;
+
+font-family:"Caveat",cursive;
+
+font-size:1.4rem;
+
+
+}
+
+/* tape */
+
+.archive-item::before{
+
+content:"";
+
+position:absolute;
+
+top:-10px;
+left:50%;
+
+width:90px;
+height:24px;
+
+transform:
+    translateX(-50%)
+    rotate(-3deg);
+
+background:
+    rgba(255,255,255,.65);
+
+backdrop-filter:
+    blur(3px);
+
+
+}
+@media (max-width:900px){
+
+    .archive-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:600px){
+
+    .archive-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* =========================
+FINAL NOTE
+========================= */
+
+.final-note{
+
+padding:
+    8rem 8vw
+    12rem;
+
+
+}
+
+.note-paper{
+
+max-width:900px;
+
+margin:auto;
+
+background:white;
+
+padding:4rem;
+
+border-radius:20px;
+
+box-shadow:
+    0 20px 60px rgba(0,0,0,.08);
+
+position:relative;
+
+
+}
+
+.note-paper::before{
+
+content:"";
+
+position:absolute;
+
+top:-12px;
+right:80px;
+
+width:120px;
+height:28px;
+
+background:
+    rgba(255,255,255,.65);
+
+transform:
+    rotate(6deg);
+
+
+}
+
+.note-paper h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:clamp(2.5rem,5vw,4rem);
+
+font-weight:400;
+
+margin:
+    1rem 0
+    2rem;
+
+}
+
+.note-paper p{
+
+line-height:1.9;
+
+max-width:700px;
+
+}
+
+.footer-links{
+
+margin-top:3rem;
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:1.5rem;
+
+
+}
+
+.footer-links a{
+
+text-decoration:none;
+
+color:var(--ink);
+
+padding:.7rem 1.2rem;
+
+background:var(--cream);
+
+border-radius:999px;
+
+transition:
+    transform .2s ease;
+
+
+}
+
+.footer-links a:hover{
+
+transform:
+    translateY(-3px);
+
+}
+
+.signature{
+
+margin-top:3rem;
+
+font-family:"Caveat",cursive;
+
+font-size:2rem;
+
+
+}
+
+

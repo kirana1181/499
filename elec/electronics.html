@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>Electronic Sculpture Archive</title>
+  <link rel="icon" type="image/x-icon" href="images/elecfav.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="electronics.css">
+    <link rel="stylesheet" href="../hamburgermenu.css?v=6">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sideMenu">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+<nav class="side-menu" id="sideMenu" data-menu-root=".." aria-label="Site menu"></nav>
+
+<div class="grid-overlay"></div>
+
+<div class="side-label">
+    Electronic Sculpture Archive
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-tag">
+        Experimental Systems / Interactive Media
+    </div>
+
+    <h1>
+        ELECTRONIC<br>
+        SCULPTURES<br>
+        & MACHINES
+    </h1>
+
+    <div class="hero-line"></div>
+
+    <p>
+        A collection of interactive installations, projection-mapped environments,
+        animatronics, kinetic sculptures, TouchDesigner systems, and experimental
+        electronic works blending cinema, robotics, and responsive media.
+    </p>
+
+</section>
+
+<!-- FILTERS -->
+
+<section class="filters">
+
+    <button class="filter-btn active" data-filter="all">
+        All Projects
+    </button>
+
+    <button class="filter-btn" data-filter="touchdesigner">
+        TouchDesigner
+    </button>
+
+    <button class="filter-btn" data-filter="projection">
+        Projection Mapping
+    </button>
+
+    <button class="filter-btn" data-filter="animatronics">
+        Animatronics
+    </button>
+
+    <button class="filter-btn" data-filter="kinetic">
+        Kinetic Sculpture
+    </button>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section class="projects">
+
+<div class="project-grid">
+
+    <!-- PROJECT -->
+
+    <div class="project-card" data-category="touchdesigner">
+
+        <div class="project-image"
+        style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop');">
+        </div>
+
+        <div class="project-overlay"></div>
+
+        <div class="project-content">
+
+            <div class="category">
+                TouchDesigner
+            </div>
+
+            <h2 class="project-title">
+                Infection
+            </h2>
+
+            <p class="project-description">
+                Personalized projection-mapping simulating blood spreading in veins— 
+                overlayed with a video of memories and organs....
+                custom TouchDesigner pipeline.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECT -->
+
+    <div class="project-card" data-category="projection">
+
+        <div class="project-image"
+        style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop');">
+        </div>
+
+        <div class="project-overlay"></div>
+
+        <div class="project-content">
+
+            <div class="category">
+                Electronic/Animatronic
+            </div>
+
+            <h2 class="project-title">
+                I Don't Blame You / Defunct Portal Turret
+            </h2>
+
+            <p class="project-description">
+              A reiteration of a robot featured in the game, Portal. Motion sensors trigger an intense light spasm
+                when the structure detects a subject.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECT -->
+
+    <div class="project-card" data-category="animatronics">
+
+        <div class="project-image"
+        style="background-image:url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1400&auto=format&fit=crop');">
+        </div>
+
+        <div class="project-overlay"></div>
+
+        <div class="project-content">
+
+            <div class="category">
+                Automata & interactive projection
+            </div>
+
+            <h2 class="project-title">
+               THE NAVIGATION THAT GUDES YOU
+            </h2>
+
+            <p class="project-description">
+                Servo-driven automata gives a spinning shadow to the wall— while
+                interacters control a flowing beam of light that will follow their hands. Light
+                can be programmed to follow, or run away from the hand.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECT -->
+
+    <div class="project-card" data-category="kinetic">
+
+        <div class="project-image"
+        style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&auto=format&fit=crop');">
+        </div>
+
+        <div class="project-overlay"></div>
+
+        <div class="project-content">
+
+            <div class="category">
+               Animatronic
+            </div>
+
+            <h2 class="project-title">
+               Blue Bird! Broken Bird!
+            </h2>
+
+            <p class="project-description">
+                Interactive bird model programmed with arduino.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECT -->
+
+    <div class="project-card" data-category="touchdesigner">
+
+        <div class="project-image"
+        style="background-image:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1400&auto=format&fit=crop');">
+        </div>
+
+        <div class="project-overlay"></div>
+
+        <div class="project-content">
+
+            <div class="category">
+                TouchDesigner / Performance
+            </div>
+
+            <h2 class="project-title">
+                Echo Chamber
+            </h2>
+
+            <p class="project-description">
+              Interactive Touchdesigner installation- different messages appear as the viewer slowly
+                closes their eyes and or hides their face— symbolizing the messages we are too afraid to hear. 
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- PROJECT -->
+
+    <div class="project-card" data-category="projection">
+
+        <div class="project-image"
+        style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop');">
+        </div>
+
+        <div class="project-overlay"></div>
+
+        <div class="project-content">
+
+            <div class="category">
+                Audio / Visual
+            </div>
+
+            <h2 class="project-title">
+                Signal Bloom
+            </h2>
+
+            <p class="project-description">
+                Audio reactive light.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+    .gate{
+    display:block;
+    padding:60px;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    text-decoration:none;
+    color:white;
+    transition:0.5s;
+}
+
+.gate:hover{
+    background:rgba(0,255,200,0.08);
+    transform:translateX(10px);
+}
+
+.gate-title{
+    font-size:2.5rem;
+    font-family:'Orbitron', sans-serif;
+}
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div>
+
+        <h3>
+            Archive
+        </h3>
+
+        <p>
+            Experimental Media / Robotics / Electronic Sculpture
+        </p>
+
+    </div>
+
+    <div>
+
+        <h3>
+            Contact
+        </h3>
+
+        <a href="#">
+            Instagram
+        </a>
+
+        <br>
+
+        <a href="#">
+            Vimeo
+        </a>
+
+    </div>
+
+</footer>
+
+<script src="../site-menu.js?v=3"></script>
+<script>
+
+/* FILTER SYSTEM */
+
+const buttons = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".project-card");
+
+buttons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        buttons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.dataset.filter;
+
+        cards.forEach(card => {
+
+            if(filter === "all"){
+                card.style.display = "block";
+            }
+
+            else if(card.dataset.category === filter){
+                card.style.display = "block";
+            }
+
+            else{
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
