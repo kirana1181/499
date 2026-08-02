@@ -10,8 +10,8 @@
 		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" href="../hamburgermenu.css?v=6">
+		<link rel="stylesheet" type="text/css" href="css/style.css?v=2" />
+		<link rel="stylesheet" href="../hamburgermenu.css?v=7">
 		<script src="js/modernizr.custom.js"></script>
 	</head>
 	<body>
@@ -235,6 +235,27 @@
 						<p>Browse individual songs, cue ideas, and fragments from the shelf.</p>
 					</div>
 
+					<section class="watch-sound" aria-label="Watch the sound">
+						<div class="watch-sound__copy">
+							<p class="archive-label">watch the sound</p>
+							<h2 class="watch-sound__title">Stolen Dreams</h2>
+							<p class="watch-sound__note">Video slot for a trailer, music video, or scene excerpt.</p>
+							<div class="mini-turntable" aria-hidden="true">
+								<div class="mini-vinyl">
+									<div class="mini-vinyl__label"></div>
+								</div>
+								<div class="mini-needle"></div>
+							</div>
+							<audio class="archive-audio" controls src="mp3/Stolen_Dreams_Backing_Track.mp3"></audio>
+						</div>
+						<div class="video-embed">
+							<div class="video-embed__placeholder">
+								<span>youtube / video embed</span>
+								<p>Add a YouTube URL here when the final video is ready.</p>
+							</div>
+						</div>
+					</section>
+
 					<div class="track-list">
 						<button class="track-row is-current" type="button" data-audio="mp3/Stolen_Dreams_Backing_Track.mp3" data-video-title="Stolen Dreams" data-video-note="Video slot for a trailer, music video, or scene excerpt.">
 							<span class="track-row__num">01</span>
@@ -281,20 +302,6 @@
 					</div>
 				</section>
 
-				<section class="watch-sound" aria-label="Watch the sound">
-					<div class="watch-sound__copy">
-						<p class="archive-label">watch the sound</p>
-						<h2 class="watch-sound__title">Stolen Dreams</h2>
-						<p class="watch-sound__note">Video slot for a trailer, music video, or scene excerpt.</p>
-						<audio class="archive-audio" controls src="mp3/Stolen_Dreams_Backing_Track.mp3"></audio>
-					</div>
-					<div class="video-embed">
-						<div class="video-embed__placeholder">
-							<span>youtube / video embed</span>
-							<p>Add a YouTube URL here when the final video is ready.</p>
-						</div>
-					</div>
-				</section>
 			</div><!-- /view-grid -->
 			<div class="deco-expander"></div>
 			<div class="view view--player">
@@ -548,8 +555,8 @@
 		<script src="js/dynamics.min.js"></script>
 		<script src="js/abbey-load.js"></script>
 		<script src="js/main.js"></script>
-		<script src="js/archive.js"></script>
-		<script src="../site-menu.js?v=3"></script>
+		<script src="js/archive.js?v=2"></script>
+		<script src="../site-menu.js?v=7"></script>
 		<!-- 
 		- position expander: set opacity to 1, set top and left to the point where the mouse it. Animate to scale3d(1,1,1). To do the opposite, animate to scale3d(0,0,1) or scale(0.001,0.001,1).
 		- set class current of the respective single (set class single--current)

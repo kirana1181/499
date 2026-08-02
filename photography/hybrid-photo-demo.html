@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Photography Exhibitions Demo | Kiran Arain</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="hybrid-photo-demo.css?v=5">
+	<link rel="stylesheet" href="../hamburgermenu.css?v=7">
+</head>
+<body>
+	<button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sideMenu">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+	<nav class="side-menu" id="sideMenu" data-menu-root=".." aria-label="Site menu"></nav>
+
+	<header class="hybrid-nav">
+		<a class="return-link" href="../index.html">← Return</a>
+	</header>
+
+	<main>
+		<section class="hybrid-hero">
+			<div class="hero-copy">
+				<p class="eyebrow">commission archive</p>
+				<h1>Photography</h1>
+				<p>
+					exhibitions and commissioned work
+				</p>
+			</div>
+		</section>
+
+		<nav class="photo-mode-switch" aria-label="Photography archive mode">
+			<button class="photo-mode active" type="button" data-mode="exhibitions">
+				<span>01</span>
+				Exhibitions
+			</button>
+			<button class="photo-mode" type="button" data-mode="commissions">
+				<span>02</span>
+				Commissions
+			</button>
+		</nav>
+
+		<section class="exhibition-section" id="exhibitions">
+			<div class="section-heading dark">
+				<p class="eyebrow">photography archive</p>
+			</div>
+
+			<div class="expo-shell">
+				<aside class="expo-menu">
+					<button class="archive-collapse" type="button" aria-expanded="true" aria-label="Collapse photography archive">
+						<span class="archive-collapse__open">Hide Archive</span>
+						<span class="archive-collapse__closed">Archive</span>
+					</button>
+					<button class="expo-tab active" type="button" data-expo="rhossili"><span>01</span> Rhossili Bay</button>
+					<button class="expo-tab" type="button" data-expo="florida"><span>02</span> The Florida Project</button>
+					<button class="expo-tab" type="button" data-expo="birds"><span>03</span> Birds of a Feather</button>
+					<button class="expo-tab is-soon" type="button" data-expo="coming-exhibition"><span>04</span> Coming Soon</button>
+					<button class="expo-tab is-soon" type="button" data-expo="coming-study"><span>05</span> Coming Soon</button>
+				</aside>
+
+				<div class="expo-stage">
+					<section class="expo-panel active" id="rhossili">
+						<div class="expo-heading">
+							<div>
+								<p class="eyebrow">exhibition 01</p>
+								<h3>Rhossili Bay</h3>
+							</div>
+							<div class="view-toggle">
+								<button class="view-btn active" type="button" data-view="archive">Archive</button>
+								<button class="view-btn" type="button" data-view="focus">Focus</button>
+							</div>
+						</div>
+						<p class="expo-note">A coastal horse study shown as a masonry archive or as a quiet one-image focus viewer.</p>
+						<div class="archive-grid"></div>
+						<div class="focus-view" hidden>
+							<button class="focus-arrow focus-prev" type="button" aria-label="Previous Rhossili image">‹</button>
+							<figure>
+								<img alt="">
+								<figcaption></figcaption>
+							</figure>
+							<button class="focus-arrow focus-next" type="button" aria-label="Next Rhossili image">›</button>
+						</div>
+					</section>
+
+					<section class="expo-panel" id="florida">
+						<div class="expo-heading">
+							<div>
+								<p class="eyebrow">exhibition 02</p>
+								<h3>The Florida Project</h3>
+							</div>
+							<div class="view-toggle">
+								<button class="view-btn active" type="button" data-view="archive">Archive</button>
+								<button class="view-btn" type="button" data-view="focus">Focus</button>
+							</div>
+						</div>
+						<p class="expo-note">Animals and creatures that feel displaced, uncanny, or slightly impossible in Florida.</p>
+						<div class="archive-grid"></div>
+						<div class="focus-view" hidden>
+							<button class="focus-arrow focus-prev" type="button" aria-label="Previous Florida image">‹</button>
+							<figure>
+								<img alt="">
+								<figcaption></figcaption>
+							</figure>
+							<button class="focus-arrow focus-next" type="button" aria-label="Next Florida image">›</button>
+						</div>
+					</section>
+
+					<section class="expo-panel" id="birds">
+						<div class="expo-heading">
+							<div>
+								<p class="eyebrow">exhibition 03</p>
+								<h3>Birds of a Feather</h3>
+							</div>
+							<div class="view-toggle">
+								<button class="view-btn active" type="button" data-view="archive">Archive</button>
+								<button class="view-btn" type="button" data-view="focus">Focus</button>
+							</div>
+						</div>
+						<p class="expo-note">Bird images pulled into their own small exhibition.</p>
+						<div class="archive-grid"></div>
+						<div class="focus-view" hidden>
+							<button class="focus-arrow focus-prev" type="button" aria-label="Previous bird image">‹</button>
+							<figure>
+								<img alt="">
+								<figcaption></figcaption>
+							</figure>
+							<button class="focus-arrow focus-next" type="button" aria-label="Next bird image">›</button>
+						</div>
+					</section>
+
+					<section class="expo-panel coming-panel" id="coming-exhibition">
+						<div class="expo-heading">
+							<div>
+								<p class="eyebrow">exhibition 04</p>
+								<h3>Coming Soon</h3>
+							</div>
+						</div>
+						<p class="expo-note">A future body of work can sit here when the next exhibition is ready.</p>
+					</section>
+
+					<section class="expo-panel coming-panel" id="coming-study">
+						<div class="expo-heading">
+							<div>
+								<p class="eyebrow">exhibition 05</p>
+								<h3>Coming Soon</h3>
+							</div>
+						</div>
+						<p class="expo-note">A placeholder for another series, study, or experimental image archive.</p>
+					</section>
+
+					<section class="expo-panel commission-panel" id="commissions">
+						<div class="expo-heading">
+							<div>
+								<p class="eyebrow">commission archive</p>
+								<h3>Commissions</h3>
+							</div>
+						</div>
+						<p class="expo-note">Product, building, subject, and editorial studies gathered into one horizontal working archive.</p>
+						<div class="commission-filter-row" aria-label="Filter commissioned work">
+							<button class="commission-filter active" type="button" data-commission-filter="all">All</button>
+							<button class="commission-filter" type="button" data-commission-filter="editorial">Editorial</button>
+							<button class="commission-filter" type="button" data-commission-filter="pet">Subjects</button>
+							<button class="commission-filter" type="button" data-commission-filter="building">Buildings</button>
+							<button class="commission-filter" type="button" data-commission-filter="product">Products</button>
+						</div>
+						<div class="client-grid">
+							<button class="client-shot product" type="button"><img src="products/1.jpg" alt="Product commission photograph of a small object"></button>
+							<button class="client-shot building wide" type="button"><img src="buildings/london.jpg" alt="London building photographed as a commission sample"></button>
+							<button class="client-shot building" type="button"><img src="buildings/glass.jpg" alt="Glass architectural detail photograph"></button>
+							<button class="client-shot editorial product" type="button"><img src="products/boat.jpg" alt="Boat object photographed as a product study"></button>
+							<button class="client-shot building tall" type="button"><img src="buildings/lighthall.jpg" alt="Tall bright hall and interior architecture photograph"></button>
+							<button class="client-shot product" type="button"><img src="products/brooch1.jpg" alt="Brooch product photograph"></button>
+							<button class="client-shot product tall" type="button"><img src="products/pot.jpg" alt="Ceramic pot product photograph"></button>
+							<button class="client-shot building wide" type="button"><img src="buildings/london2.jpg" alt="Wide London building exterior photograph"></button>
+							<button class="client-shot building" type="button"><img src="buildings/lantern.jpg" alt="Lantern and building detail photograph"></button>
+							<button class="client-shot product" type="button"><img src="products/brooch2.jpg" alt="Second brooch product photograph"></button>
+							<button class="client-shot editorial building tall" type="button"><img src="buildings/london3.jpg" alt="Vertical London architecture photograph"></button>
+							<button class="client-shot building wide" type="button"><img src="buildings/store.jpg" alt="Storefront photographed as a building commission sample"></button>
+							<button class="client-shot product" type="button"><img src="products/heads.jpg" alt="Object heads photographed as product documentation"></button>
+							<button class="client-shot product" type="button"><img src="products/pots.jpg" alt="Group of pots photographed as product documentation"></button>
+							<button class="client-shot building" type="button"><img src="buildings/glass2.jpg" alt="Second glass architectural detail photograph"></button>
+							<button class="client-shot editorial product wide" type="button"><img src="products/skate.jpg" alt="Skate object photographed as a product commission sample"></button>
+							<button class="client-shot pet" type="button"><img src="pets/kitty.jpg" alt="Cat portrait photographed as a subject commission sample"></button>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<div class="hybrid-lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+		<button class="hybrid-lightbox__close" type="button" aria-label="Close image">×</button>
+		<img src="" alt="">
+	</div>
+
+	<script src="../site-menu.js?v=7"></script>
+	<script src="hybrid-photo-demo.js?v=5"></script>
+</body>
+</html>

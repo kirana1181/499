@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title>Electronic Sculpture Archive</title>
-  <link rel="icon" type="image/x-icon" href="images/elecfav.png">
+  <link rel="icon" type="image/x-icon" href="../images/elecfav.png">
     <!-- CSS -->
-    <link rel="stylesheet" href="electronics.css">
-    <link rel="stylesheet" href="../hamburgermenu.css?v=6">
+    <link rel="stylesheet" href="electronics.css?v=9">
+    <link rel="stylesheet" href="../hamburgermenu.css?v=7">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +28,13 @@
 </button>
 <nav class="side-menu" id="sideMenu" data-menu-root=".." aria-label="Site menu"></nav>
 
+<a class="return-link" href="../index.html">← Return</a>
+
+<aside class="construction-banner" aria-label="Page status">
+    <span>Still under construction</span>
+    <strong>new circuitry is being wired in</strong>
+</aside>
+
 <div class="grid-overlay"></div>
 
 <div class="side-label">
@@ -42,10 +49,9 @@
         Experimental Systems / Interactive Media
     </div>
 
-    <h1>
-        ELECTRONIC<br>
-        SCULPTURES<br>
-        & MACHINES
+    <h1 class="hero-title-card">
+        <span>Electronic Sculptures</span>
+        <span>& Machines</span>
     </h1>
 
     <div class="hero-line"></div>
@@ -53,8 +59,54 @@
     <p>
         A collection of interactive installations, projection-mapped environments,
         animatronics, kinetic sculptures, TouchDesigner systems, and experimental
-        electronic works blending cinema, robotics, and responsive media.
+        electronic works.
     </p>
+
+</section>
+
+<!-- CIRCUIT NOTES -->
+
+<section class="circuit-notes" aria-label="Electronic process notes">
+
+    <article class="circuit-note note-a">
+        <div class="note-placeholder"></div>
+        <p>placeholder image</p>
+    </article>
+
+    <article class="circuit-note note-b">
+        <div class="note-placeholder"></div>
+        <p>placeholder image</p>
+    </article>
+
+    <article class="circuit-note note-c">
+        <div class="note-placeholder"></div>
+        <p>placeholder image</p>
+    </article>
+
+    <article class="circuit-note note-d">
+        <div class="note-placeholder"></div>
+        <p>placeholder image</p>
+    </article>
+
+    <article class="circuit-note note-e">
+        <div class="note-placeholder"></div>
+        <p>placeholder image</p>
+    </article>
+
+    <div class="workshop-note note-text-a">
+        <span>workshop notes</span>
+        test light response before attaching shell
+    </div>
+
+    <div class="workshop-note note-text-b">
+        <span>workshop notes</span>
+        sensor reads best from waist height
+    </div>
+
+    <div class="workshop-note note-text-c">
+        <span>workshop notes</span>
+        make video documentation slot for each object
+    </div>
 
 </section>
 
@@ -92,10 +144,15 @@
 
     <!-- PROJECT -->
 
-    <div class="project-card" data-category="touchdesigner">
+    <div class="project-card" data-category="touchdesigner" role="button" tabindex="0"
+        data-title="Infection"
+        data-category-label="TouchDesigner"
+        data-image="../images/index/infectiontester.png"
+        data-video=""
+        data-details="Personalized projection-mapping simulating blood spreading through veins, overlaid with video fragments of memory, body, and organ imagery. Built through a custom TouchDesigner pipeline.">
 
         <div class="project-image"
-        style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop');">
+        style="background-image:url('../images/index/infectiontester.png');">
         </div>
 
         <div class="project-overlay"></div>
@@ -122,10 +179,15 @@
 
     <!-- PROJECT -->
 
-    <div class="project-card" data-category="projection">
+    <div class="project-card" data-category="projection" role="button" tabindex="0"
+        data-title="I Don't Blame You / Defunct Portal Turret"
+        data-category-label="Electronic / Animatronic"
+        data-image="../images/index/electronics.png"
+        data-video=""
+        data-details="A reiteration of a robot featured in Portal. Motion sensors trigger an intense light spasm when the structure detects a subject, turning recognition into a nervous, theatrical response.">
 
         <div class="project-image"
-        style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop');">
+        style="background-image:url('../images/index/electronics.png');">
         </div>
 
         <div class="project-overlay"></div>
@@ -151,7 +213,12 @@
 
     <!-- PROJECT -->
 
-    <div class="project-card" data-category="animatronics">
+    <div class="project-card" data-category="animatronics" role="button" tabindex="0"
+        data-title="The Navigation That Guides You"
+        data-category-label="Automata & Interactive Projection"
+        data-image="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1400&auto=format&fit=crop"
+        data-video=""
+        data-details="Servo-driven automata creates a spinning shadow on the wall while interactors control a flowing beam of light with their hands. The light can be programmed to follow, avoid, or react against the viewer.">
 
         <div class="project-image"
         style="background-image:url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1400&auto=format&fit=crop');">
@@ -166,7 +233,7 @@
             </div>
 
             <h2 class="project-title">
-               THE NAVIGATION THAT GUDES YOU
+               The Navigation That Guides You
             </h2>
 
             <p class="project-description">
@@ -181,10 +248,15 @@
 
     <!-- PROJECT -->
 
-    <div class="project-card" data-category="kinetic">
+    <div class="project-card" data-category="kinetic" role="button" tabindex="0"
+        data-title="Blue Bird! Broken Bird!"
+        data-category-label="Animatronic"
+        data-image="../images/bluebird.png"
+        data-video=""
+        data-details="An interactive bird model programmed with Arduino, exploring fragile motion, character, and the expressive potential of small mechanisms.">
 
         <div class="project-image"
-        style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&auto=format&fit=crop');">
+        style="background-image:url('../images/bluebird.png');">
         </div>
 
         <div class="project-overlay"></div>
@@ -209,39 +281,15 @@
 
     <!-- PROJECT -->
 
-    <div class="project-card" data-category="touchdesigner">
+    <div class="project-card" data-category="projection" role="button" tabindex="0"
+        data-title="Signal Bloom"
+        data-category-label="Audio / Visual"
+        data-image="../images/elecfav.png"
+        data-video=""
+        data-details="An audio-reactive light piece that treats signal as a blooming object: a small electronic system that translates sound into pulse, glow, and rhythm.">
 
         <div class="project-image"
-        style="background-image:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1400&auto=format&fit=crop');">
-        </div>
-
-        <div class="project-overlay"></div>
-
-        <div class="project-content">
-
-            <div class="category">
-                TouchDesigner / Performance
-            </div>
-
-            <h2 class="project-title">
-                Echo Chamber
-            </h2>
-
-            <p class="project-description">
-              Interactive Touchdesigner installation- different messages appear as the viewer slowly
-                closes their eyes and or hides their face— symbolizing the messages we are too afraid to hear. 
-            </p>
-
-        </div>
-
-    </div>
-
-    <!-- PROJECT -->
-
-    <div class="project-card" data-category="projection">
-
-        <div class="project-image"
-        style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop');">
+        style="background-image:url('../images/elecfav.png');">
         </div>
 
         <div class="project-overlay"></div>
@@ -268,68 +316,39 @@
 
 </section>
 
-    .gate{
-    display:block;
-    padding:60px;
-    border-bottom:1px solid rgba(255,255,255,0.08);
-    text-decoration:none;
-    color:white;
-    transition:0.5s;
-}
+<section class="project-modal" id="projectModal" aria-hidden="true" aria-labelledby="modalTitle" role="dialog">
+    <button class="modal-close" type="button" aria-label="Close project viewer">×</button>
 
-.gate:hover{
-    background:rgba(0,255,200,0.08);
-    transform:translateX(10px);
-}
+    <div class="modal-panel">
+        <div class="modal-media">
+            <img id="modalImage" src="" alt="">
+            <div class="modal-video" id="modalVideo">
+                <span>Video link coming soon</span>
+            </div>
+        </div>
 
-.gate-title{
-    font-size:2.5rem;
-    font-family:'Orbitron', sans-serif;
-}
-
-<!-- FOOTER -->
-
-<footer class="footer">
-
-    <div>
-
-        <h3>
-            Archive
-        </h3>
-
-        <p>
-            Experimental Media / Robotics / Electronic Sculpture
-        </p>
-
+        <div class="modal-copy">
+            <p class="modal-category" id="modalCategory"></p>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDetails"></p>
+        </div>
     </div>
+</section>
 
-    <div>
-
-        <h3>
-            Contact
-        </h3>
-
-        <a href="#">
-            Instagram
-        </a>
-
-        <br>
-
-        <a href="#">
-            Vimeo
-        </a>
-
-    </div>
-
-</footer>
-
-<script src="../site-menu.js?v=3"></script>
+<script src="../site-menu.js?v=7"></script>
 <script>
 
 /* FILTER SYSTEM */
 
 const buttons = document.querySelectorAll(".filter-btn");
 const cards = document.querySelectorAll(".project-card");
+const modal = document.getElementById("projectModal");
+const modalClose = modal.querySelector(".modal-close");
+const modalImage = document.getElementById("modalImage");
+const modalVideo = document.getElementById("modalVideo");
+const modalCategory = document.getElementById("modalCategory");
+const modalTitle = document.getElementById("modalTitle");
+const modalDetails = document.getElementById("modalDetails");
 
 buttons.forEach(button => {
 
@@ -358,6 +377,56 @@ buttons.forEach(button => {
 
     });
 
+});
+
+function openProject(card) {
+    modalImage.src = card.dataset.image;
+    modalImage.alt = card.dataset.title;
+    modalCategory.textContent = card.dataset.categoryLabel;
+    modalTitle.textContent = card.dataset.title;
+    modalDetails.textContent = card.dataset.details;
+
+    if (card.dataset.video) {
+        modalVideo.innerHTML = `<iframe src="${card.dataset.video}" title="${card.dataset.title} video" allowfullscreen></iframe>`;
+    } else {
+        modalVideo.innerHTML = "<span>Video link coming soon</span>";
+    }
+
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+    modalClose.focus();
+}
+
+function closeProject() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+    modalVideo.innerHTML = "";
+}
+
+cards.forEach(card => {
+    card.addEventListener("click", () => openProject(card));
+    card.addEventListener("keydown", event => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openProject(card);
+        }
+    });
+});
+
+modalClose.addEventListener("click", closeProject);
+
+modal.addEventListener("click", event => {
+    if (event.target === modal) {
+        closeProject();
+    }
+});
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) {
+        closeProject();
+    }
 });
 
 </script>

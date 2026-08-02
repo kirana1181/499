@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Client Photography Demo | Kiran Arain</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="client-work-demo.css">
+</head>
+<body>
+	<header class="client-header">
+		<a class="client-logo return-link" href="hybrid-photo-demo.html">← Return</a>
+		<nav aria-label="Client photography demo">
+			<a href="hybrid-photo-demo.html#exhibitions">Exhibitions</a>
+			<div class="nav-menu">
+				<a href="#selected">Commissions</a>
+				<div class="nav-dropdown" aria-label="Commission categories">
+					<a href="#selected" data-filter-link="all">All</a>
+					<a href="#selected" data-filter-link="product">Products</a>
+					<a href="#selected" data-filter-link="building">Buildings</a>
+					<a href="#selected" data-filter-link="pet">Subjects</a>
+					<a href="#services">Editorial</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section class="client-hero">
+			<div class="hero-copy">
+				<p class="eyebrow">commission archive</p>
+				<h1>Commissions</h1>
+				<p>
+					Product, building, object, and companion studies.
+				</p>
+			</div>
+		</section>
+
+		<section class="selected-work" id="selected">
+			<div class="section-intro">
+				<p class="eyebrow">selected work</p>
+				<h2>Client studies</h2>
+				<p>Small focused galleries for product, interiors, buildings, and companion portraits.</p>
+			</div>
+
+			<div class="filter-row" aria-label="Filter gallery">
+				<button class="filter active" type="button" data-filter="all">All</button>
+				<button class="filter" type="button" data-filter="product">Product</button>
+				<button class="filter" type="button" data-filter="building">Building</button>
+				<button class="filter" type="button" data-filter="pet">Pet</button>
+			</div>
+
+			<div class="client-grid">
+				<button class="client-shot product" type="button"><img src="products/1.jpg" alt="Product commission photograph of a small object"></button>
+				<button class="client-shot building wide" type="button"><img src="buildings/london.jpg" alt="London building photographed as a commission sample"></button>
+				<button class="client-shot building" type="button"><img src="buildings/glass.jpg" alt="Glass architectural detail photograph"></button>
+				<button class="client-shot product" type="button"><img src="products/boat.jpg" alt="Boat object photographed as a product study"></button>
+				<button class="client-shot building tall" type="button"><img src="buildings/lighthall.jpg" alt="Tall bright hall and interior architecture photograph"></button>
+				<button class="client-shot product" type="button"><img src="products/brooch1.jpg" alt="Brooch product photograph"></button>
+				<button class="client-shot product tall" type="button"><img src="products/pot.jpg" alt="Ceramic pot product photograph"></button>
+				<button class="client-shot building wide" type="button"><img src="buildings/london2.jpg" alt="Wide London building exterior photograph"></button>
+				<button class="client-shot building" type="button"><img src="buildings/lantern.jpg" alt="Lantern and building detail photograph"></button>
+				<button class="client-shot product" type="button"><img src="products/brooch2.jpg" alt="Second brooch product photograph"></button>
+				<button class="client-shot building tall" type="button"><img src="buildings/london3.jpg" alt="Vertical London architecture photograph"></button>
+				<button class="client-shot building wide" type="button"><img src="buildings/store.jpg" alt="Storefront photographed as a building commission sample"></button>
+				<button class="client-shot product" type="button"><img src="products/heads.jpg" alt="Object heads photographed as product documentation"></button>
+				<button class="client-shot product" type="button"><img src="products/pots.jpg" alt="Group of pots photographed as product documentation"></button>
+				<button class="client-shot building" type="button"><img src="buildings/glass2.jpg" alt="Second glass architectural detail photograph"></button>
+				<button class="client-shot product wide" type="button"><img src="products/skate.jpg" alt="Skate object photographed as a product commission sample"></button>
+				<button class="client-shot pet" type="button"><img src="pets/kitty.jpg" alt="Cat portrait photographed as a pet commission sample"></button>
+			</div>
+		</section>
+
+		<section class="services" id="services">
+			<div>
+				<p class="eyebrow">services</p>
+				<h2>Built for artful commercial use.</h2>
+			</div>
+			<ul>
+				<li><span>Product</span> Objects, merchandise, beauty, still-life, detail sets.</li>
+				<li><span>Building</span> Exterior, interior, storefront, venue, and architectural detail.</li>
+				<li><span>Pet</span> Companion portraits, character studies, and gentle environmental documentation.</li>
+				<li><span>Editorial</span> Campaign imagery, artist documentation, process, and brand story.</li>
+			</ul>
+		</section>
+
+		<section class="case-studies" id="case-studies">
+			<article>
+				<p class="eyebrow">case study</p>
+				<h3>Object launch kit</h3>
+				<p>Hero stills, detail crops, and neutral e-commerce frames for a small product release.</p>
+			</article>
+			<article>
+				<p class="eyebrow">case study</p>
+				<h3>Built environment archive</h3>
+				<p>Exterior approach, interior movement, and human-scale details for a venue or installation.</p>
+			</article>
+			<article>
+				<p class="eyebrow">case study</p>
+				<h3>Artist studio package</h3>
+				<p>Documentation that blends object record, process images, and press-ready portraits.</p>
+			</article>
+		</section>
+
+		<section class="inquiry" id="inquiry">
+			<p class="eyebrow">inquiry</p>
+			<h2>Need examples for a client conversation?</h2>
+			<p>A darker companion to the exhibition archive, made for commission samples and service examples.</p>
+			<a href="hybrid-photo-demo.html">Back to exhibitions</a>
+		</section>
+	</main>
+
+	<div class="client-lightbox" aria-hidden="true" role="dialog" aria-label="Client work image viewer">
+		<button class="client-lightbox__close" type="button" aria-label="Close image">×</button>
+		<img src="" alt="">
+	</div>
+
+	<script src="client-work-demo.js"></script>
+</body>
+</html>

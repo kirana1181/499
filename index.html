@@ -13,8 +13,8 @@
 
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="main.css?v=35">
-	<link rel="stylesheet" href="hamburgermenu.css?v=6">
+	<link rel="stylesheet" href="main.css?v=51">
+	<link rel="stylesheet" href="hamburgermenu.css?v=7">
 
 </head>
 
@@ -38,7 +38,7 @@
     muted
     loop
     playsinline>
-    <source src="videos/hdbackgroundcrop.mp4" type="video/mp4">
+    <source src="videos/updatedhero.mp4" type="video/mp4">
 </video>
 
 		<div class="hero-content">
@@ -68,20 +68,79 @@ HAMBURGER MENU
 
 <nav class="side-menu" id="sideMenu" data-menu-root="." aria-label="Site menu"></nav>
 	
-	<section class="manifesto">
-    <p>
-        a conglomeration of film, art, electronics, and various other projects.
-    </p>
-</section>
+	<div class="space-continuum">
+	<section class="manifesto manifesto-space">
+		<div class="lost-space" aria-hidden="true">
+			<div class="lost-space__stars">
+				<span></span><span></span><span></span><span></span><span></span>
+				<span></span><span></span><span></span><span></span><span></span>
+				<span></span><span></span><span></span><span></span><span></span>
+				<span></span><span></span><span></span><span></span><span></span>
+				<span></span><span></span><span></span><span></span><span></span>
+				<span></span><span></span><span></span><span></span><span></span>
+			</div>
+			<div class="lost-space__planets">
+				<div class="lost-planet lost-planet--one"><span></span></div>
+				<div class="lost-planet lost-planet--ring">
+					<span class="lost-planet__ring"></span>
+					<span class="lost-planet__body"></span>
+				</div>
+				<div class="lost-planet lost-planet--three"></div>
+			</div>
+			<div class="lost-astronaut">
+				<span class="lost-astronaut__pack"></span>
+				<span class="lost-astronaut__helmet"><i></i></span>
+				<span class="lost-astronaut__body"><i></i></span>
+				<span class="lost-astronaut__arm lost-astronaut__arm--left"></span>
+				<span class="lost-astronaut__arm lost-astronaut__arm--right"></span>
+				<span class="lost-astronaut__leg lost-astronaut__leg--left"></span>
+				<span class="lost-astronaut__leg lost-astronaut__leg--right"></span>
+			</div>
+		</div>
+
+		<svg class="manifesto-thread" viewBox="0 0 1000 760" preserveAspectRatio="none" aria-hidden="true">
+			<path d="M78 255 C 190 402, 292 174, 414 362 S 592 615, 704 430 S 835 274, 944 570" />
+		</svg>
+
+		<figure class="manifesto-polaroid manifesto-polaroid--two reveal from-left">
+			<img src="images/index/manifesto.png" alt="">
+			<figcaption>motion, object, archive</figcaption>
+		</figure>
+
+		<figure class="manifesto-polaroid manifesto-polaroid--three reveal from-right">
+			<img src="images/rhosbay/rhosbay29.png" alt="">
+			<figcaption>rhossili bay / field study</figcaption>
+		</figure>
+
+		<figure class="manifesto-polaroid manifesto-polaroid--four reveal from-left">
+			<img src="images/index/dragonhead.png" alt="">
+			<figcaption>dragon head / sculpture</figcaption>
+		</figure>
+
+		<figure class="manifesto-polaroid manifesto-polaroid--five reveal from-right">
+			<img src="images/index/wirebird.png" alt="">
+			<figcaption>wire bird / kinetic form</figcaption>
+		</figure>
+
+		<figure class="manifesto-polaroid manifesto-polaroid--six reveal from-left">
+			<img src="images/index/touchchapter" alt="">
+			<figcaption>navigation / responsive light</figcaption>
+		</figure>
+
+		<p class="reveal from-left">
+			a conglomeration of film, art, electronics, and various other projects.
+		</p>
+	</section>
 
 <section class="about about-section" id="about">
-	<div class="about-parallax" aria-hidden="true">
-		<div class="about-layer"></div>
-		<div class="about-layer"></div>
-		<div class="about-layer"></div>
-		<div class="about-layer"></div>
-		<div class="about-layer"></div>
-		<div class="about-layer"></div>
+	<div class="about-cosmos" aria-hidden="true">
+		<div class="cosmos-stars cosmos-stars--far"></div>
+		<div class="cosmos-stars cosmos-stars--near"></div>
+		<div class="cosmos-sun"></div>
+		<div class="cosmos-orbit cosmos-orbit--one"><span></span></div>
+		<div class="cosmos-orbit cosmos-orbit--two"><span></span></div>
+		<div class="cosmos-orbit cosmos-orbit--three"><span></span></div>
+		<div class="cosmos-comet"></div>
 	</div>
 
 	<div class="about-copy reveal from-left">
@@ -99,6 +158,7 @@ HAMBURGER MENU
 		<img src="images/index/profile.png" alt="Kiran Arain portrait">
 	</div>
 </section>
+	</div>
 
 	<section class="horizontal-gallery" id="work">
     <div class="gallery-sticky">
@@ -120,18 +180,18 @@ HAMBURGER MENU
         <div class="gallery-track">
 
 			
-            <!-- ITEM 3 -->
-            <a class="gallery-item" href="photography/photo.html">
-                <img src="images/rhosbay/rhosbay29.png" alt="Rhossili Bay">
+            <!-- ITEM 1 -->
+            <a class="gallery-item" href="newfilm.html">
+                <img src="images/film/poster.png" alt="Poster for a message to the united states, god, or my dead cat">
 
                 <div class="gallery-info">
-                    <h3>Rhossili Bay</h3>
-                    <p>Photography Series • 2024</p>
+                    <h3>a message to the united states, god, or my dead cat</h3>
+                    <p>Film / Climate Eulogy</p>
 					
                 </div>
             </a>
 
-            <!-- ITEM 1 -->
+            <!-- ITEM 2 -->
             <a class="gallery-item" href="elec/electronics.html">
                 <img src="images/index/infectiontester.png" alt="Infection Tester">
 
@@ -141,7 +201,7 @@ HAMBURGER MENU
                 </div>
             </a>
 
-            <!-- ITEM 2 -->
+            <!-- ITEM 3 -->
             <a class="gallery-item" href="newfilm.html">
                 <img src="images/index/filmmoniter.png" alt="Film Monitor">
 
@@ -154,113 +214,26 @@ HAMBURGER MENU
                 </div>
             </a>
 
-            <!-- ITEM 4 -->
-            <a class="gallery-item" href="pups/puppets.html">
-                <img src="images/index/dragonhead.png" alt="Dragon Head">
-
-                <div class="gallery-info">
-                    <h3>Dragon Head</h3>
-                    <p>Base layer for Dragon Sculpture</p>
-                </div>
-            </a>
-
-            <!-- ITEM 6 -->
-            <a class="gallery-item" href="elec/electronics.html">
-                <img src="images/index/wirebird.png" alt="Wire Bird">
-
-                <div class="gallery-info">
-                    <h3>Wire Bird</h3>
-                    <p>Kinetic Sculpture</p>
-                </div>
-            </a>
-
         </div>
 
     </div>
 		
 </section>
 
-	  <div class="reel-divider-title" id="featured">
-        Featured Works
-    </div>
-
-<section class="film">
-	<!-- SCENE 01 -->
-	<section class="scene">
-		<div class="scene-sticky">
-			<div class="scene-image2">
-				<a class="scene-link" href="newfilm.html" aria-label="View film work">
-					<img
-					    src="images/film/poster.png"
-					    alt="Poster"
-					    style="border:1px solid rgba(255,255,255,.4); border-radius:4px;"
-					>
-				</a>
-			</div>
-			<div class="scene-content">
-				<p class="scene-label">Featured Work</p>
-				<h2>a message to the united states, god, or my dead cat</h2>
-				<p>a climate eulogy</p>
-			</div>
-		</div>
-	</section>
-
-	<!-- SCENE 02 -->
-	<section class="scene">
-		<div class="scene-sticky">
-			<div class="scene-image">
-				<a class="scene-link" href="photography/photo.html" aria-label="View Rhossili Bay photography">
-					<img
-					    src="images/rhosbay/rhosbay28.png"
-					    alt="Wild horses in Rhossili Bay"
-					    style="object-position:35% center;"
-					>
-				</a>
-			</div>
-			<div class="scene-content">
-				<p class="scene-label">Featured Work</p>
-				<h2>Wild Horses of Rhossili Bay</h2>
-				<p>Photo-documentary series capturing the home and characters of Rhossili Bay's only wild pony herd.</p>
-			</div>
-		</div>
-	</section>
-
-	<!-- SCENE 03 -->
-	<section class="scene">
-		<div class="scene-sticky">
-			<div class="scene-image">
-				<a class="scene-link" href="elec/electronics.html" aria-label="View interactive electronics work">
-					<img src="images/index/touchchapter" alt="Interactive navigation installation">
-				</a>
-			</div>
-			<div class="scene-content">
-				<p class="scene-label">Featured Work</p>
-				<h2>The Navigation which guides you</h2>
-				<p>Interactive light installation coded with TouchDesigner and a motorized automata.</p>
-			</div>
-		</div>
-	</section>
-
-	<!-- SCENE 04 -->
-	<section class="scene">
-		<div class="scene-sticky">
-			<div class="scene-image">
-				<a class="scene-link" href="elec/electronics.html" aria-label="View Blue Bird automata">
-					<img src="images/bluebird.png" alt="Blue Bird automata">
-				</a>
-			</div>
-			<div class="scene-content">
-				<p class="scene-label">Featured Work</p>
-				<h2>Blue Bird</h2>
-				<p>Automata</p>
-			</div>
-		</div>
-	</section>
-
-</section>
-	
-
 	<section class="chapters-section" id="archive">
+
+	<div class="underground-garden" aria-hidden="true">
+		<span class="root root--one"></span>
+		<span class="root root--two"></span>
+		<span class="root root--three"></span>
+		<span class="root root--four"></span>
+		<span class="bloom bloom--one"></span>
+		<span class="bloom bloom--two"></span>
+		<span class="bloom bloom--three"></span>
+		<span class="sprout sprout--one"></span>
+		<span class="sprout sprout--two"></span>
+		<span class="sprout sprout--three"></span>
+	</div>
 
 	<div class="chapters-copy">
 
@@ -291,16 +264,16 @@ HAMBURGER MENU
 		</a>
 
 		<a href="pups/puppets.html" class="chapter-card">
-			<img src="images/index/puppetry:sculptures.png" alt="Sculptures and puppets">
+			<img src="images/bluebird.png" alt="Blue Bird automata">
 			<span>Sculptures and Puppets</span>
 		</a>
 
-		<a href="photography/photo.html" class="chapter-card">
-			<img src="images/rhosbay/rhosbay13.jpg" alt="Rhossili Bay photography">
+		<a href="photography/hybrid-photo-demo.html" class="chapter-card">
+			<img src="images/rhosbay/rhosbay28.png" alt="Wild horses in Rhossili Bay">
 			<span>Photography</span>
 		</a>
 
-		<a href="art.html" class="chapter-card">
+		<a href="coming-soon.html" class="chapter-card">
 			<img src="images/finearts.png" alt="Fine arts work">
 			<span>Fine Arts</span>
 		</a>
@@ -310,7 +283,7 @@ HAMBURGER MENU
 			<span>Digital</span>
 		</a>
 
-		<a href="music.html" class="chapter-card">
+		<a href="coming-soon.html" class="chapter-card">
 			<img src="images/index/musiccover.png" alt="Music work">
 			<span>Music</span>
 		</a>
@@ -438,8 +411,8 @@ HAMBURGER MENU
 </footer>
 
 	
-	<script src="site-menu.js?v=3"></script>
-	<script src="script.js?v=18"></script>
+	<script src="site-menu.js?v=7"></script>
+	<script src="script.js?v=20"></script>
 
 </body>
 

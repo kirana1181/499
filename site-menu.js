@@ -20,12 +20,12 @@
 		},
 		{
 			title: "Photography",
-			href: "photography/photo.html",
+			href: "photography/hybrid-photo-demo.html",
 			accent: "#3f6f7a"
 		},
 		{
 			title: "Art",
-			href: "art.html",
+			href: "coming-soon.html",
 			accent: "#7c4f91"
 		},
 		{
@@ -35,12 +35,12 @@
 		},
 		{
 			title: "Music",
-			href: "music.html",
+			href: "coming-soon.html",
 			accent: "#8c5c39"
 		},
 		{
 			title: "Puppets",
-			href: "pups/puppets.html",
+			href: "coming-soon.html",
 			accent: "#c08a3f"
 		}
 	];

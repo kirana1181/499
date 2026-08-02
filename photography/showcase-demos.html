@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Photography Showcase Demo</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="showcase-demos.css">
+</head>
+<body>
+	<aside class="demo-sidebar">
+		<a class="demo-return" href="photo.html">Return</a>
+		<p class="demo-kicker">Nocturne Archive</p>
+		<h1>Photography</h1>
+		<nav class="demo-nav" aria-label="Photography exhibitions">
+			<button class="expo-tab active" type="button" data-expo="rhossili">Rhossili Bay</button>
+			<button class="expo-tab" type="button" data-expo="florida">The Florida Project</button>
+			<button class="expo-tab" type="button" data-expo="birds">Birds of a Feather</button>
+		</nav>
+	</aside>
+
+	<main class="demo-main">
+		<section class="demo-hero">
+			<p>demo direction</p>
+			<h2>Archive grids and one-at-a-time focus viewing for each exhibition.</h2>
+		</section>
+
+		<section class="expo-panel active" id="rhossili">
+			<div class="expo-heading">
+				<div>
+					<p class="demo-kicker">exhibition 01</p>
+					<h2>Rhossili Bay</h2>
+				</div>
+				<div class="view-toggle" aria-label="Rhossili Bay view mode">
+					<button class="view-btn active" type="button" data-view="archive">Archive</button>
+					<button class="view-btn" type="button" data-view="focus">Focus</button>
+				</div>
+			</div>
+			<p class="expo-note">A coastal horse study shown as a masonry archive or as a quiet one-image focus viewer.</p>
+			<div class="archive-grid"></div>
+			<div class="focus-view" hidden>
+				<button class="focus-arrow focus-prev" type="button" aria-label="Previous Rhossili image">‹</button>
+				<figure>
+					<img alt="">
+					<figcaption></figcaption>
+				</figure>
+				<button class="focus-arrow focus-next" type="button" aria-label="Next Rhossili image">›</button>
+			</div>
+		</section>
+
+		<section class="expo-panel" id="florida">
+			<div class="expo-heading">
+				<div>
+					<p class="demo-kicker">exhibition 02</p>
+					<h2>The Florida Project</h2>
+				</div>
+				<div class="view-toggle" aria-label="Florida Project view mode">
+					<button class="view-btn active" type="button" data-view="archive">Archive</button>
+					<button class="view-btn" type="button" data-view="focus">Focus</button>
+				</div>
+			</div>
+			<p class="expo-note">Animals and creatures that feel displaced, uncanny, or slightly impossible in Florida.</p>
+			<div class="archive-grid"></div>
+			<div class="focus-view" hidden>
+				<button class="focus-arrow focus-prev" type="button" aria-label="Previous Florida image">‹</button>
+				<figure>
+					<img alt="">
+					<figcaption></figcaption>
+				</figure>
+				<button class="focus-arrow focus-next" type="button" aria-label="Next Florida image">›</button>
+			</div>
+		</section>
+
+		<section class="expo-panel" id="birds">
+			<div class="expo-heading">
+				<div>
+					<p class="demo-kicker">exhibition 03</p>
+					<h2>Birds of a Feather</h2>
+				</div>
+				<div class="view-toggle" aria-label="Birds of a Feather view mode">
+					<button class="view-btn active" type="button" data-view="archive">Archive</button>
+					<button class="view-btn" type="button" data-view="focus">Focus</button>
+				</div>
+			</div>
+			<p class="expo-note">Bird images pulled into their own small exhibition.</p>
+			<div class="archive-grid"></div>
+			<div class="focus-view" hidden>
+				<button class="focus-arrow focus-prev" type="button" aria-label="Previous bird image">‹</button>
+				<figure>
+					<img alt="">
+					<figcaption></figcaption>
+				</figure>
+				<button class="focus-arrow focus-next" type="button" aria-label="Next bird image">›</button>
+			</div>
+		</section>
+	</main>
+
+	<div class="lightbox" aria-hidden="true" role="dialog" aria-label="Image close up">
+		<button class="lightbox-close" type="button" aria-label="Close image">×</button>
+		<img src="" alt="">
+	</div>
+
+	<script src="showcase-demos.js"></script>
+</body>
+</html>

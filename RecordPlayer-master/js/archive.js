@@ -3,6 +3,7 @@
 
 	var rows = [].slice.call(document.querySelectorAll('.track-row'));
 	var audio = document.querySelector('.archive-audio');
+	var watchSound = document.querySelector('.watch-sound');
 	var videoTitle = document.querySelector('.watch-sound__title');
 	var videoNote = document.querySelector('.watch-sound__note');
 	var explore = document.querySelector('.explore-archive');
@@ -19,6 +20,9 @@
 			if (audio && row.getAttribute('data-audio')) {
 				audio.src = row.getAttribute('data-audio');
 				audio.load();
+				if (watchSound) {
+					watchSound.classList.remove('is-playing');
+				}
 			}
 
 			if (videoTitle) {
@@ -30,6 +34,20 @@
 			}
 		});
 	});
+
+	if (audio && watchSound) {
+		audio.addEventListener('play', function() {
+			watchSound.classList.add('is-playing');
+		});
+
+		audio.addEventListener('pause', function() {
+			watchSound.classList.remove('is-playing');
+		});
+
+		audio.addEventListener('ended', function() {
+			watchSound.classList.remove('is-playing');
+		});
+	}
 
 	if (explore && gridView && archive) {
 		explore.addEventListener('click', function(ev) {

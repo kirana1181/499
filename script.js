@@ -23,6 +23,8 @@ const observer = new IntersectionObserver((entries) => {
 	entries.forEach(entry => {
 		if (entry.isIntersecting) {
 			entry.target.classList.add("visible");
+		} else if (entry.target.closest(".manifesto-space")) {
+			entry.target.classList.remove("visible");
 		}
 	});
 }, {
@@ -44,6 +46,8 @@ const galleryItems = document.querySelectorAll(".gallery-item");
 const forestLayers = document.querySelectorAll(".forest-layer");
 const about = document.querySelector(".about-section");
 const aboutLayers = document.querySelectorAll(".about-layer");
+const manifesto = document.querySelector(".manifesto-space");
+const manifestoThread = document.querySelector(".manifesto-thread");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const compactGalleryQuery = window.matchMedia("(max-width: 640px)");
 
@@ -70,6 +74,7 @@ function updateGallery() {
 	const forestIntroEnd = 0.12;
 	const forestDropProgress = Math.min(progress / forestIntroEnd, 1);
 	const horizontalProgress = Math.min(Math.max((progress - forestIntroEnd) / (1 - forestIntroEnd), 0), 1);
+	const forestVisibility = Math.min(Math.max((window.innerHeight - rect.top) / (window.innerHeight * 0.85), 0), 1);
 
 	const maxMove =
 		track.scrollWidth - window.innerWidth;
@@ -88,6 +93,7 @@ function updateGallery() {
 		`translateX(${-currentX}px)`;
 	track.style.setProperty("--gallery-progress", horizontalProgress.toFixed(3));
 	gallery.style.setProperty("--gallery-progress", horizontalProgress.toFixed(3));
+	gallery.style.setProperty("--forest-visibility", forestVisibility.toFixed(3));
 
 	forestLayers.forEach((layer, index) => {
 		const depth = 52 + (index * 3);
@@ -99,6 +105,21 @@ function updateGallery() {
 }
 
 updateGallery();
+
+function updateManifestoScroll() {
+	if (!manifesto || !manifestoThread) return;
+
+	const rect = manifesto.getBoundingClientRect();
+	const scrollDistance = Math.max(manifesto.offsetHeight - window.innerHeight, 1);
+	const progress = Math.min(Math.max(-rect.top / scrollDistance, 0), 1);
+
+	manifesto.style.setProperty("--manifesto-progress", progress.toFixed(3));
+	manifestoThread.classList.toggle("visible", progress >= 0.5);
+
+	requestAnimationFrame(updateManifestoScroll);
+}
+
+updateManifestoScroll();
 
 function updateAboutParallax() {
 	if (!about || !aboutLayers.length || reducedMotion) return;

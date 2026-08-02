@@ -1,0 +1,454 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: #000;
+	color: #edf7ff;
+	font-family: Inter, sans-serif;
+}
+
+img {
+	max-width: 100%;
+}
+
+.client-header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	align-items: center;
+	padding: .85rem clamp(1rem, 4vw, 3rem);
+	background:
+		linear-gradient(90deg, rgba(3, 7, 11, .92), rgba(3, 7, 11, .68));
+	color: #edf7ff;
+	backdrop-filter: blur(18px);
+}
+
+.client-logo,
+.client-header a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.return-link {
+	font-size: .72rem;
+	letter-spacing: .16em;
+	opacity: .72;
+	text-transform: uppercase;
+	transition: opacity .25s ease, transform .25s ease;
+}
+
+.return-link:hover {
+	opacity: 1;
+	transform: translateX(-3px);
+}
+
+.client-header nav {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: clamp(.75rem, 2vw, 1.8rem);
+	font-size: .72rem;
+	letter-spacing: .12em;
+	text-transform: uppercase;
+}
+
+.client-header nav > a,
+.nav-menu > a {
+	position: relative;
+	padding: .55rem 0;
+}
+
+.client-header nav > a::after,
+.nav-menu > a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 100%;
+	bottom: .28rem;
+	height: 1px;
+	background: currentColor;
+	opacity: .65;
+	transition: right .25s ease;
+}
+
+.client-header nav > a:hover::after,
+.nav-menu:hover > a::after {
+	right: 0;
+}
+
+.nav-menu {
+	position: relative;
+}
+
+.nav-dropdown {
+	position: absolute;
+	top: calc(100% + .35rem);
+	right: 0;
+	min-width: 12rem;
+	display: grid;
+	gap: .15rem;
+	padding: .75rem;
+	background: rgba(3, 7, 11, .94);
+	box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, .32);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-.5rem);
+	transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+}
+
+.nav-menu:hover .nav-dropdown,
+.nav-menu:focus-within .nav-dropdown {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.nav-dropdown a {
+	padding: .6rem .75rem;
+	color: rgba(237, 247, 255, .68);
+	font-size: .68rem;
+	letter-spacing: .14em;
+}
+
+.nav-dropdown a:hover {
+	color: #fff;
+	background: rgba(155, 205, 245, .1);
+}
+
+.client-hero {
+	min-height: 54vh;
+	display: grid;
+	place-items: center;
+	padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 4vw, 3rem) clamp(3rem, 6vw, 5rem);
+	background:
+		linear-gradient(180deg, rgba(0,0,0,.32), rgba(0,0,0,.78)),
+		radial-gradient(circle at 64% 18%, rgba(102, 169, 224, .2), transparent 30rem),
+		url("buildings/lighthall.jpg") center / cover no-repeat;
+	color: #edf7ff;
+	text-align: center;
+}
+
+.hero-copy {
+	animation: contentIn .8s ease both;
+}
+
+.eyebrow {
+	margin: 0 0 .9rem;
+	color: currentColor;
+	opacity: .55;
+	font-size: .72rem;
+	letter-spacing: .18em;
+	text-transform: uppercase;
+}
+
+.hero-copy h1,
+.section-intro h2,
+.services h2,
+.inquiry h2 {
+	margin: 0;
+	font-family: "Instrument Serif", serif;
+	font-size: clamp(3.6rem, 8vw, 9rem);
+	font-weight: 400;
+	line-height: .84;
+	letter-spacing: 0;
+}
+
+.hero-copy p:last-child,
+.section-intro p:last-child,
+.inquiry p {
+	max-width: 36rem;
+	color: rgba(237, 247, 255, .68);
+	line-height: 1.7;
+}
+
+.hero-copy p:last-child,
+.inquiry p {
+	margin-inline: auto;
+}
+
+.selected-work,
+.services,
+.case-studies,
+.inquiry {
+	padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 4vw, 3rem);
+}
+
+.selected-work {
+	background:
+		radial-gradient(circle at 80% 10%, rgba(86, 151, 207, .24), transparent 24rem),
+		linear-gradient(180deg, #000 0%, #07121c 100%);
+}
+
+.section-intro {
+	margin-bottom: 1rem;
+	animation: contentIn .65s ease both;
+}
+
+.filter-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .6rem;
+	margin-bottom: 1.25rem;
+	padding: 0;
+}
+
+.filter {
+	padding: .72rem .95rem;
+	border: 0;
+	background: rgba(4, 12, 18, .78);
+	color: rgba(237, 247, 255, .68);
+	cursor: pointer;
+	font: inherit;
+	letter-spacing: .16em;
+	font-size: .72rem;
+	text-transform: uppercase;
+}
+
+.filter.active,
+.filter:hover,
+.filter:focus-visible {
+	background: rgba(155, 205, 245, .18);
+	color: #fff;
+	outline: none;
+}
+
+.client-grid {
+	display: grid;
+	grid-auto-flow: column dense;
+	grid-template-rows: repeat(4, minmax(10rem, 14rem));
+	grid-auto-columns: clamp(13rem, 22vw, 20rem);
+	gap: .8rem;
+	max-width: 100%;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding-bottom: 1rem;
+	scroll-snap-type: x proximity;
+	animation: panelRise .7s ease both;
+}
+
+.client-grid::-webkit-scrollbar {
+	height: .55rem;
+}
+
+.client-grid::-webkit-scrollbar-track {
+	background: rgba(237, 247, 255, .08);
+}
+
+.client-grid::-webkit-scrollbar-thumb {
+	background: rgba(155, 205, 245, .35);
+}
+
+.client-shot {
+	min-height: 0;
+	padding: 0;
+	border: 0;
+	background: #03070b;
+	cursor: zoom-in;
+	overflow: hidden;
+	scroll-snap-align: start;
+}
+
+.client-shot.wide {
+	grid-column: span 2;
+}
+
+.client-shot.tall {
+	grid-row: span 2;
+}
+
+.client-shot img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	transition: transform .6s ease, filter .6s ease;
+}
+
+.client-shot:hover img,
+.client-shot:focus-visible img {
+	transform: scale(1.04);
+	filter: saturate(.95) contrast(1.08);
+}
+
+.client-shot.is-hidden {
+	display: none;
+}
+
+.services {
+	display: grid;
+	grid-template-columns: minmax(0, .8fr) minmax(0, 1fr);
+	gap: clamp(2rem, 6vw, 6rem);
+	background:
+		radial-gradient(circle at 18% 0%, rgba(86, 151, 207, .18), transparent 24rem),
+		#020508;
+	color: #edf7ff;
+}
+
+.services ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.services li {
+	padding: 1.3rem 0;
+	color: rgba(237, 247, 255, .68);
+	line-height: 1.6;
+}
+
+.services span {
+	display: block;
+	margin-bottom: .3rem;
+	color: #fff;
+	font-family: "Instrument Serif", serif;
+	font-size: 2rem;
+}
+
+.case-studies {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	background:
+		radial-gradient(circle at 80% 20%, rgba(86, 151, 207, .14), transparent 24rem),
+		#000;
+}
+
+.case-studies article {
+	min-height: 18rem;
+	padding: clamp(1.4rem, 3vw, 2.4rem);
+	background: rgba(4, 12, 18, .72);
+}
+
+.case-studies h3 {
+	margin: 0 0 1rem;
+	font-family: "Instrument Serif", serif;
+	font-size: clamp(2.2rem, 4vw, 4rem);
+	font-weight: 400;
+	line-height: .92;
+}
+
+.case-studies p:last-child {
+	color: rgba(237, 247, 255, .66);
+	line-height: 1.7;
+}
+
+.inquiry {
+	min-height: 62vh;
+	display: grid;
+	place-content: center;
+	text-align: center;
+	background:
+		radial-gradient(circle at 50% 0%, rgba(79, 142, 198, .18), transparent 24rem),
+		#000;
+}
+
+.inquiry a {
+	display: inline-flex;
+	width: fit-content;
+	margin: 1rem auto 0;
+	padding: .85rem 1rem;
+	background: rgba(4, 12, 18, .72);
+	color: inherit;
+	text-decoration: none;
+	font-size: .72rem;
+	letter-spacing: .12em;
+	text-transform: uppercase;
+}
+
+.client-lightbox {
+	position: fixed;
+	inset: 0;
+	z-index: 30;
+	display: grid;
+	place-items: center;
+	padding: 2rem;
+	background: rgba(0, 0, 0, .9);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.client-lightbox.is-open {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.client-lightbox img {
+	max-width: 92vw;
+	max-height: 88vh;
+	object-fit: contain;
+}
+
+.client-lightbox__close {
+	position: absolute;
+	top: 1.2rem;
+	right: 1.2rem;
+	width: 3rem;
+	height: 3rem;
+	border: 0;
+	border-radius: 50%;
+	background: rgba(4, 12, 18, .8);
+	color: #fff;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+@keyframes panelRise {
+	from {
+		opacity: 0;
+		transform: translateY(22px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes contentIn {
+	from {
+		opacity: 0;
+		transform: translateY(14px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 900px) {
+	.client-header,
+	.services,
+	.case-studies {
+		grid-template-columns: 1fr;
+	}
+
+	.filter-row {
+		position: relative;
+		top: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	.client-grid {
+		grid-auto-columns: clamp(12rem, 42vw, 18rem);
+		grid-template-rows: repeat(3, minmax(9rem, 13rem));
+	}
+}
+
+@media (max-width: 560px) {
+	.client-header {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+}
