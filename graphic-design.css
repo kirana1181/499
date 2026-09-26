@@ -1,0 +1,618 @@
+```css
+/* ==================================================
+   GRAPHIC DESIGN PAGE
+   KIRAN ARAIN
+================================================== */
+
+
+/* ==================================================
+   COLORS
+================================================== */
+
+:root {
+
+  --ink: #0B0D0F;
+
+  --cream: #E9E4DD;
+
+  --sage: #A4AEA0;
+
+  --green: #39483D;
+
+  --yellow: #D8C56A;
+
+}
+
+
+/* ==================================================
+   GENERAL
+================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  margin: 0;
+
+  background: var(--cream);
+
+  color: var(--ink);
+
+  font-family: "Raleway", sans-serif;
+
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.site-header {
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 70px;
+
+  padding: 0 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: var(--cream);
+
+  z-index: 100;
+
+}
+
+
+.site-name {
+
+  font-size: 13px;
+
+  letter-spacing: .15em;
+
+  color: var(--green);
+
+}
+
+
+.menu-button {
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--green);
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+}
+
+
+/* ==================================================
+   PAGE
+================================================== */
+
+.page {
+
+  max-width: 1600px;
+
+  margin: 0 auto;
+
+  padding: 120px 28px 100px;
+
+}
+
+
+/* ==================================================
+   INTRO
+================================================== */
+
+.design-header {
+
+  position: relative;
+
+  max-width: 900px;
+
+  padding: 25px 0 55px;
+
+}
+
+
+.design-number {
+
+  margin-bottom: 25px;
+
+  font-size: 10px;
+
+  letter-spacing: .18em;
+
+  color: var(--green);
+
+}
+
+
+.design-header h1 {
+
+  margin: 0;
+
+  color: var(--green);
+
+  font-size: clamp(52px, 8vw, 110px);
+
+  font-weight: 400;
+
+  line-height: .88;
+
+  letter-spacing: -.055em;
+
+}
+
+
+.design-header h1 em {
+
+  color: #718071;
+
+  font-family: Georgia, serif;
+
+  font-weight: normal;
+
+}
+
+
+.design-star {
+
+  display: inline-block;
+
+  margin-left: 10px;
+
+  color: var(--yellow);
+
+  font-family: Arial, sans-serif;
+
+  font-size: .45em;
+
+  vertical-align: top;
+
+  animation: spin 8s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+.design-intro {
+
+  max-width: 510px;
+
+  margin-top: 35px;
+
+  color: var(--ink);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+}
+
+
+/* ==================================================
+   FILTER
+================================================== */
+
+.filter-section {
+
+  margin-bottom: 30px;
+
+}
+
+
+.filter-bar {
+
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+
+}
+
+
+.filter-label {
+
+  margin-right: 5px;
+
+  color: var(--green);
+
+  font-size: 10px;
+
+  letter-spacing: .16em;
+
+  opacity: .5;
+
+}
+
+
+.filter-btn {
+
+  position: relative;
+
+  border: 1px solid transparent;
+
+  border-radius: 100px;
+
+  padding: 7px 13px;
+
+  background: transparent;
+
+  color: var(--green);
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  letter-spacing: .08em;
+
+  cursor: pointer;
+
+  transition:
+    background .25s ease,
+    color .25s ease,
+    border .25s ease;
+
+}
+
+
+.filter-btn:hover {
+
+  border-color: var(--sage);
+
+}
+
+
+.filter-btn.active {
+
+  background: var(--green);
+
+  color: var(--cream);
+
+}
+
+
+/* ==================================================
+   CURRENT VIEW
+================================================== */
+
+.current-view {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 18px;
+
+  font-size: 9px;
+
+  letter-spacing: .12em;
+
+}
+
+
+.current-view span {
+
+  opacity: .4;
+
+}
+
+
+.current-view strong {
+
+  color: var(--green);
+
+  font-weight: 500;
+
+}
+
+
+/* ==================================================
+   GALLERY
+================================================== */
+
+.photo-grid {
+
+  column-count: 4;
+
+  column-gap: 8px;
+
+}
+
+
+.photo-grid img {
+
+  display: block;
+
+  width: 100%;
+
+  margin-bottom: 8px;
+
+  cursor: pointer;
+
+  break-inside: avoid;
+
+  transition:
+    opacity .35s ease,
+    transform .35s ease;
+
+}
+
+
+.photo-grid img:hover {
+
+  opacity: .78;
+
+}
+
+
+/* ==================================================
+   MODAL
+================================================== */
+
+dialog {
+
+  width: min(1000px, 92vw);
+
+  max-height: 92vh;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+}
+
+
+dialog::backdrop {
+
+  background: rgba(11, 13, 15, .92);
+
+}
+
+
+.modal-content {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+}
+
+
+.modal-content img {
+
+  max-width: 100%;
+
+  max-height: 82vh;
+
+  object-fit: contain;
+
+}
+
+
+.modal-content p {
+
+  margin: 15px 0 0;
+
+  color: var(--cream);
+
+  font-size: 12px;
+
+  letter-spacing: .05em;
+
+}
+
+
+.modal-close {
+
+  position: fixed;
+
+  top: 20px;
+
+  right: 25px;
+
+  z-index: 10;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--cream);
+
+  font-size: 38px;
+
+  font-weight: 200;
+
+  cursor: pointer;
+
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.site-footer {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 25px 28px;
+
+  border-top: 1px solid rgba(57, 72, 61, .2);
+
+  color: var(--green);
+
+  font-size: 9px;
+
+  letter-spacing: .15em;
+
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+  .photo-grid {
+
+    column-count: 3;
+
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 650px) {
+
+  .site-header {
+
+    padding: 0 18px;
+
+  }
+
+
+  .page {
+
+    padding: 105px 15px 70px;
+
+  }
+
+
+  .design-header {
+
+    padding-bottom: 40px;
+
+  }
+
+
+  .design-header h1 {
+
+    font-size: clamp(46px, 15vw, 75px);
+
+  }
+
+
+  .design-intro {
+
+    font-size: 13px;
+
+  }
+
+
+  .filter-bar {
+
+    gap: 7px;
+
+  }
+
+
+  .filter-label {
+
+    width: 100%;
+
+    margin-bottom: 2px;
+
+  }
+
+
+  .filter-btn {
+
+    padding: 6px 10px;
+
+    font-size: 10px;
+
+  }
+
+
+  .current-view {
+
+    display: block;
+
+    line-height: 1.8;
+
+  }
+
+
+  .current-view span {
+
+    display: block;
+
+  }
+
+
+  .photo-grid {
+
+    column-count: 2;
+
+    column-gap: 5px;
+
+  }
+
+
+  .photo-grid img {
+
+    margin-bottom: 5px;
+
+  }
+
+
+  .site-footer {
+
+    padding: 20px 15px;
+
+    font-size: 8px;
+
+  }
+
+}
+```
