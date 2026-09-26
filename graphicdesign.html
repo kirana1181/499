@@ -1,296 +1,293 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Graphic Design</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Graphic Design — Kiran Arain</title>
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-body,h1,h2,h3,h4,h5 {
-  font-family: "Raleway", sans-serif;
-}
+  <!-- W3.CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 
-/* GRID */
-.photo-grid {
-  column-count: 4;
-  column-gap: 0;
-}
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
-.photo-grid img {
-  display: block;
-  width: 100%;
-  margin-bottom: -6px;
-  cursor: pointer;
-}
-
-.photo-grid img:hover {
-  opacity: 0.6;
-  transition: 0.3s;
-}
-
-/* FILTER BAR */
-.filter-bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin: 25px 0;
-}
-
-.filter-label {
-  margin-right: 10px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.filter-btn {
-  background: transparent;
-  border: 1px solid #000;
-  padding: 8px 14px;
-  cursor: pointer;
-  font-family: inherit;
-  transition: 0.2s;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-  background: #000;
-  color: #fff;
-}
-
-/* MODAL */
-dialog {
-  border: 0;
-  padding: 0;
-  width: min(900px,90%);
-}
-
-dialog::backdrop {
-  background: rgba(0,0,0,0.85);
-}
-
-@media (max-width:600px) {
-  .photo-grid {
-    column-count: 1;
-  }
-
-  .filter-bar {
-    gap: 5px;
-  }
-
-  .filter-btn {
-    padding: 7px 10px;
-    font-size: 12px;
-  }
-}
-</style>
-  
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="graphic-design.css">
 </head>
 
-<body class="w3-light-grey">
 
-<!-- TOP MENU -->
-<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
-  <span class="w3-left w3-padding">SOME NAME</span>
-  <a href="javascript:void(0)" class="w3-right w3-button w3-white">☰</a>
-</header>
+<body>
 
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-<!-- PAGE CONTENT -->
-<div class="w3-main w3-content" style="max-width:1600px;margin-top:83px">
+  <header class="site-header">
 
-  <h2>graphic design</h2>
+    <div class="site-name">
+      KIRAN ARAIN
+    </div>
 
-  <!-- SORT BUTTONS -->
-  <div class="filter-bar">
-
-    <span class="filter-label">SORT BY</span>
-
-    <button class="filter-btn active" onclick="filterGallery('all', this)">
-      ALL
+    <button class="menu-button">
+      ☰
     </button>
 
-    <button class="filter-btn" onclick="filterGallery('movie', this)">
-      MOVIE POSTERS
-    </button>
-
-    <button class="filter-btn" onclick="filterGallery('advertising', this)">
-      ADVERTISING
-    </button>
-
-    <button class="filter-btn" onclick="filterGallery('illustration', this)">
-      DRAWN / ILLUSTRATION
-    </button>
-
-    <button class="filter-btn" onclick="filterGallery('brand', this)">
-      BRAND
-    </button>
-
-    <button class="filter-btn" onclick="filterGallery('shows', this)">
-      SHOWS
-    </button>
-
-  </div>
+  </header>
 
 
-  <!-- PHOTO GRID -->
-  <div class="photo-grid" id="gallery">
+  <!-- =========================
+       PAGE
+  ========================== -->
 
-    <!-- MOVIE POSTER -->
-    <img
-      src="images/bluebird.png"
-      data-category="movie"
-      onclick="onClick(this)"
-      alt="Movie poster design"
-    >
-
-    <!-- ADVERTISING -->
-    <img
-      src="/w3images/boy.jpg"
-      data-category="advertising"
-      onclick="onClick(this)"
-      alt="Advertising design"
-    >
-
-    <!-- ILLUSTRATION -->
-    <img
-      src="/w3images/girl.jpg"
-      data-category="illustration"
-      onclick="onClick(this)"
-      alt="Illustration"
-    >
-
-    <!-- BRAND -->
-    <img
-      src="/w3images/girl_train.jpg"
-      data-category="brand"
-      onclick="onClick(this)"
-      alt="Brand identity design"
-    >
-
-    <!-- SHOW -->
-    <img
-      src="/w3images/man_bench.jpg"
-      data-category="shows"
-      onclick="onClick(this)"
-      alt="Show design"
-    >
-
-    <!-- MOVIE POSTER -->
-    <img
-      src="/w3images/natureboy.jpg"
-      data-category="movie"
-      onclick="onClick(this)"
-      alt="Movie poster design"
-    >
-
-    <!-- ADVERTISING -->
-    <img
-      src="/w3images/man_bench.jpg"
-      data-category="advertising"
-      onclick="onClick(this)"
-      alt="Advertising design"
-    >
-
-    <!-- ILLUSTRATION -->
-    <img
-      src="/w3images/girl_mountain.jpg"
-      data-category="illustration"
-      onclick="onClick(this)"
-      alt="Illustration"
-    >
-
-    <!-- BRAND -->
-    <img
-      src="/w3images/closegirl.jpg"
-      data-category="brand"
-      onclick="onClick(this)"
-      alt="Brand identity design"
-    >
-
-    <!-- SHOW -->
-    <img
-      src="/w3images/natureboy.jpg"
-      data-category="shows"
-      onclick="onClick(this)"
-      alt="Show design"
-    >
-
-  </div>
+  <main class="page">
 
 
-  <!-- IMAGE MODAL -->
-  <dialog id="modal01" class="w3-black w3-animate-zoom">
+    <!-- =========================
+         INTRO
+    ========================== -->
+
+    <section class="design-header">
+
+      <div class="design-number">
+        03 / GRAPHIC DESIGN
+      </div>
+
+      <h1>
+        Things I've<br>
+        <em>made to look at.</em>
+        <span class="design-star">✳</span>
+      </h1>
+
+      <p class="design-intro">
+        Posters, identities, illustrations, advertisements, and various
+        visual experiments. Mostly made for films, shows, friends,
+        and whatever idea wouldn't leave me alone.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         FILTER
+    ========================== -->
+
+    <section class="filter-section">
+
+      <div class="filter-bar">
+
+        <span class="filter-label">
+          VIEW
+        </span>
+
+        <button
+          class="filter-btn active"
+          data-filter="all">
+          ALL
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="movie">
+          FILM
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="advertising">
+          ADVERTISING
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="illustration">
+          ILLUSTRATION
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="brand">
+          BRAND
+        </button>
+
+        <button
+          class="filter-btn"
+          data-filter="shows">
+          THEATRE
+        </button>
+
+      </div>
+
+
+      <!-- Changing category text -->
+
+      <div class="current-view">
+
+        <span>
+          CURRENTLY LOOKING AT:
+        </span>
+
+        <strong id="viewText">
+          ALL OF IT, APPARENTLY
+        </strong>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALLERY
+    ========================== -->
+
+    <section class="photo-grid" id="gallery">
+
+
+      <!-- FILM -->
+
+      <img
+        src="images/bluebird.png"
+        data-category="movie"
+        alt="Film poster design"
+      >
+
+
+      <!-- ADVERTISING -->
+
+      <img
+        src="/w3images/boy.jpg"
+        data-category="advertising"
+        alt="Advertising design"
+      >
+
+
+      <!-- ILLUSTRATION -->
+
+      <img
+        src="/w3images/girl.jpg"
+        data-category="illustration"
+        alt="Illustration"
+      >
+
+
+      <!-- BRAND -->
+
+      <img
+        src="/w3images/girl_train.jpg"
+        data-category="brand"
+        alt="Brand identity design"
+      >
+
+
+      <!-- THEATRE -->
+
+      <img
+        src="/w3images/man_bench.jpg"
+        data-category="shows"
+        alt="Theatre design"
+      >
+
+
+      <!-- FILM -->
+
+      <img
+        src="/w3images/natureboy.jpg"
+        data-category="movie"
+        alt="Film poster design"
+      >
+
+
+      <!-- ADVERTISING -->
+
+      <img
+        src="/w3images/man_bench.jpg"
+        data-category="advertising"
+        alt="Advertising design"
+      >
+
+
+      <!-- ILLUSTRATION -->
+
+      <img
+        src="/w3images/girl_mountain.jpg"
+        data-category="illustration"
+        alt="Illustration"
+      >
+
+
+      <!-- BRAND -->
+
+      <img
+        src="/w3images/closegirl.jpg"
+        data-category="brand"
+        alt="Brand identity design"
+      >
+
+
+      <!-- THEATRE -->
+
+      <img
+        src="/w3images/natureboy.jpg"
+        data-category="shows"
+        alt="Theatre design"
+      >
+
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =========================
+       IMAGE MODAL
+  ========================== -->
+
+  <dialog id="modal01">
 
     <button
-      class="w3-button w3-black w3-xxlarge w3-display-topright"
-      commandfor="modal01"
-      command="close"
-      title="Close image">
+      id="modalClose"
+      class="modal-close"
+      aria-label="Close image">
       ×
     </button>
 
-    <div class="w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image" alt="">
-      <p id="caption" class="w3-opacity w3-large"></p>
+    <div class="modal-content">
+
+      <img
+        id="img01"
+        alt=""
+      >
+
+      <p id="caption"></p>
+
     </div>
 
   </dialog>
 
-</div>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="site-footer">
+
+    <span>
+      KIRAN ARAIN
+    </span>
+
+    <span>
+      GRAPHIC DESIGN / 2026
+    </span>
+
+  </footer>
 
 
-<script>
-
-/* FILTER GALLERY */
-
-function filterGallery(category, button) {
-
-  const images = document.querySelectorAll("#gallery img");
-  const buttons = document.querySelectorAll(".filter-btn");
-
-  /* Remove active state */
-  buttons.forEach(btn => {
-    btn.classList.remove("active");
-  });
-
-  /* Add active state */
-  button.classList.add("active");
-
-  /* Show / hide images */
-  images.forEach(image => {
-
-    if (category === "all" || image.dataset.category === category) {
-      image.style.display = "block";
-    } else {
-      image.style.display = "none";
-    }
-
-  });
-}
-
-
-/* MODAL IMAGE GALLERY */
-
-function onClick(image) {
-
-  const dialog = document.getElementById("modal01");
-  const dialogImage = document.getElementById("img01");
-  const caption = document.getElementById("caption");
-
-  dialogImage.src = image.src;
-  dialogImage.alt = image.alt;
-  caption.textContent = image.alt;
-
-  dialog.showModal();
-}
-
-</script>
+  <!-- JavaScript -->
+  <script src="graphic-design.js"></script>
 
 </body>
 </html>
-```
+
