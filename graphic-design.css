@@ -40,7 +40,7 @@ body {
 
   margin: 0;
 
-  background: var(--cream);
+  background: var(--sage);
 
   color: var(--ink);
 
@@ -98,7 +98,7 @@ body {
 
   color: var(--green);
 
-  font-size: 22px;
+  font-size: 32px;
 
   cursor: pointer;
 
@@ -110,15 +110,16 @@ body {
 ================================================== */
 
 .page {
-
-  max-width: 1600px;
-
-  margin: 0 auto;
-
-  padding: 120px 28px 100px;
-
+  width: 100%;
+  margin: 0;
+  padding: 120px 0 100px;
 }
 
+.page-intro {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
 
 /* ==================================================
    INTRO
