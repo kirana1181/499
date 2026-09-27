@@ -1,4 +1,4 @@
-```javascript
+
 /* ==================================================
    GRAPHIC DESIGN PAGE
    KIRAN ARAIN
@@ -33,7 +33,7 @@ const viewText = {
 
 
 /* ==================================================
-   FILTER GALLERY
+   GET ELEMENTS
 ================================================== */
 
 const filterButtons =
@@ -46,35 +46,40 @@ const viewTextElement =
   document.getElementById("viewText");
 
 
+/* ==================================================
+   FILTERING
+================================================== */
+
 filterButtons.forEach(button => {
 
-  button.addEventListener("click", () => {
+  button.addEventListener("click", function () {
 
     const category =
-      button.dataset.filter;
+      this.dataset.filter;
 
 
-    /* Remove active state */
+    /* -------------------------------
+       UPDATE ACTIVE BUTTON
+    -------------------------------- */
 
     filterButtons.forEach(btn => {
-
       btn.classList.remove("active");
-
     });
 
-
-    /* Activate clicked button */
-
-    button.classList.add("active");
+    this.classList.add("active");
 
 
-    /* Change little description */
+    /* -------------------------------
+       UPDATE TEXT
+    -------------------------------- */
 
     viewTextElement.textContent =
       viewText[category];
 
 
-    /* Filter images */
+    /* -------------------------------
+       SHOW / HIDE IMAGES
+    -------------------------------- */
 
     galleryImages.forEach(image => {
 
@@ -121,16 +126,16 @@ const closeButton =
 
 galleryImages.forEach(image => {
 
-  image.addEventListener("click", () => {
+  image.addEventListener("click", function () {
 
     modalImage.src =
-      image.src;
+      this.src;
 
     modalImage.alt =
-      image.alt;
+      this.alt;
 
     caption.textContent =
-      image.alt;
+      this.alt;
 
     modal.showModal();
 
@@ -143,16 +148,18 @@ galleryImages.forEach(image => {
    CLOSE MODAL
 ================================================== */
 
-closeButton.addEventListener("click", () => {
+closeButton.addEventListener("click", function () {
 
   modal.close();
 
 });
 
 
-/* Close when clicking outside image */
+/* ==================================================
+   CLICK OUTSIDE TO CLOSE
+================================================== */
 
-modal.addEventListener("click", event => {
+modal.addEventListener("click", function (event) {
 
   if (event.target === modal) {
 
@@ -163,9 +170,11 @@ modal.addEventListener("click", event => {
 });
 
 
-/* ESC KEY */
+/* ==================================================
+   ESC KEY
+================================================== */
 
-document.addEventListener("keydown", event => {
+document.addEventListener("keydown", function (event) {
 
   if (
     event.key === "Escape" &&
@@ -177,4 +186,4 @@ document.addEventListener("keydown", event => {
   }
 
 });
-```
+
