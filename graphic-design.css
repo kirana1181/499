@@ -1,4 +1,3 @@
-
 /* ==================================================
    GRAPHIC DESIGN PAGE
    KIRAN ARAIN
@@ -64,8 +63,12 @@ body {
   margin: 0;
   padding: 120px 0 100px;
 }
+/* ==================================================
+   CENTERED INTRO + FILTER
+================================================== */
 .page-intro {
-  max-width: 850px;
+  width: 100%;
+  max-width: 950px;
   margin: 0 auto;
   padding: 0 28px;
 }
@@ -74,19 +77,19 @@ body {
 ================================================== */
 .design-header {
   position: relative;
-  max-width: 900px;
-  padding: 25px 0 55px;
+  padding: 25px 0 45px;
 }
 .design-number {
   margin-bottom: 25px;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: .18em;
   color: var(--green);
 }
 .design-header h1 {
+  max-width: 850px;
   margin: 0;
   color: var(--green);
-  font-size: clamp(52px, 8vw, 110px);
+  font-size: clamp(52px, 8vw, 105px);
   font-weight: 400;
   line-height: .88;
   letter-spacing: -.055em;
@@ -124,42 +127,49 @@ body {
    FILTER
 ================================================== */
 .filter-section {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 .filter-bar {
   display: flex;
-  align-items: baseline;
-  gap: 18px;
+  align-items: center;
+  gap: 10px;
   flex-wrap: wrap;
 }
 .filter-label {
   margin-right: 5px;
   color: var(--green);
-  font-size: 20px;
+  font-size: 13px;
+  font-weight: 600;
   letter-spacing: .16em;
-  opacity: .5;
+  opacity: .55;
 }
+/* FILTER BUTTONS */
 .filter-btn {
   position: relative;
-  border: 1px solid transparent;
+  border: 1px solid rgba(57, 72, 61, .45);
   border-radius: 100px;
-  padding: 7px 13px;
+  padding: 10px 17px;
   background: transparent;
   color: var(--green);
   font-family: inherit;
-  font-size: 21px;
+  font-size: 13px;
+  font-weight: 500;
   letter-spacing: .08em;
   cursor: pointer;
   transition:
     background .25s ease,
     color .25s ease,
-    border .25s ease;
+    border-color .25s ease,
+    transform .2s ease;
 }
 .filter-btn:hover {
-  border-color: var(--sage);
+  border-color: var(--green);
+  transform: translateY(-1px);
 }
+/* ACTIVE BUTTON */
 .filter-btn.active {
   background: var(--green);
+  border-color: var(--green);
   color: var(--cream);
 }
 /* ==================================================
@@ -169,24 +179,27 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 18px;
-  font-size: 9px;
+  margin-top: 17px;
+  font-size: 10px;
   letter-spacing: .12em;
 }
 .current-view span {
-  opacity: .4;
+  opacity: .45;
 }
 .current-view strong {
   color: var(--green);
-  font-weight: 500;
+  font-weight: 600;
 }
 /* ==================================================
-   GALLERY
+   FULL-WIDTH GALLERY
 ================================================== */
 .photo-grid {
+  width: 100%;
+  padding: 0 8px;
   column-count: 4;
   column-gap: 8px;
 }
+/* INDIVIDUAL IMAGES */
 .photo-grid img {
   display: block;
   width: 100%;
@@ -269,7 +282,10 @@ dialog::backdrop {
     padding: 0 18px;
   }
   .page {
-    padding: 105px 15px 70px;
+    padding: 105px 0 70px;
+  }
+  .page-intro {
+    padding: 0 18px;
   }
   .design-header {
     padding-bottom: 40px;
@@ -281,14 +297,14 @@ dialog::backdrop {
     font-size: 13px;
   }
   .filter-bar {
-    gap: 7px;
+    gap: 6px;
   }
   .filter-label {
     width: 100%;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
   }
   .filter-btn {
-    padding: 6px 10px;
+    padding: 8px 12px;
     font-size: 10px;
   }
   .current-view {
@@ -299,6 +315,7 @@ dialog::backdrop {
     display: block;
   }
   .photo-grid {
+    padding: 0 5px;
     column-count: 2;
     column-gap: 5px;
   }
